@@ -299,7 +299,7 @@
             
                 h4 {
                     font-family: var(--f3);
-                    color: var(--c-gold-dark);
+                    color: var(--c-gold-dimmer);
                     letter-spacing: 1px;
                     font-size: 18px;
                 }
@@ -792,8 +792,8 @@
 
     h4 {
         font-family: var(--f3);
-        color: var(--c-gold-dark);
-        text-stroke: 2px var(--c-gold-dark);
+        color: var(--c-gold-dimmer);
+        text-stroke: 2px var(--c-gold-dimmer);
         letter-spacing: 1px;
         // text-shadow: 2px 3px 2px var(--c-dark),-1px -1px 0 var(--c-cyan-dark);
         font-size: 18px;
@@ -1170,7 +1170,7 @@
         }
     }
 
-    //** SIDEBAR **//
+    //** INFOBOXES **//
 
     .infobox {
         background: none;
@@ -1178,6 +1178,8 @@
         border-radius: 0;
         margin: 0;
         padding: 0;
+        max-width: calc(100% - 375px);
+        transition: all 200ms ease;
 
         .flexor {
             background: var(--c-dark);
@@ -1186,6 +1188,7 @@
             border-radius: 0;
             align-items: initial;  
             border: none;
+            gap: 0;
 
             &.left-third {
                 grid-template-columns: 200px auto;
@@ -1203,15 +1206,15 @@
         }
 
         .infobox-text {
-            padding: 15px 10px 20px 0;
+            padding: 15px 10px 20px 1em;
 
             h4 {
                 padding-top: 0;
                 padding-bottom: 15px;
-                color: var(--c-gold-dark);
+                color: var(--c-gold-dimmer);
             }
 
-            em {
+            .infobox-link em {
                 display: block;
                 padding-top: 10px;
                 color: var(--c-gray-light);
@@ -1259,7 +1262,31 @@
             }
 
         }
+
+        &:hover, &:focus {
+            filter: drop-shadow(1px 1px 0 var(--c-gold-dim)) drop-shadow(-1px -1px 0 var(--c-gold-dim)) drop-shadow(1px -1px 0 var(--c-gold-dim)) drop-shadow(-1px 1px 0 var(--c-gold-dim)); 
+
+            .infobox-text {
+                background: rgba(255, 179, 13, 0.03);
+
+                h4 {
+                    color: var(--c-gold-dim);
+                }
+            }
+        }
+        &:active {
+            filter: drop-shadow(1px 1px 0 var(--c-gold)) drop-shadow(-1px -1px 0 var(--c-gold)) drop-shadow(1px -1px 0 var(--c-gold)) drop-shadow(-1px 1px 0 var(--c-gold)); 
+
+            .infobox-text {
+                background: rgba(255, 179, 13, 0.09);
+                h4 {
+                    color: var(--c-gold);
+                }
+            }
+        }
     }    
+
+    //** SIDEBAR **//    
 
     .overview-text {
         width: calc(100% - 375px)
@@ -1408,6 +1435,12 @@
                 text-transform: uppercase;
                 padding: 0 65px;
                 display: block;
+                opacity: 0.4;
+                transition: 300ms ease;
+
+                &:hover, &:focus {
+                    opacity: 1;
+                }
             }
         }
 
@@ -1514,19 +1547,27 @@
         }
 
         .tagged-articles-list {
-            padding: 0 !important;
+            padding: 0;
+            margin-bottom: 8px;
 
             .article-list-item {
-                margin: 5px 0 !important;
+                margin: 8px 0;
+                padding: 2px 0 2px 2px;
 
                 &:nth-of-type(1) {
+                    padding: 0 0 2px 2px;
                     margin-top: 0 !important;
                 }
 
                 &:last-of-type {
+                    padding: 2px 0 0 2px;
                     margin-bottom: 0 !important;
                 }
 
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
             }
 
         }

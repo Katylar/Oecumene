@@ -2,6 +2,29 @@
 @import "_responsive.scss";
 @import "_variables.scss";
 
+.user-css-presentation {
+    .navbar {
+        display: none;
+        height: 0;
+    }
+    #world-editor-bar {
+        // display: none !important;
+        // height: 0px;
+        // padding-bottom: 0px !important;
+        position: fixed;
+        bottom: 0;
+        opacity: 0.1;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+    .row .col-6 a.mb-2.btn.btn-block.d-block.btn-primary {
+        display: none !important;
+        height: 0;
+    }
+}
+
 
 .user-css-extended {
     display: none;
@@ -11,11 +34,6 @@
     background: url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
     background-size: cover;
     background-color: #00000000;
-
-    .world-global-header {
-        // display: none;
-        visibility: hidden;
-    }
 
     .topnav {
         width: 1170px;
@@ -239,7 +257,7 @@
         border: 1px solid var(--c-gold-dimmer);
     }
 
-    //** TOOLTIP POPUP **//
+    //** TOOLTIP LINK POPUP **//
 
     .tooltipster-sidetip.tooltipster-light {
         color: var(--c-light);
@@ -370,8 +388,10 @@
         border-bottom: 1px solid var(--c-gold-dimmer);
         position: absolute;
         left: 0;
-        top: 134px;
-        bottom: 689px;
+        // top: 134px;
+        top: 78px;
+        // bottom: 689px;
+        bottom: 660px;
         width: 22em !important;
         margin-right: 0;
         padding-right: 0;
@@ -1581,6 +1601,12 @@
         .custom-sidebar-wrapper {
             margin-top: -148px;
         }
+    }
+
+    /** TOOLTIP ABBREV POPUP **/
+
+    .text-abbreviation.tooltipster {
+        color: var(--c-gray-light);
     }
 }
 

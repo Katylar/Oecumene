@@ -129,12 +129,13 @@
         padding: 5px;
         margin-right: 1vw;
         transition: all 500ms ease;
+        bottom: 8%;
 
         .backtotop-button {
             background: rgba(2, 2, 7, 0.9);
             clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
             display: block;
-            margin: 10px !important;
+            margin: 0 10px !important;
             padding: 10px 15px;
             text-align: center;
     
@@ -336,6 +337,10 @@
             &:active {
                 filter: brightness(125%);
             }
+        }
+
+        .tooltip, .tooltipster-base {
+            display: none!important;
         }
     }
     
@@ -544,13 +549,13 @@
         }
 
         .toc-with-overview {
-            position: sticky;
+            // position: sticky;
             top: 1em;
             bottom: 1em;
-            overflow-y: scroll;
-            max-height: 100vh;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            // overflow-y: scroll;
+            // max-height: 100vh;
+            // scrollbar-width: none;
+            // -ms-overflow-style: none;
                 
             &::-webkit-scrollbar { 
                 width: 0;
@@ -1092,6 +1097,7 @@
 
     .article-title h1 {
         font-weight: 500;
+        padding-top: 0;
     }
 
     h1 {
@@ -1574,14 +1580,31 @@
 
     .custom-sidebar-wrapper{
         padding: 1px;
-        width: 360px;
+        width: 370px;
         background: var(--c-cyan-dark);
         // clip-path: polygon(96% 0px, 100% 0.6%, 100% 97%, 96% 97.6%, 96% 99.4%, 92% 100.00%, 4% 100%, 0px 99.4%, 0% 1.2%, 4% 0.6%, 24% 0.6%, 28% 0%);
-        clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 56px), 96% calc(100% - 46px), 96% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 24% 10px, 28% 0%);
-        position: relative;
+        // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 56px), 96% calc(100% - 46px), 96% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 24% 10px, 28% 0%);
+        // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 55px, 100% 65px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 80px 10px, 90px 0%);
+        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);        position: relative;
         float: right;
-        margin-top: -125px;
+        // margin-top: -125px;
+        margin-top: 0;
         margin-left: 15px;
+
+        
+        small {
+            font-size: 10px;
+            position: absolute;
+            top: 113px;
+            right: -21px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transform: rotate(90deg);
+            display: block;
+            color: rgba(0,0,0,.6);
+            font-weight: 800;
+        }
+
 
         .custom-sidebar-inner {
             border: none;
@@ -1590,20 +1613,19 @@
             margin: 0;
             background: var(--c-dark);
             // clip-path: polygon(96% 0px, 100% 0.6%, 100% 95%, 96% 95.6%, 96.00% 99.4%, 92% 100%, 4% 100%, 0px 99.4%, 0% 1.2%, 4% 0.6%, 32% 0.6%, 36% 0%);
-            clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
+            // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
+            // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 155px, 100% 165px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 105px 10px, 115px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
         }
 
         .custom-sidebar {
             font-family: var(--f1);
             font-size: 14px;
             color: var(--c-light);
-            padding: 0 10px 1em 10px;
-            clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
-
-            em {
-                font-size: 12.5px;
-                font-style: normal;
-            }
+            padding: 20px 30px 20px 10px;
+            // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
+            // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 155px, 100% 165px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 105px 10px, 115px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
 
             .vermiform {
                 font-size: 11px;
@@ -1705,23 +1727,11 @@
             .user-css-image-thumbnail a {
                 pointer-events: none;
             }
-
-            small {
-                font-size: 10px;
-                position: absolute;
-                top: 2px;
-                right: 18px;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                padding: 0 65px;
-                display: block;
-                opacity: 0.4;
-                transition: 300ms ease;
-
-                &:hover, &:focus {
-                    opacity: 1;
-                }
+            em {
+                font-size: 12.5px;
+                font-style: normal;
             }
+
         }
 
         .sidebar-1, .motto {
@@ -1735,7 +1745,7 @@
             font-variant: small-caps;
             font-size: 28px;
             margin: 0;
-            padding-top: 20px;
+            padding-top: 10px;
             line-height: 1.3;
             color: var(--c-cyan);
         }
@@ -1872,11 +1882,30 @@
     /** EXPERIMENT **/
 
 
-    .article-title {
-        h1 {
-            padding-top: 0;
+    .glitch {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            color: var(--c-gold);
+            font-family: var(--f1);
+            font-weight: 800;
+            position: relative;
+            font-size: 72px;
+            border-bottom: none;
+            position: fixed;
+            z-index: 10;
+            top: 50vh;
+            transform: translateY(-100%);
+            margin: 0 auto;
+            display: block;
         }
     }
+
+
     
 
 

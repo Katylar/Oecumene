@@ -1,0 +1,49 @@
+@keyframes flash {
+    0% {
+        background-color: white;
+        color: black;
+    }
+    5% {
+        background-color: var(--c-cyan);
+        color: white;
+    }
+    10% {
+        background-color: white;
+        color: black;
+    }
+    15% {
+        background-color: var(--c-cyan);
+        color: white;
+    }
+    20% {
+        background-color: white;
+        color: black;
+    }
+    25% {
+        background-color: var(--c-cyan);
+        color: white;
+    }
+    30% {
+        background-color: white;
+        color: black;
+    }
+    35% {
+        background-color: var(--c-cyan);
+        color: white;
+    }  
+    100% {
+        background-color: rgba(2, 2, 7, 0.98);;
+        color: var(--c-lightest);
+    }
+}
+
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

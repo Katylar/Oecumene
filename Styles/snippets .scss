@@ -268,9 +268,145 @@
 }
 
 /** **/
+
+[container: topnav]
+[ul]
+[container: link-active-oecumene][li]@[The Œcumene](article:b0f21a25-a5a5-4bdf-aa8c-cdb24a53d38b)[/li][/container]
+[container: link-active-communion][li]@[The Communion](article:18954731-3ee4-4e02-8221-041b8ea1279e)[/li][/container]
+[container: link-active-principalia][li]@[The Principalía](article:438071e9-74a2-4d51-aa4a-f839af982da0)[/li][/container]
+[container: link-active-people][li]@[The Peoples](article:da57f410-f6f0-4916-b5d0-d2183072d212)[/li][/container]
+[container: link-active-compendium][li]@[The Compendium](article:8049d99d-8255-4e2a-b5c3-2ff3fc651233)[/li][/container]
+[container: link-active-history][li]@[The Histories](article:c2b99f10-1818-430d-932b-48cb1a10b6a1)[/li][/container]
+[/ul]
+[/container]
+[container:article-table-of-contents]
+[container:article-table-of-contents-inner]
+[h2]Contents[/h2]
+[container:toc-with-overview]
+[url:#header][container:overview-link]Overview[/container][/url]
+[articletoc]
+[/container]
+[/container]
+[/container]
+
 /** **/
+
+[container:backlink][url:/w/the-Ecumenical-future-katylar][h1]Back to Home[/h1][/url][/container]
+
+
 /** **/
+
+&::before {
+    content: url(.);
+    display: block;
+    position: absolute;
+    background: var(--c-cyan);
+    height: 75%;
+    width: 30%;
+    top: -5px;
+    left: -5px;
+    clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+}
+&::after {
+    content: url(.);
+    display: block;
+    position: absolute;
+    background: var(--c-cyan);
+    height: 75%;
+    width: 30%;
+    bottom: -5px;
+    right: -5px;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px))
+}
+
+
 /** **/
+
+&.page-article {
+
+    .world-global-article-introduction {
+        &::after, &::before {
+            content: none;
+        }
+    }
+
+    .article-title {
+        border-left: none;
+        position: absolute;
+        top: 290px;
+        left: 0;
+        width: 100%;
+        display: block;
+        background: rgba(2, 2, 7,0.6);
+        height: 98px;
+        margin-left: 0;
+
+        h1 {
+            font-size: 42px;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 15px;
+            // margin-left: -20px;
+
+            .breadcrumb-article-current {
+                display: none;
+            }
+        }
+
+        .article-table-of-contents {
+            margin-top: 14px;
+            left: 0;
+            top: initial;
+            width: 300px;
+
+            h3 {
+                padding: 1em 25px 0 25px;
+            }
+
+            .overview-link {
+                padding: 3px 1.7em 3px 25px;
+            }
+
+            .articletoc .article-toc-link {
+                padding: 3px 1.7em 3px 25px;
+
+                &.article-toc-indent-1 {
+                    padding-left: 45px;
+
+                    &::after {
+                        left: 25px
+                    }
+                }
+    
+                &.article-toc-indent-2 {
+                    padding-left: 65px;
+
+                    &::after {
+                        left: 45px
+                    }
+                }
+                &.article-toc-indent-3 {
+                    padding-left: 85px;
+
+                    &::after {
+                        left: 65px
+                    }        
+                }
+            }
+
+            .article-table-of-contents-inner h3 {
+                padding-top: 30px;
+            }
+        }
+    }
+
+    .custom-sidebar-wrapper {
+        // margin-top: -263px;
+    }
+}
+
 /** **/
 /** **/
 /** **/

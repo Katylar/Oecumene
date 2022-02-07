@@ -1,7 +1,34 @@
 @import "_fonts.scss";
 @import "_responsive.scss";
-@import "_variables.scss";
 @import "_animations.scss";
+
+.user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
+    --f1: Orbitron, Verdana;
+    --f2: Electrolize, Verdana;
+    --f3: Michroma, Verdana;
+    --f4: Audiowide, Verdana;
+    --f5: Raleway, Verdana;
+    --f6: Roboto, georgia;
+    --i: Icono;
+
+    --c-gold: rgb(255, 179, 13);
+    --c-gold-dark: rgb(88, 61, 3);
+    --c-gold-dimmer: rgb(129, 91, 9);
+    --c-gold-dim: rgb(187, 128, 0);
+    --c-cyan: rgb(6, 123, 194);
+    --c-cyan-dark: rgb(4, 98, 155);
+    --c-cyan-darkest: rgb(4, 97, 154);    
+    --c-light: rgb(185, 185, 185);
+    --c-lightest: rgb(240, 240, 240);
+    --c-dark: rgb(2, 2, 7);
+    --c-gray-light: rgb(113, 124, 142);
+}
+
+.user-css-viewer {
+    .do-not-print:last-of-type {
+        margin-top: 0;
+    }
+}
 
 .user-css-presentation {
     .navbar {
@@ -33,16 +60,21 @@
 }
 
 .user-css-presentation {
-    background: url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
-    background-size: cover;
+    // background: url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+    // background-size: cover;
     background-color: #00000000;
 
     .world-global-header {
-        background: var(--c-gold-dim);        
-        max-height: 50px;
-
+        background: var(--c-gold-dimmer);
+        height: 44px;
         z-index: 500;
-        position: relative;
+        position: sticky;
+        top: 0;
+        box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
+
+        .tooltip, .tooltipster-base {
+            display: none!important;
+        }
     }
 
     .topnav {
@@ -227,7 +259,7 @@
         max-width: 500px;
         left: 70px;
         scrollbar-color: var(--c-gold-dimmer) rgba(2, 2, 7, 0.9);
-        box-shadow: 5px 13px 20px rgba(0,0,0,.6);
+        // box-shadow: 5px 13px 20px rgba(0,0,0,.6);
         font-family: var(--f2) !important;
         animation: slideright 450ms ease-in-out;
 
@@ -589,7 +621,7 @@
             .article-toc-link {
                 margin-bottom: 6px;
                 cursor: pointer;
-                transition: 35ms 75ms all ease-out;
+                transition: 100ms all ease-out;
                 border-right: 1px solid transparent;
                 border-top: 1px solid transparent;
                 border-bottom: 1px solid transparent;
@@ -634,20 +666,19 @@
 
                 }
 
-
-    
                 &::before {
                     content: url(.);
                     height: 100%;
-                    width: 0;
-                    transition: width 30ms;
-                    background: var(--c-gold-dim);
+                    width: 12px;
+                    transition: all 250ms ease-out;
+                    background: var(--c-gold-dark);
                     border-radius: 0;
                     position: absolute;
                     top: 0;
                     bottom: 0;
                     right: 0;
                     transform-origin: left;
+                    transform: translateX(-290px);                    
                 }
     
                 &:hover, &:focus {
@@ -656,7 +687,8 @@
                     background: rgba(113, 124, 142, 0.1);
     
                     &::before {
-                        width: 12px;
+                        background: var(--c-gold-dim);
+                        transform: translateX(0%);
                     }
 
                     &::after {
@@ -679,7 +711,7 @@
         .overview-link {
             margin-bottom: 6px;
             cursor: pointer;
-            transition: 35ms 75ms all ease-out;
+            transition: 100ms all ease-out;
             border-top: 1px solid transparent;
             border-bottom: 1px solid transparent;
             border-radius: 0;
@@ -690,27 +722,28 @@
             &::before {
                 content: url(.);
                 height: 100%;
-                width: 0;
-                transition: width 30ms;
-                background: var(--c-gold);
+                width: 12px;
+                transition: all 250ms ease-out;
+                background: var(--c-gold-dark);
                 border-radius: 0;
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 right: 0;
                 transform-origin: left;
+                transform: translateX(-290px);                    
             }
 
             &:hover, &:focus {
-
-                color: var(--c-gold);
-                border-color: var(--c-gold);
+                color: var(--c-gold-dim);
+                border-color: var(--c-gold-dim);
                 background: rgba(113, 124, 142, 0.1);
 
                 &::before {
-                    width: 12px;
+                    background: var(--c-gold-dim);
+                    transform: translateX(0%);
                 }
-            }
+            }            
         }
 
         a {
@@ -1062,6 +1095,8 @@
         border-bottom: 1px solid var(--c-gold-dimmer);
         background: rgba(2, 2, 7, 0.9);
         box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
+        overflow-y: hidden;
+        margin-bottom: 0;
 
         .article-title, .tab-content, .article-content-bottom {
             padding-left: 25px;
@@ -1155,17 +1190,47 @@
         display: none;
     }
 
-    .cover {
-        border-bottom: 1px solid var(--c-gold-dimmer);
-        max-height: 400px;
-        overflow-y: hidden;
-        display: flex;
-        align-items: center;
+    #cover {
+        // border-bottom: 1px solid var(--c-gold-dimmer);
+        max-height: 500px;
+        // overflow-y: hidden;
+        // display: flex;
+        // align-items: center;
+        // position: absolute;
+        // top: 0;
+        // margin-top: 40px;
 
-        .img-responsive {
-
-        }
+        // .img-responsive {
+        //     position: fixed;
+        //     width: 100%;
+        //     top: 0;
+        //     z-index: 0;
+        // }
     }
+
+    .article-content, #content {
+        // &::before {
+        //     position: absolute;
+        //     content: url(.);
+        //     background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+        //     background-size: cover;
+        //     background-color: #00000000;
+        //     inset: 0;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+
+        // margin-top: 356px;
+        z-index: 1;
+        position: relative;
+        border-top: 1px solid var(--c-gold-dimmer);
+        margin-left: -25px;
+        margin-right: -25px;
+        background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+        background-size: cover;
+        background-color: #00000000;        
+    }
+
 
     .bottomnotch {
         position: absolute;
@@ -1183,6 +1248,13 @@
         text-align: center;
         font-family: var(--f6);
         color: var(--c-light);
+        margin-top: 0 !important;
+        padding: 20px 0 0 0;
+        // background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+        // background-size: cover;
+        // background-color: #00000000;
+        // z-index: 10;  
+        // position: relative;
 
         &::before {
             content: url(.);
@@ -1207,6 +1279,14 @@
             position: absolute;
             background:var(--c-gold-dimmer)
         }
+    }
+
+    .artist-credits.cover-credits {
+        // background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+        // background-size: cover;
+        // background-color: #00000000;
+        // z-index: 10;
+        position: relative;
     }
 
     .article-content-left {
@@ -1247,6 +1327,10 @@
                 color: var(--c-gold);
             }
         }
+    }
+
+    .article-social-media {
+        display: none;
     }
 
     //** BREADCRUMBS AND SUBTITLES **//
@@ -1868,9 +1952,9 @@
             display: none;
         }
 
-        .custom-sidebar-wrapper {
-            margin-top: -148px;
-        }
+        // .custom-sidebar-wrapper {
+        //     margin-top: -148px;
+        // }
     }
 
     /** TOOLTIP ABBREV POPUP **/

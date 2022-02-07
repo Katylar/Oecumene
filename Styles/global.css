@@ -214,27 +214,6 @@
   }
 }
 
-.user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
-  --f1: Orbitron, Verdana;
-  --f2: Electrolize, Verdana;
-  --f3: Michroma, Verdana;
-  --f4: Audiowide, Verdana;
-  --f5: Raleway, Verdana;
-  --f6: Roboto, georgia;
-  --i: Icono;
-  --c-gold: rgb(255, 179, 13);
-  --c-gold-dark: rgb(88, 61, 3);
-  --c-gold-dimmer: rgb(129, 91, 9);
-  --c-gold-dim: rgb(187, 128, 0);
-  --c-cyan: rgb(6, 123, 194);
-  --c-cyan-dark: rgb(4, 98, 155);
-  --c-cyan-darkest: rgb(4, 97, 154);
-  --c-light: rgb(185, 185, 185);
-  --c-lightest: rgb(240, 240, 240);
-  --c-dark: rgb(2, 2, 7);
-  --c-gray-light: rgb(113, 124, 142);
-}
-
 @-webkit-keyframes flash {
   0% {
     background-color: white;
@@ -339,6 +318,31 @@
   }
 }
 
+.user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
+  --f1: Orbitron, Verdana;
+  --f2: Electrolize, Verdana;
+  --f3: Michroma, Verdana;
+  --f4: Audiowide, Verdana;
+  --f5: Raleway, Verdana;
+  --f6: Roboto, georgia;
+  --i: Icono;
+  --c-gold: rgb(255, 179, 13);
+  --c-gold-dark: rgb(88, 61, 3);
+  --c-gold-dimmer: rgb(129, 91, 9);
+  --c-gold-dim: rgb(187, 128, 0);
+  --c-cyan: rgb(6, 123, 194);
+  --c-cyan-dark: rgb(4, 98, 155);
+  --c-cyan-darkest: rgb(4, 97, 154);
+  --c-light: rgb(185, 185, 185);
+  --c-lightest: rgb(240, 240, 240);
+  --c-dark: rgb(2, 2, 7);
+  --c-gray-light: rgb(113, 124, 142);
+}
+
+.user-css-viewer .do-not-print:last-of-type {
+  margin-top: 0;
+}
+
 .user-css-presentation .navbar {
   margin-top: 0;
   z-index: 1000;
@@ -364,16 +368,22 @@
 }
 
 .user-css-presentation {
-  background: url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
-  background-size: cover;
   background-color: #00000000;
 }
 
 .user-css-presentation .world-global-header {
-  background: var(--c-gold-dim);
-  max-height: 50px;
+  background: var(--c-gold-dimmer);
+  height: 44px;
   z-index: 500;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+          box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+}
+
+.user-css-presentation .world-global-header .tooltip, .user-css-presentation .world-global-header .tooltipster-base {
+  display: none !important;
 }
 
 .user-css-presentation .topnav {
@@ -570,8 +580,6 @@
   max-width: 500px;
   left: 70px;
   scrollbar-color: var(--c-gold-dimmer) rgba(2, 2, 7, 0.9);
-  -webkit-box-shadow: 5px 13px 20px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 13px 20px rgba(0, 0, 0, 0.6);
   font-family: var(--f2) !important;
   -webkit-animation: slideright 450ms ease-in-out;
           animation: slideright 450ms ease-in-out;
@@ -938,8 +946,8 @@
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link {
   margin-bottom: 6px;
   cursor: pointer;
-  -webkit-transition: 35ms 75ms all ease-out;
-  transition: 35ms 75ms all ease-out;
+  -webkit-transition: 100ms all ease-out;
+  transition: 100ms all ease-out;
   border-right: 1px solid transparent;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -988,10 +996,10 @@
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link::before {
   content: url(.);
   height: 100%;
-  width: 0;
-  -webkit-transition: width 30ms;
-  transition: width 30ms;
-  background: var(--c-gold-dim);
+  width: 12px;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  background: var(--c-gold-dark);
   border-radius: 0;
   position: absolute;
   top: 0;
@@ -999,6 +1007,8 @@
   right: 0;
   -webkit-transform-origin: left;
           transform-origin: left;
+  -webkit-transform: translateX(-290px);
+          transform: translateX(-290px);
 }
 
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:hover, .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:focus {
@@ -1008,7 +1018,9 @@
 }
 
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:hover::before, .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:focus::before {
-  width: 12px;
+  background: var(--c-gold-dim);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:hover::after, .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:focus::after {
@@ -1029,8 +1041,8 @@
 .user-css-presentation .article-table-of-contents .overview-link {
   margin-bottom: 6px;
   cursor: pointer;
-  -webkit-transition: 35ms 75ms all ease-out;
-  transition: 35ms 75ms all ease-out;
+  -webkit-transition: 100ms all ease-out;
+  transition: 100ms all ease-out;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   border-radius: 0;
@@ -1041,10 +1053,10 @@
 .user-css-presentation .article-table-of-contents .overview-link::before {
   content: url(.);
   height: 100%;
-  width: 0;
-  -webkit-transition: width 30ms;
-  transition: width 30ms;
-  background: var(--c-gold);
+  width: 12px;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  background: var(--c-gold-dark);
   border-radius: 0;
   position: absolute;
   top: 0;
@@ -1052,16 +1064,20 @@
   right: 0;
   -webkit-transform-origin: left;
           transform-origin: left;
+  -webkit-transform: translateX(-290px);
+          transform: translateX(-290px);
 }
 
 .user-css-presentation .article-table-of-contents .overview-link:hover, .user-css-presentation .article-table-of-contents .overview-link:focus {
-  color: var(--c-gold);
-  border-color: var(--c-gold);
+  color: var(--c-gold-dim);
+  border-color: var(--c-gold-dim);
   background: rgba(113, 124, 142, 0.1);
 }
 
 .user-css-presentation .article-table-of-contents .overview-link:hover::before, .user-css-presentation .article-table-of-contents .overview-link:focus::before {
-  width: 12px;
+  background: var(--c-gold-dim);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .user-css-presentation .article-table-of-contents a {
@@ -1415,6 +1431,8 @@
   background: rgba(2, 2, 7, 0.9);
   -webkit-box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
           box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+  overflow-y: hidden;
+  margin-bottom: 0;
 }
 
 .user-css.page-article .article-title, .user-css.page-article .tab-content, .user-css.page-article .article-content-bottom, .user-css.page-article-main .article-title, .user-css.page-article-main .tab-content, .user-css.page-article-main .article-content-bottom {
@@ -1502,16 +1520,20 @@
   display: none;
 }
 
-.user-css .cover {
-  border-bottom: 1px solid var(--c-gold-dimmer);
-  max-height: 400px;
-  overflow-y: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.user-css #cover {
+  max-height: 500px;
+}
+
+.user-css .article-content, .user-css #content {
+  z-index: 1;
+  position: relative;
+  border-top: 1px solid var(--c-gold-dimmer);
+  margin-left: -25px;
+  margin-right: -25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 7, 0.9)), to(rgba(2, 2, 7, 0.9))), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+  background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
+  background-size: cover;
+  background-color: #00000000;
 }
 
 .user-css .bottomnotch {
@@ -1531,6 +1553,8 @@
   text-align: center;
   font-family: var(--f6);
   color: var(--c-light);
+  margin-top: 0 !important;
+  padding: 20px 0 0 0;
 }
 
 .user-css .copyright-attribution::before {
@@ -1557,6 +1581,10 @@
   width: 60px;
   position: absolute;
   background: var(--c-gold-dimmer);
+}
+
+.user-css .artist-credits.cover-credits {
+  position: relative;
 }
 
 .user-css .article-content-left {
@@ -1596,6 +1624,10 @@
 
 .user-css .artist-credits a:active {
   color: var(--c-gold);
+}
+
+.user-css .article-social-media {
+  display: none;
 }
 
 .user-css .breadcrumb-wrapper, .user-css .breadcrumb, .user-css .article-subheading, .user-css .nav-linear {
@@ -2210,10 +2242,6 @@
 
 .user-css.tag-top .breadcrumb {
   display: none;
-}
-
-.user-css.tag-top .custom-sidebar-wrapper {
-  margin-top: -148px;
 }
 
 .user-css .text-abbreviation.tooltipster {

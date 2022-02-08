@@ -363,6 +363,32 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes topnaver {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes topnaver {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
 .user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
   --f1: Orbitron, Verdana;
   --f2: Electrolize, Verdana;
@@ -415,7 +441,7 @@
   background-color: #00000000;
 }
 .user-css-presentation .world-global-header {
-  background: var(--c-gold-gradient);
+  background: var(--c-gold-dark);
   height: 44px;
   z-index: 500;
   position: -webkit-sticky;
@@ -453,14 +479,14 @@
   transition: 400ms ease-in-out;
   width: 100%;
   height: 100%;
-  margin-left: -100px;
+  opacity: 0;
   grid-column: 1/2;
 }
 .user-css-presentation .topnav ul .boxer:before, .user-css-presentation .topnav ul .boxer:after {
   content: url(.);
   position: absolute;
   z-index: -1;
-  background: red;
+  background: var(--c-gold);
   height: 20px;
   width: 20px;
   -webkit-clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
@@ -475,6 +501,10 @@
   bottom: -2px;
   right: -2px;
   transform: rotate(180deg);
+}
+.user-css-presentation .topnav ul .topnav-link {
+  position: relative;
+  width: 100%;
 }
 .user-css-presentation .topnav ul .topnav-link:hover.link-active-home ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-home ~ .boxer {
   grid-column: 1/2;
@@ -498,18 +528,61 @@
   grid-column: 7/8;
 }
 .user-css-presentation .topnav ul .topnav-link:hover ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus ~ .boxer {
-  margin-left: 0;
+  -webkit-animation: topnaver 500ms ease-in-out normal forwards;
+          animation: topnaver 500ms ease-in-out normal forwards;
+}
+.user-css-presentation .topnav ul .topnav-link:before, .user-css-presentation .topnav ul .topnav-link:after {
+  content: url(.);
+  position: absolute;
+  z-index: -1;
+  background: var(--c-gold-dim);
+  height: 20px;
+  width: 40px;
+  -webkit-clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+          clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+  transition: 400ms ease-in-out;
+  opacity: 0;
+}
+.user-css-presentation .topnav ul .topnav-link:before {
+  top: -1px;
+  right: -1px;
+}
+.user-css-presentation .topnav ul .topnav-link:after {
+  bottom: -1px;
+  left: -1px;
+  transform: rotate(180deg);
 }
 .user-css-presentation .topnav li {
   -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
           clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
-  background: var(--c-gold);
+  background: var(--c-gold-dimmer);
   padding: 1px;
   transition: all 180ms ease-in-out;
   display: flex;
   align-items: center;
   position: relative;
   width: 100%;
+}
+.user-css-presentation .topnav li:before, .user-css-presentation .topnav li:after {
+  content: url(.);
+  position: absolute;
+  z-index: -1;
+  background: var(--c-gold);
+  height: 20px;
+  width: 20px;
+  -webkit-clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+          clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+  transition: 400ms ease-in-out;
+  opacity: 0;
+}
+.user-css-presentation .topnav li:before {
+  top: -2px;
+  left: -2px;
+}
+.user-css-presentation .topnav li:after {
+  bottom: -2px;
+  right: -2px;
+  transform: rotate(180deg);
 }
 .user-css-presentation .topnav li a {
   -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
@@ -528,10 +601,14 @@
   text-decoration: none !important;
 }
 .user-css-presentation .topnav li:hover, .user-css-presentation .topnav li:focus {
-  background: var(--c-gold);
+  background: var(--c-gold-dim);
 }
 .user-css-presentation .topnav li:hover a, .user-css-presentation .topnav li:focus a {
   color: var(--c-gold);
+}
+.user-css-presentation .topnav li:hover::before, .user-css-presentation .topnav li:hover::after, .user-css-presentation .topnav li:focus::before, .user-css-presentation .topnav li:focus::after {
+  -webkit-animation: topnaver 500ms ease-in-out normal forwards;
+          animation: topnaver 500ms ease-in-out normal forwards;
 }
 .user-css-presentation .topnav li:active {
   filter: brightness(140%);

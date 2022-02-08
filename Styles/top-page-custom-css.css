@@ -1,0 +1,83 @@
+.user-css-presentation .topnav ul .topnav-link.link-active-oecumene {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-oecumene::before, .user-css-presentation .topnav ul .topnav-link.link-active-oecumene::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-oecumene li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-oecumene li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}
+
+.user-css-presentation .topnav ul .topnav-link.link-active-communion {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-communion::before, .user-css-presentation .topnav ul .topnav-link.link-active-communion::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-communion li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-communion li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}
+
+.user-css-presentation .topnav ul .topnav-link.link-active-principalia {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-principalia::before, .user-css-presentation .topnav ul .topnav-link.link-active-principalia::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-principalia li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-principalia li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}
+
+.user-css-presentation .topnav ul .topnav-link.link-active-people {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-people::before, .user-css-presentation .topnav ul .topnav-link.link-active-people::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-people li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-people li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}
+
+.user-css-presentation .topnav ul .topnav-link.link-active-compendium {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-compendium::before, .user-css-presentation .topnav ul .topnav-link.link-active-compendium::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-compendium li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-compendium li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}
+
+.user-css-presentation .topnav ul .topnav-link.link-active-history {
+  pointer-events: none;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-history::before, .user-css-presentation .topnav ul .topnav-link.link-active-history::after {
+  opacity: 1;
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-history li {
+  background: var(--c-gold-dim);
+}
+.user-css-presentation .topnav ul .topnav-link.link-active-history li a {
+  color: var(--c-gold-dim);
+  pointer-events: none;
+}

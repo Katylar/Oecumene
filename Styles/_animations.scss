@@ -93,3 +93,17 @@
         opacity: 1;
     }
 }
+
+@keyframes topnaver {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8) scaleX(0.1);
+    }
+    50% {
+        transform: scaleY(1) scaleX(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+}

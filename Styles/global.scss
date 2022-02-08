@@ -12,17 +12,21 @@
     --i: Icono;
 
     --c-gold: rgb(255, 179, 13);
-    --c-gold-dark: rgb(88, 61, 3);
-    --c-gold-dimmer: rgb(129, 91, 9);
     --c-gold-dim: rgb(187, 128, 0);
+    --c-gold-dimmer: rgb(129, 91, 9);
+    --c-gold-dark: rgb(88, 61, 3);
+    --c-gold-gradient: linear-gradient(90deg, rgba(88,61,3,1) 0%, rgba(129,91,9,1) 35%, rgba(187,128,0,1) 60%, rgba(255,179,13,1) 100%);
+
     --c-cyan: rgb(6, 123, 194);
     --c-cyan-dark: rgb(4, 98, 155);
     --c-cyan-darkest: rgb(4, 97, 154);    
+    --c-cyan-gradient: linear-gradient(90deg, rgba(4,61,97,1) 0%, rgba(4,98,155,1) 45%, rgba(6,123,194,1) 100%); 
+
     --c-light: rgb(185, 185, 185);
     --c-lightest: rgb(240, 240, 240);
     --c-dark: rgb(2, 2, 7);
     --c-gray-light: rgb(113, 124, 142);
-}
+} 
 
 .user-css-viewer {
     .do-not-print:last-of-type {
@@ -611,6 +615,8 @@
             letter-spacing: 1px;
             font-family: var(--f2);
             text-transform: uppercase;
+            animation: fadein 200ms 1.75s ease-in 1 normal forwards;
+            opacity: 0;
         }
 
         .articletoc {
@@ -628,7 +634,8 @@
                 border-radius: 0;
                 color: var(--c-gold-dim);
                 position: relative;
-                // font-weight: 700;
+                opacity: 0;
+                animation: slideright 400ms ease-out 1 normal forwards;
 
                 &.article-toc-indent-1, &.article-toc-indent-2, &.article-toc-indent-3 {
                     // font-weight: 300;
@@ -705,6 +712,87 @@
                         background: var(--c-gold);
                     }
                 }
+
+                &:nth-child(1) { animation-delay: 2600ms; }
+                &:nth-child(2) { animation-delay: 3000ms; }
+                &:nth-child(3) { animation-delay: 3400ms; }
+                &:nth-child(4) { animation-delay: 3800ms; }
+                &:nth-child(5) { animation-delay: 4200ms; }
+                &:nth-child(6) { animation-delay: 4600ms; }
+                &:nth-child(7) { animation-delay: 5000ms; }
+                &:nth-child(8) { animation-delay: 5400ms; }
+                &:nth-child(9) { animation-delay: 5800ms; }
+                &:nth-child(10) { animation-delay: 6200ms; }
+                &:nth-child(11) { animation-delay: 6600ms; }
+                &:nth-child(12) { animation-delay: 7000ms; }
+                &:nth-child(13) { animation-delay: 7400ms; }
+                &:nth-child(14) { animation-delay: 7800ms; }
+                &:nth-child(15) { animation-delay: 8200ms; }
+                &:nth-child(16) { animation-delay: 8600ms; }
+                &:nth-child(17) { animation-delay: 9000ms; }
+                &:nth-child(18) { animation-delay: 9400ms; }
+                &:nth-child(19) { animation-delay: 9800ms; }
+                &:nth-child(20) { animation-delay: 10200ms; }
+                &:nth-child(21) { animation-delay: 10600ms; }
+                &:nth-child(22) { animation-delay: 11000ms; }
+                &:nth-child(23) { animation-delay: 11400ms; }
+                &:nth-child(24) { animation-delay: 11800ms; }
+                &:nth-child(25) { animation-delay: 12200ms; }
+                &:nth-child(26) { animation-delay: 12600ms; }
+                &:nth-child(27) { animation-delay: 13000ms; }
+                &:nth-child(28) { animation-delay: 13400ms; }
+                &:nth-child(29) { animation-delay: 13800ms; }
+                &:nth-child(30) { animation-delay: 14200ms; }
+                &:nth-child(31) { animation-delay: 14600ms; }
+                &:nth-child(32) { animation-delay: 15000ms; }
+                &:nth-child(33) { animation-delay: 15400ms; }
+                &:nth-child(34) { animation-delay: 15800ms; }
+                &:nth-child(35) { animation-delay: 16200ms; }
+                &:nth-child(36) { animation-delay: 16600ms; }
+                &:nth-child(37) { animation-delay: 17000ms; }
+                &:nth-child(38) { animation-delay: 17400ms; }
+                &:nth-child(39) { animation-delay: 17800ms; }
+                &:nth-child(40) { animation-delay: 18200ms; }
+                &:nth-child(41) { animation-delay: 18600ms; }
+                &:nth-child(42) { animation-delay: 19000ms; }
+                &:nth-child(43) { animation-delay: 19400ms; }
+                &:nth-child(44) { animation-delay: 19800ms; }
+                &:nth-child(45) { animation-delay: 20200ms; }
+                &:nth-child(46) { animation-delay: 20600ms; }
+                &:nth-child(47) { animation-delay: 21000ms; }
+                &:nth-child(48) { animation-delay: 21400ms; }
+                &:nth-child(49) { animation-delay: 21800ms; }
+                &:nth-child(50) { animation-delay: 22200ms; }
+                &:nth-child(51) { animation-delay: 22600ms; }
+                &:nth-child(52) { animation-delay: 23000ms; }
+                &:nth-child(53) { animation-delay: 23400ms; }
+                &:nth-child(54) { animation-delay: 23800ms; }
+                &:nth-child(55) { animation-delay: 24200ms; }
+                &:nth-child(56) { animation-delay: 24600ms; }
+                &:nth-child(57) { animation-delay: 25000ms; }
+                &:nth-child(58) { animation-delay: 25400ms; }
+                &:nth-child(59) { animation-delay: 25800ms; }
+                &:nth-child(60) { animation-delay: 26200ms; }
+                &:nth-child(61) { animation-delay: 26600ms; }
+                &:nth-child(62) { animation-delay: 27000ms; }
+                &:nth-child(63) { animation-delay: 27400ms; }
+                &:nth-child(64) { animation-delay: 27800ms; }
+                &:nth-child(65) { animation-delay: 28200ms; }
+                &:nth-child(66) { animation-delay: 28600ms; }
+                &:nth-child(67) { animation-delay: 29000ms; }
+                &:nth-child(68) { animation-delay: 29400ms; }
+                &:nth-child(69) { animation-delay: 29800ms; }
+                &:nth-child(70) { animation-delay: 30200ms; }
+                &:nth-child(71) { animation-delay: 30600ms; }
+                &:nth-child(72) { animation-delay: 31000ms; }
+                &:nth-child(73) { animation-delay: 31400ms; }
+                &:nth-child(74) { animation-delay: 31800ms; }
+                &:nth-child(75) { animation-delay: 32200ms; }
+                &:nth-child(76) { animation-delay: 32600ms; }
+                &:nth-child(77) { animation-delay: 33000ms; }
+                &:nth-child(78) { animation-delay: 33400ms; }
+                &:nth-child(79) { animation-delay: 33800ms; }
+                &:nth-child(80) { animation-delay: 34200ms; }
             }
         }
 
@@ -718,6 +806,8 @@
             position: relative;
             // font-weight: 700;
             text-decoration: none;
+            animation: slideright 400ms 3000ms ease-out 1 normal forwards;
+            opacity: 0;
 
             &::before {
                 content: url(.);
@@ -759,10 +849,9 @@
                 filter: brightness(125%);
             }
         } 
-        
+
         .striper {
             position: absolute;
-            // clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
             height: 25px;
             width: 120px;
             top: 0;
@@ -770,8 +859,11 @@
             display: block;
             z-index: 20;
             background: var(--c-gold-dimmer);
+            animation: slideright 500ms 1s ease-out 1 normal forwards;
+            opacity: 0;
 
             &::before {
+                opacity: 0;
                 content: url(.);
                 clip-path: polygon(60% 0%, 100% 0.00%, 60% 100%, 0% 100%);
                 top: 0;
@@ -780,10 +872,12 @@
                 height: 25px;
                 width: 90px;
                 position: absolute;
-                background: var(--c-gold-dimmer)
+                background: var(--c-gold-dimmer);
+                animation: slideright 500ms 1s ease-out 1 normal forwards;
             }
     
             &::after {
+                opacity: 0;
                 content: url(.);
                 clip-path: polygon(60% 0%, 100% 0.00%, 40% 100%, 0% 100%);
                 top: 0;
@@ -792,11 +886,13 @@
                 height: 25px;
                 width: 60px;
                 position: absolute;
-                background:var(--c-gold-dimmer)
+                background:var(--c-gold-dimmer);
+                animation: slideright 500ms 1.5s ease-out 1 normal forwards;
             }
         }
 
         &::before {
+            opacity: 0;
             content: url(.);
             clip-path: polygon(60% 0%, 100% 0.00%, 40% 100%, 0% 100%);
             top: 0;
@@ -805,10 +901,12 @@
             height: 25px;
             width: 60px;
             position: absolute;
-            background: var(--c-gold-dimmer)
+            background: var(--c-gold-dimmer);
+            animation: slideright 500ms 1.75s ease-out 1 normal forwards;
         }
 
         &::after {
+            opacity: 0;
             content: url(.);
             clip-path: polygon(17.5% 0%, 100% 0%, 82.5% 100%, 0% 100%);
             top: 0;
@@ -817,7 +915,8 @@
             height: 12px;
             width: 97px;
             position: absolute;
-            background:var(--c-gold-dimmer)
+            background:var(--c-gold-dimmer);
+            animation: slideright 500ms 2s ease-out 1 normal forwards;
         }
 
     }  
@@ -889,18 +988,17 @@
         padding: 15px 0 6px 0;
     }
 
+
     blockquote {
-        background: var(--c-cyan-dark);
-        margin: 10px 0;
+        background: var(--c-cyan-gradient);
+        margin: 10px 0 15px 0;
         border: none;
         padding: 21px 11px;
         box-shadow: none;
         border-radius: 0;
         position: relative;
-        // clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 60%, 100% calc(60% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 30%) 100%, calc(100% - 30% - 10px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 40%, 0 calc(40% - 10px), 0 10px);
-        // clip-path: polygon(20px 0, 30% 0, calc(30% + 20px) 20px, calc(100% - 40px) 20px, calc(100% - 20px) 40px, calc(100% - 20px) 50%, 100% calc(50% + 20px), 100% calc(100% - 20px), calc(100% - 20px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 20px), 40px calc(100% - 20px), 20px calc(100% - 40px), 20px 50%, 0 calc(50% - 20px), 0 20px);
-        clip-path: polygon(10px 0, 30% 0, calc(30% + 20px) 20px, calc(100% - 20px) 20px, calc(100% - 10px) 30px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 20px), 20px calc(100% - 20px), 10px calc(100% - 30px), 10px 50%, 0 calc(50% - 10px), 0 10px);
-
+        clip-path: polygon(10px 0,30% 0,calc(30% + 20px) 20px,calc(100% - 20px) 20px,calc(100% - 10px) 30px,calc(100% - 10px) 50%,100% calc(50% + 10px),100% calc(100% - 10px),calc(100% - 10px) 100%,calc(100% - 40%) 100%,calc(100% - 40% - 20px) calc(100% - 20px),20px calc(100% - 20px),10px calc(100% - 30px),10px 50%,0 calc(50% - 10px),0 10px);
+        
         em, small {
             font-family: var(--f1);
             font-size: 10px;
@@ -911,7 +1009,7 @@
             color: rgba(0,0,0,.6);
             font-weight: 800;
         }
-
+ 
         .quotebox {
             background: var(--c-dark);
             color: var(--c-cyan-dark);
@@ -920,10 +1018,15 @@
             border-radius: 0;      
             font-family: var(--f2);     
             padding: 20px;
-            // clip-path: polygon(10px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
             clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100%  100%, 10px 100%, 0 calc(100% - 10px));
+            // transition: color ease-in-out 250ms;
+            // animation: flash 400ms linear;        
+
+            &:hover, &:focus {
+                animation: flash 400ms linear;
+                color: var(--c-cyan);
+            }
         }
-        
         p {
             font-family: var(--f2);
             display: block;
@@ -957,14 +1060,28 @@
             }
         }
 
-        &:hover, &:focus {
-
-            .quotebox {
-                color: var(--c-cyan);
-            }
+        &::before, &::after {
+            content: url(.);
+            display: block;
+            position: absolute;
+            background: var(--c-cyan-gradient);
+            left: -5px;
+            right: 5px;
+            z-index: 100;
         }
+
+        &::before {
+            height: 50%;
+            top: 0;            
+            animation: sesame-up 500ms 1s ease-in 1 normal forwards;
+        }
+        &::after {
+            height: 50%;
+            bottom: 0;
+            animation: sesame-down 500ms 1s ease-in 1 normal forwards;
+        }    
+
     }
-    
 }
 
 .user-css {
@@ -1144,7 +1261,7 @@
     h2 {
         font-family: var(--f2);
         color: var(--c-gold-dim);
-        text-stroke: 2px var(--c-gold-dim);
+        // text-stroke: 2px var(--c-gold-dim);
         letter-spacing: 1px;
         // text-shadow: 2px 3px 2px var(--c-dark),-1px -1px 0 var(--c-cyan-dark);
         text-transform: none;
@@ -1155,7 +1272,7 @@
     h3 {
         font-family: var(--f4);
         color: var(--c-gold-dim);
-        text-stroke: 2px var(--c-gold-dark);
+        // text-stroke: 2px var(--c-gold-dark);
         letter-spacing: 1px;
         // text-shadow: 2px 3px 2px var(--c-dark),-1px -1px 0 var(--c-cyan-dark);
         font-size: 24px;
@@ -1165,7 +1282,7 @@
     h4 {
         font-family: var(--f3);
         color: var(--c-gold-dimmer);
-        text-stroke: 2px var(--c-gold-dimmer);
+        // text-stroke: 2px var(--c-gold-dimmer);
         letter-spacing: 1px;
         // text-shadow: 2px 3px 2px var(--c-dark),-1px -1px 0 var(--c-cyan-dark);
         font-size: 18px;
@@ -1174,7 +1291,7 @@
     h5 {
         font-family: var(--f5);
         color: var(--c-gold-dark);
-        text-stroke: 2px var(--c-gold-dark);
+        // text-stroke: 2px var(--c-gold-dark);
         letter-spacing: 1px;
         // text-shadow: 2px 3px 2px var(--c-dark),-1px -1px 0 var(--c-cyan-dark);
     }
@@ -1192,11 +1309,10 @@
 
     #cover {
         // border-bottom: 1px solid var(--c-gold-dimmer);
-        max-height: 500px;
-        // overflow-y: hidden;
-        // display: flex;
-        // align-items: center;
-        // position: absolute;
+        max-height: 400px;
+        display: flex;
+        align-items: center;
+        position: relative;
         // top: 0;
         // margin-top: 40px;
 
@@ -1425,6 +1541,7 @@
         i.fa-chevron-right{
             margin-right: 18px;
             margin-left: -10px;
+            transition: none;
 
             &::before {
                 content: url(https://www.worldanvil.com/uploads/images/f58272769172069703427b677a19a9e5.svg) !important;
@@ -1432,6 +1549,7 @@
                 display: block;
                 position: absolute;
                 top: 3px;
+                transition: none;
             }
         }
     }
@@ -1665,7 +1783,7 @@
     .custom-sidebar-wrapper{
         padding: 1px;
         width: 370px;
-        background: var(--c-cyan-dark);
+        background: var(--c-cyan-gradient);
         // clip-path: polygon(96% 0px, 100% 0.6%, 100% 97%, 96% 97.6%, 96% 99.4%, 92% 100.00%, 4% 100%, 0px 99.4%, 0% 1.2%, 4% 0.6%, 24% 0.6%, 28% 0%);
         // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 56px), 96% calc(100% - 46px), 96% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 24% 10px, 28% 0%);
         // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 55px, 100% 65px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 80px 10px, 90px 0%);
@@ -1674,7 +1792,7 @@
         // margin-top: -125px;
         margin-top: 0;
         margin-left: 15px;
-
+ 
         
         small {
             font-size: 10px;
@@ -1944,6 +2062,27 @@
                 margin-bottom: 0;
             }
 
+        }
+
+        &::before, &::after {
+            content: url(.);
+            display: block;
+            position: absolute;
+            background: var(--c-cyan-dark);
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+
+        &::before {
+            width: 50%;
+            left: 0;            
+            animation: sesame-left 500ms 1s ease-in 1 normal forwards;
+        }
+        &::after {
+            width: 50%;
+            right: 0;
+            animation: sesame-right 500ms 1s ease-in 1 normal forwards;
         }
     }
 

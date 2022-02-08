@@ -54,6 +54,7 @@
     }
     100% {
         transform: translateY(-100%);
+        display: none;
     }
 }
 @keyframes sesame-down {
@@ -62,6 +63,7 @@
     }
     100% {
         transform: translateY(100%);
+        display: none;
     }
 }
 @keyframes sesame-left {
@@ -70,6 +72,7 @@
     }
     100% {
         transform: translateX(-120%);
+        display: none;
     }
 }
 @keyframes sesame-right {
@@ -78,6 +81,7 @@
     }
     100% {
         transform: translateX(120%);
+        display: none;
     }
 }
 

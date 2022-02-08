@@ -69,7 +69,7 @@
     background-color: #00000000;
 
     .world-global-header {
-        background: var(--c-gold-dimmer);
+        background: var(--c-gold-gradient);
         height: 44px;
         z-index: 500;
         position: sticky;
@@ -82,41 +82,169 @@
     }
 
     .topnav {
-        // width: 1170px;
-        margin: 0 auto;
-        display: block;
+        margin: 0 auto 0 0;
+        padding-inline: 10px;
         // position: absolute;
         z-index: 10;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        height: 100%;
 
         ul {
             list-style: none;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1em;
             justify-content: space-between;
             padding: 0;
             margin-bottom: 0;
 
+            position: relative;
+
+            .boxer {
+                position: absolute;
+                z-index: -1;
+                transition: 400ms ease-in-out;
+                width: 100%;
+                height: 100%;
+                margin-left: -100px;
+                grid-column: 1/2;
+
+                &:before, &:after {
+                    content: url(.);
+                    position: absolute;
+                    z-index: -1;
+                    background: red;
+                    height: 20px;
+                    width: 20px;
+                    clip-path: polygon(
+                        4px 0,
+                        100% 0,
+                        100% 100%,
+                        0 100%,
+                        0 4px
+                    );
+                    transition: 400ms ease-in-out;
+                    // opacity: 0;
+                }
+                &:before {
+                    top: -2px;
+                    left: -2px;
+                }
+        
+                &:after {
+                    bottom: -2px;
+                    right: -2px;
+                    transform: rotate(180deg);
+                }
+            }
+            .topnav-link {
+                &:hover, &:focus {
+                    &.link-active-home {
+                        & ~ .boxer {
+                            grid-column: 1/2;
+                        }
+                    }
+                    &.link-active-oecumene {
+                        & ~ .boxer {
+                            grid-column: 2/3;
+                        }
+                    }
+                    &.link-active-communion {
+                        & ~ .boxer {
+                            grid-column: 3/4;
+                        }
+                    }
+                    &.link-active-principalia {
+                        & ~ .boxer {
+                            grid-column: 4/5;
+                        }
+                    }
+                    &.link-active-people {
+                        & ~ .boxer {
+                            grid-column: 5/6;
+                        }
+                    }
+                    &.link-active-compendium {
+                        & ~ .boxer {
+                            grid-column: 6/7;
+                        }
+                    }
+                    &.link-active-history {
+                        & ~ .boxer {
+                            grid-column: 7/8;
+                        }
+                    }
+
+                    & ~ .boxer {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .topnav-link {
+            // &:nth-of-type(2):hover { &:before, &:after {grid-column: 2/3;  opacity: 1;}; }
+            // &:nth-of-type(3):hover { &:before, &:after {grid-column: 3/4;  opacity: 1;}; }
+            // &:nth-of-type(4):hover { &:before, &:after {grid-column: 4/5;  opacity: 1;}; }
+            // &:nth-of-type(5):hover { &:before, &:after {grid-column: 5/6;  opacity: 1;}; }
+            // &:nth-of-type(6):hover { &:before, &:after {grid-column: 6/7;  opacity: 1;}; }
+            // &:nth-of-type(7):hover { &:before, &:after {grid-column: 7/8;  opacity: 1;}; }
         }
 
         li {
-            clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);            
-            background: var(--c-gray-light);
-            padding: 10px 4px;
+            // clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);            
+            clip-path: polygon(
+                4px 0,
+                calc(100% - 4px) 0,
+                100% 4px,
+                100% calc(100% - 4px),
+                calc(100% - 4px) 100%,
+                4px 100%,
+                0 calc(100% - 4px),
+                0 4px
+            );
+            background: var(--c-gold);
+            padding: 1px;
             transition: all 180ms ease-in-out;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
 
             a {
-                clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+                // clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+                clip-path: polygon(
+                    4px 0,
+                    calc(100% - 4px) 0,
+                    100% 4px,
+                    100% calc(100% - 4px),
+                    calc(100% - 4px) 100%,
+                    4px 100%,
+                    0 calc(100% - 4px),
+                    0 4px
+                );
                 color: var(--c-light);
                 background: var(--c-dark);
                 transition: all 180ms ease-in-out;
-                padding: 0.6em 1.5em;
+                padding: 4px 10px;
                 font-family: var(--f2);
+                min-height: 32px;
+                // width: 150px;
+                text-align: center;
+                width: 100%;
+
+                &:hover, &:focus, &:active, &:focus-within, &:focus-visible {
+                    text-decoration: none !important;
+                }
+                z-index: 150;
             }
 
             &:hover, &:focus {
                 background: var(--c-gold);
 
                 a {
-                    text-decoration: none;
                     color: var(--c-gold);
                 }
             }
@@ -129,8 +257,6 @@
                 }
             }
         }
-
-
     }
 
     .worldmenu-inner h1 a, .table-of-contents h5 a {
@@ -2136,6 +2262,7 @@
 
 
 }
+
 
 
 

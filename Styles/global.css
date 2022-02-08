@@ -99,20 +99,6 @@
   .user-css-presentation .world-navigation-palette-trigger {
     display: none;
   }
-  .user-css-presentation .topnav {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .user-css-presentation .topnav div {
-    margin: 0 15px;
-  }
-  .user-css-presentation .topnav div:nth-of-type(1) {
-    margin-left: 0;
-  }
-  .user-css-presentation .topnav div:nth-last-of-type(1) {
-    margin-right: 0;
-  }
   .user-css-presentation .search-form {
     left: unset;
     right: 15px;
@@ -295,6 +281,7 @@
   }
   100% {
     transform: translateY(-100%);
+    display: none;
   }
 }
 @keyframes sesame-up {
@@ -303,6 +290,7 @@
   }
   100% {
     transform: translateY(-100%);
+    display: none;
   }
 }
 @-webkit-keyframes sesame-down {
@@ -311,6 +299,7 @@
   }
   100% {
     transform: translateY(100%);
+    display: none;
   }
 }
 @keyframes sesame-down {
@@ -319,6 +308,7 @@
   }
   100% {
     transform: translateY(100%);
+    display: none;
   }
 }
 @-webkit-keyframes sesame-left {
@@ -327,6 +317,7 @@
   }
   100% {
     transform: translateX(-120%);
+    display: none;
   }
 }
 @keyframes sesame-left {
@@ -335,6 +326,7 @@
   }
   100% {
     transform: translateX(-120%);
+    display: none;
   }
 }
 @-webkit-keyframes sesame-right {
@@ -343,6 +335,7 @@
   }
   100% {
     transform: translateX(120%);
+    display: none;
   }
 }
 @keyframes sesame-right {
@@ -351,6 +344,7 @@
   }
   100% {
     transform: translateX(120%);
+    display: none;
   }
 }
 @-webkit-keyframes fadein {
@@ -421,7 +415,7 @@
   background-color: #00000000;
 }
 .user-css-presentation .world-global-header {
-  background: var(--c-gold-dimmer);
+  background: var(--c-gold-gradient);
   height: 44px;
   z-index: 500;
   position: -webkit-sticky;
@@ -433,38 +427,110 @@
   display: none !important;
 }
 .user-css-presentation .topnav {
-  margin: 0 auto;
-  display: block;
+  margin: 0 auto 0 0;
+  padding-inline: 10px;
   z-index: 10;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .user-css-presentation .topnav ul {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1em;
   justify-content: space-between;
   padding: 0;
   margin-bottom: 0;
+  position: relative;
+}
+.user-css-presentation .topnav ul .boxer {
+  position: absolute;
+  z-index: -1;
+  transition: 400ms ease-in-out;
+  width: 100%;
+  height: 100%;
+  margin-left: -100px;
+  grid-column: 1/2;
+}
+.user-css-presentation .topnav ul .boxer:before, .user-css-presentation .topnav ul .boxer:after {
+  content: url(.);
+  position: absolute;
+  z-index: -1;
+  background: red;
+  height: 20px;
+  width: 20px;
+  -webkit-clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+          clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
+  transition: 400ms ease-in-out;
+}
+.user-css-presentation .topnav ul .boxer:before {
+  top: -2px;
+  left: -2px;
+}
+.user-css-presentation .topnav ul .boxer:after {
+  bottom: -2px;
+  right: -2px;
+  transform: rotate(180deg);
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-home ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-home ~ .boxer {
+  grid-column: 1/2;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-oecumene ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-oecumene ~ .boxer {
+  grid-column: 2/3;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-communion ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-communion ~ .boxer {
+  grid-column: 3/4;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-principalia ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-principalia ~ .boxer {
+  grid-column: 4/5;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-people ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-people ~ .boxer {
+  grid-column: 5/6;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-compendium ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-compendium ~ .boxer {
+  grid-column: 6/7;
+}
+.user-css-presentation .topnav ul .topnav-link:hover.link-active-history ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus.link-active-history ~ .boxer {
+  grid-column: 7/8;
+}
+.user-css-presentation .topnav ul .topnav-link:hover ~ .boxer, .user-css-presentation .topnav ul .topnav-link:focus ~ .boxer {
+  margin-left: 0;
 }
 .user-css-presentation .topnav li {
-  -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-          clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-  background: var(--c-gray-light);
-  padding: 10px 4px;
+  -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+          clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+  background: var(--c-gold);
+  padding: 1px;
   transition: all 180ms ease-in-out;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 .user-css-presentation .topnav li a {
-  -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-          clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+  -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+          clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
   color: var(--c-light);
   background: var(--c-dark);
   transition: all 180ms ease-in-out;
-  padding: 0.6em 1.5em;
+  padding: 4px 10px;
   font-family: var(--f2);
+  min-height: 32px;
+  text-align: center;
+  width: 100%;
+  z-index: 150;
+}
+.user-css-presentation .topnav li a:hover, .user-css-presentation .topnav li a:focus, .user-css-presentation .topnav li a:active, .user-css-presentation .topnav li a:focus-within, .user-css-presentation .topnav li a:focus-visible {
+  text-decoration: none !important;
 }
 .user-css-presentation .topnav li:hover, .user-css-presentation .topnav li:focus {
   background: var(--c-gold);
 }
 .user-css-presentation .topnav li:hover a, .user-css-presentation .topnav li:focus a {
-  text-decoration: none;
   color: var(--c-gold);
 }
 .user-css-presentation .topnav li:active {

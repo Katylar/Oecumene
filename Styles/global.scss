@@ -1,6 +1,11 @@
 @import "_fonts.scss";
-@import "_responsive.scss";
+// @import "_responsive.scss";
 @import "_animations.scss";
+
+
+html {
+    scroll-behavior: smooth;
+}
 
 .user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
     --f1: Orbitron, Verdana;
@@ -26,6 +31,8 @@
     --c-lightest: rgb(240, 240, 240);
     --c-dark: rgb(2, 2, 7);
     --c-gray-light: rgb(113, 124, 142);
+
+    scroll-behavior: smooth;
 } 
 
 .user-css-viewer {
@@ -75,6 +82,8 @@
         position: sticky;
         top: 0;
         box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
+        grid-template-columns: 5fr 2fr;
+        display: none;
 
         .tooltip, .tooltipster-base {
             display: none!important;
@@ -204,12 +213,13 @@
                 &:before {
                     top: -1px;
                     right: -1px;
+                    transform: scaleX(-1);
                 }
         
                 &:after {
                     bottom: -1px;
                     left: -1px;
-                    transform: rotate(180deg);
+                    transform: scaleY(-1);
                 }
             }
         }
@@ -282,6 +292,8 @@
                 // width: 150px;
                 text-align: center;
                 width: 100%;
+                white-space: nowrap;
+                font-size: clamp(12px, 1em, 1.2em);
 
                 &:hover, &:focus, &:active, &:focus-within, &:focus-visible {
                     text-decoration: none !important;
@@ -312,29 +324,102 @@
         }
     }
 
+    .right-topnav {
+        height: 100%;
+        background: var(--c-gold-gradient);
+        position: relative;
+        overflow: hidden;
+
+        &::before, &::after {
+            content: url(.);
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100px;
+            position: absolute;
+            background: var(--c-gold-dark);
+            // box-shadow: inset 0 0 8px 2px rgba(2, 2, 7, 0.8);
+            transform: rotate(-54deg);
+            border: 1px solid rgba(2, 2, 7, 0.8);
+            outline: 1px solid rgba(2, 2, 7, 0.8);
+            outline-offset: -9px;
+        }
+
+        &::after {
+            left: 40px;
+        }
+    }
+
     .worldmenu-inner h1 a, .table-of-contents h5 a {
         pointer-events: none;
     }
 
     .search-form {
+        position: sticky;
+        top: 0px;
+        margin-top: -45px !important;
+        padding: 5px 0;
+        margin-right: -10px;
+        display: none;
+        width: fit-content;
+        margin-left: auto;
+        margin-bottom: 0;
+
+        .form-group {
+            height: 34px;
+            clip-path: polygon(
+                4px 0,
+                calc(100% - 4px) 0,
+                100% 4px,
+                100% calc(100% - 4px),
+                calc(100% - 4px) 100%,
+                4px 100%,
+                0 calc(100% - 4px),
+                0 4px
+            );
+            padding: 1px;
+            background: var(--c-gold-dimmer);
+            border: none;
+            outline: none;
+            box-shadow: none;
+            transition: 250ms ease;
+
+            .type-ahead, .typeahead-input {
+                height: 100% !important
+            }
+
+            &:hover, &:focus, &:active {
+                background: var(--c-gold-dark);
+
+                &:before, &:after {
+                    opacity: 1;
+                }
+            }
+        }
 
         .typeahead-input {
             font-family: var(--f5);
-            color: var(--c-lightest);
+            color: var(--c-gold);
             background-color: var(--c-dark);
             border-radius: 0px;
-            box-shadow: 3px 3px 5px #44444420;
-            -moz-box-shadow: 3px 3px 5px #44444420;
-            -webkit-box-shadow: 3px 3px 5px #44444420;
-            border: 1px solid rgba(113, 124, 142, 0.5);
-            outline: 1px solid rgba(113, 124, 142, 0.5);
             transition: all 250ms cubic-bezier(.25,.8,.25,1);
+            border: none;
+            outline: none;
+            box-shadow: none;
+            transition: 250ms ease;
+            clip-path: polygon(
+                4px 0,
+                calc(100% - 4px) 0,
+                100% 4px,
+                100% calc(100% - 4px),
+                calc(100% - 4px) 100%,
+                4px 100%,
+                0 calc(100% - 4px),
+                0 4px
+            );
 
-            &:hover, &:focus, &:active {
-                outline: 1px solid var(--c-cyan) !important;
-                border: var(--c-cyan);
-                box-shadow: 0 10px 20px rgba(6, 123, 194, 0.19), 0 6px 6px rgba(6, 123, 194, 0.22);
-            }
+
+
         }
     }
 
@@ -342,7 +427,7 @@
         clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
         filter: drop-shadow(1px 1px 0 var(--c-gold)) drop-shadow(-1px -1px 0 var(--c-gold)) drop-shadow(1px -1px 0 var(--c-gold)) drop-shadow(-1px 1px 0 var(--c-gold));
         padding: 5px;
-        margin-right: 1vw;
+        margin-right: 11px;
         transition: all 500ms ease;
         bottom: 8%;
 
@@ -350,7 +435,7 @@
             background: rgba(2, 2, 7, 0.9);
             clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
             display: block;
-            margin: 0 10px !important;
+            margin: 0 5px !important;
             padding: 10px 15px;
             text-align: center;
     
@@ -391,8 +476,8 @@
         background: none;
         clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
         filter: drop-shadow(1px 1px 0 var(--c-gold)) drop-shadow(-1px -1px 0 var(--c-gold)) drop-shadow(1px -1px 0 var(--c-gold)) drop-shadow(-1px 1px 0 var(--c-gold));
-        padding: 2.5px;
-        margin-left: 1vw;
+        padding: 2.5px 5px;
+        margin-left: 10px;
         transition: all 500ms ease;
         margin-top: -4em;
         z-index: 50;
@@ -401,7 +486,7 @@
             background: rgba(2, 2, 7, 0.9);
             clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
             display: block;
-            margin: 0 !important;
+            margin: 0 5px !important;
             padding: 12px 10px;
             text-align: center;
             transition: all 500ms ease;
@@ -437,10 +522,10 @@
         background: rgba(2, 2, 7, 0.95);
         box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
         border: 1px solid var(--c-gold-dimmer);  
-        width: 35%;
-        min-width: 350px;
-        max-width: 500px;
-        left: 70px;
+        width: clamp(300px, 35%, calc(99vw - 60px));
+        // min-width: 350px;
+        // max-width: calc(99vw - 60px);
+        left: 80px;
         scrollbar-color: var(--c-gold-dimmer) rgba(2, 2, 7, 0.9);
         // box-shadow: 5px 13px 20px rgba(0,0,0,.6);
         font-family: var(--f2) !important;
@@ -755,6 +840,7 @@
         font-family: var(--f2) !important;
         z-index: 100;
         top: 0;
+        display: none;
 
         .article-table-of-contents-inner {
             height: 100%;
@@ -1167,6 +1253,16 @@
         padding: 15px 0 6px 0;
     }
 
+    h2, h3, h4, h5 {
+        &::before { 
+            display: block; 
+            content: url(.);
+            margin-top: -48px; 
+            height: 48px; 
+            visibility: hidden; 
+            pointer-events: none;
+        }
+    }
 
     blockquote {
         background: var(--c-cyan-gradient);
@@ -1187,6 +1283,13 @@
             position: absolute;
             color: rgba(0,0,0,.6);
             font-weight: 800;
+            display: none;
+        }
+
+        small {
+            display: flex;
+            gap: 5px;
+            white-space: nowrap;
         }
 
         .quotebox {
@@ -1198,11 +1301,10 @@
             font-family: var(--f2);     
             padding: 20px;
             clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100%  100%, 10px 100%, 0 calc(100% - 10px));
-            // transition: color ease-in-out 250ms;
-            // animation: flash 400ms linear;        
+            transition: color ease-in-out 250ms;
+            animation:  flash 400ms 1500ms linear 1 normal;
 
             &:hover, &:focus {
-                animation: flash 400ms linear;
                 color: var(--c-cyan);
             }
         }
@@ -1220,6 +1322,18 @@
             bottom: 3px;
             right: 20px;
             text-align: right;
+
+            .quotee {
+                display: none;
+            }
+
+            .quote-colon {
+                display: none;
+            }
+
+            .quoted-work {
+                display: none;
+            }
 
             a {
                 text-decoration: none;
@@ -1383,7 +1497,7 @@
         }
     }
 
-    &.page-article, &.page-article-main {
+    &.page-article {
         width: 100%;
         margin-top: 0 !important;
         // margin-top: -73px !important;
@@ -1391,19 +1505,20 @@
         border-bottom: 1px solid var(--c-gold-dimmer);
         background: rgba(2, 2, 7, 0.9);
         box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
-        overflow-y: hidden;
+        // overflow-y: hidden;
         margin-bottom: 0;
 
         .article-title, .tab-content, .article-content-bottom {
-            padding-left: 25px;
-            border-left: 1px solid var(--c-gold-dimmer);
+            padding-left: 0;
+            border-left: none;
             width: auto;
         }
         .article-title {
-            margin-left: 289px;
+            margin-left: 0;
+            padding-left: 15px;
         }
         .tab-content, .article-content-bottom {
-            margin-left: 274px;
+            margin-left: 0;
         }
 
         .tab-content {
@@ -1960,19 +2075,99 @@
     }
 
     .custom-sidebar-wrapper{
-        padding: 1px;
-        width: 370px;
-        background: var(--c-cyan-gradient);
-        // clip-path: polygon(96% 0px, 100% 0.6%, 100% 97%, 96% 97.6%, 96% 99.4%, 92% 100.00%, 4% 100%, 0px 99.4%, 0% 1.2%, 4% 0.6%, 24% 0.6%, 28% 0%);
-        // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 56px), 96% calc(100% - 46px), 96% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 24% 10px, 28% 0%);
-        // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 55px, 100% 65px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 80px 10px, 90px 0%);
-        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);        position: relative;
-        float: right;
-        // margin-top: -125px;
-        margin-top: 0;
-        margin-left: 15px;
- 
+        background: var(--c-cyan-dark);
+        position: fixed;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        filter: drop-shadow(1px 1px 0 var(--c-cyan-dark)) drop-shadow(-1px -1px 0 var(--c-cyan-dark)) drop-shadow(1px -1px 0 var(--c-cyan-dark)) drop-shadow(-1px 1px 0 var(--c-cyan-dark));
+        padding: 2.5px 0;
+        transition: all 500ms ease;
+        top: 220px;
+        cursor: pointer;
+        overflow: hidden;
+        height: 62px;
+        width: 60px;
+        z-index: 1200;
+        // margin-left: 3px;
         
+        small {
+            display: none;
+        }
+
+        .fa-database {
+            background: rgba(2, 2, 7, 0.7);
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            display: block;
+            margin: 0 3px !important;
+            padding: 12px 0px;
+            text-align: center;
+            transition: 200ms all ease;
+    
+            i {
+                transition: all 400ms ease;
+                display: inline-block;
+            }
+    
+            &:hover, &:focus {
+                background: var(--c-cyan);
+                color: var(--c-dark);
+                border: var(--c-cyan);
+            }
+    
+            &:active {
+                filter: brightness(120%);
+            }
+        }
+
+        .custom-sidebar-inner {
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 400ms ease-out;
+        }
+
+        &:hover, &:focus, &:focus-within, &:active {
+            overflow: auto;
+            clip-path: none;
+            height: auto;
+            width: auto;
+            background: none;
+            bottom: 0;
+
+            .fa-database {
+                display: none;
+            }
+            .custom-sidebar-inner {
+                opacity: 1;
+                transform: scaleX(1);
+                border: 2px solid var(--c-cyan);
+                // margin-left: 65px;
+                // margin-top: -65px;
+                width: max-content;
+                
+                .custom-sidebar {
+                    overflow-y: scroll;
+
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 0;
+                        background: var(--c-cyan-dark);
+                    }
+            
+                    &::-webkit-scrollbar-track {
+                        border-radius: 0;
+                        background: rgba(2, 2, 7, 0.9);
+                    }
+            
+                    &:hover, &:active, &:focus {
+                        scrollbar-color: var(--c-cyan) rgba(2, 2, 7, 0.9);
+            
+                        &::-webkit-scrollbar-thumb {
+                            background: var(--c-cyan);
+                        }
+                    }
+                }
+            }
+        }
+
         small {
             font-size: 10px;
             position: absolute;
@@ -1981,11 +2176,10 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             transform: rotate(90deg);
-            display: block;
+            // display: block;
             color: rgba(0,0,0,.6);
             font-weight: 800;
         }
-
 
         .custom-sidebar-inner {
             border: none;
@@ -1993,20 +2187,13 @@
             padding: 5px 0;
             margin: 0;
             background: var(--c-dark);
-            // clip-path: polygon(96% 0px, 100% 0.6%, 100% 95%, 96% 95.6%, 96.00% 99.4%, 92% 100%, 4% 100%, 0px 99.4%, 0% 1.2%, 4% 0.6%, 32% 0.6%, 36% 0%);
-            // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
-            // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 155px, 100% 165px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 105px 10px, 115px 0%);
-            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
         }
 
         .custom-sidebar {
             font-family: var(--f1);
             font-size: 14px;
             color: var(--c-light);
-            padding: 20px 30px 20px 10px;
-            // clip-path: polygon(96% 0px, 100% 10px, 100% calc(100% - 99.45px), 96% calc(100% - 89.45px), 96.00% calc(100% - 10px), 92% 100%, 4% 100%, 0px calc(100% - 10px), 0% 20px, 4% 10px, 32% 10px, 36% 0%);
-            // clip-path: polygon(calc(100% - 20px) 0px, calc(100% - 10px) 10px, calc(100% - 10px) 155px, 100% 165px, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 20px, 10px 10px, 105px 10px, 115px 0%);
-            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+            padding: 10px;
 
             .vermiform {
                 font-size: 11px;
@@ -2245,7 +2432,7 @@
 
         &::before, &::after {
             content: url(.);
-            display: block;
+            display: none;
             position: absolute;
             background: var(--c-cyan-dark);
             top: 0;
@@ -2322,3 +2509,239 @@
 
 
 
+/** ------------------------ **/
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 360px) {
+}
+
+
+@media only screen and (max-width: 650px) {
+    
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (min-width: 530px) {
+
+    .user-css {
+        .user-css-vignette {
+            blockquote {
+                em, small {
+                    display: flex;
+    
+                    .quotee {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .user-css-presentation {
+    }
+    .user-css {
+
+        &.page-article {
+            .article-content .tab-content {
+                .user-css-vignette {
+                    .custom-sidebar-wrapper {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .user-css-vignette {
+            blockquote {
+                em, small {
+                    display: flex;
+    
+                    .quotee {
+                        display: inline-block;
+                    }
+                }
+            }
+    
+        }
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .user-css-presentation {
+    }
+
+    .user-css-vignette {
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .user-css-presentation {
+
+        .world-navigation-palette-trigger {
+            display: none;
+        }
+
+        .world-global-header {
+            display: grid;
+        }
+
+        .article-table-of-contents {
+            display: block;
+        }
+        
+    }
+
+    .user-css {
+
+        .search-form {
+            display: flex;
+        }
+
+        &.page-article {
+            .article-content {
+                .article-title {
+                    margin-left: 289px;
+        
+                    .article-table-of-contents {
+                        display: block;
+                    }
+                }
+            }
+    
+            .article-title, .article-content .tab-content, .article-content-bottom {
+                padding-left: 25px;
+                border-left: 1px solid var(--c-gold-dimmer);
+                width: auto;
+            }
+            
+            .article-content .tab-content, .article-content-bottom {
+                margin-left: 274px;
+            }
+
+            .user-css-vignette {
+                blockquote {
+                    em, small {
+                        display: flex;
+        
+                        .quotee {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .custom-sidebar-wrapper{
+                    background: var(--c-cyan-gradient);
+                    position: relative;
+                    clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+                    filter: none;
+                    padding: 1px;
+                    top: unset;
+                    cursor: unset;
+                    overflow-x: hidden;
+                    height: auto;
+                    width: 370px;
+                    margin-top: 0;
+                    margin-left: 15px;
+                    float: right;
+                
+                
+                    small {
+                        display: block;
+                    }
+                
+                    .fa-database {
+                        display: none;
+                    }
+                
+                    .custom-sidebar-inner {
+                        opacity: 1;
+                        transform: none;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+                        animation:  flash 400ms 1500ms linear 1 normal;
+                    }
+                
+                    .custom-sidebar {
+                        padding: 20px 30px 20px 10px;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+                
+                    }
+                
+                    &::before, &::after {
+                        display: block;
+                    }
+                
+                    &:hover, &:focus, &:focus-within, &:active {
+                        overflow-x: hidden;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+                        width: 370px;   
+                        background: var(--c-cyan-gradient);
+                        bottom: unset;
+                        
+                        .custom-sidebar-inner {
+                            transform: none;
+                            border: none;
+                            width: auto;
+                
+                            .custom-sidebar {
+                                overflow-y: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+    
+}
+    
+
+@media only screen and (min-width: 1455px) {
+    .user-css-presentation {
+
+    }
+
+    .user-css-vignette {
+        blockquote {
+            small {
+                font-size: 8px;
+                .quoted-work, .quote-colon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .user-css-presentation {
+
+    }
+
+    .user-css-vignette {
+        blockquote {
+            small {
+                font-size: 10px;
+            }
+        }
+    }
+}

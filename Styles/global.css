@@ -95,90 +95,6 @@
   font-weight: 400;
   src: url(https://rawcdn.githack.com/Katylar/Oecumene/75fd976a8b1deb690873be87ccbd7a9e0941ce1f/Icons.woff);
 }
-@media only screen and (min-width: 1200px) {
-  .user-css-presentation .world-navigation-palette-trigger {
-    display: none;
-  }
-  .user-css-presentation .search-form {
-    left: unset;
-    right: 15px;
-    top: -56px;
-    margin: 0;
-  }
-  .user-css-presentation .search-form .typeahead-input {
-    border: 1px solid var(--c-cyan-dark);
-    outline: none;
-    box-shadow: none !important;
-    transition: 250ms ease;
-  }
-  .user-css-presentation .search-form:hover, .user-css-presentation .search-form:focus, .user-css-presentation .search-form:active {
-    border-color: var(--c-cyan);
-    box-shadow: 0 10px 20px rgba(6, 123, 194, 0.19), 0 6px 6px rgba(6, 123, 194, 0.22);
-  }
-  .user-css-presentation .page-article-main {
-    box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), 10px -10px 20px 4px rgba(19, 25, 37, 0.8) !important;
-  }
-
-  .user-css .tab-content .row .article-content-left.col-md-8 {
-    width: calc(100% - 375px) !important;
-  }
-  .user-css .tab-content .row .article-content-right {
-    display: block !important;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .user-css-presentation .topnav, .user-css-presentation .article-table-of-contents {
-    display: none !important;
-  }
-
-  .user-css .article-content .tab-content .article-content-left .user-css-vignette .custom-sidebar-wrapper {
-    margin-top: -190px;
-  }
-
-  .user-css-vignette .main-article-link {
-    margin-left: 0 !important;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .user-css .article-panel .heading, .tag-top.user-css .article-panel .heading {
-    font-size: 1em !important;
-  }
-  .user-css .world-global-article-introduction::after, .user-css .world-global-article-introduction::before, .user-css .world-global-article-introduction .backlink, .tag-top.user-css .world-global-article-introduction::after, .tag-top.user-css .world-global-article-introduction::before, .tag-top.user-css .world-global-article-introduction .backlink {
-    top: -21px !important;
-  }
-  .user-css .article-content .tab-content .article-content-left .user-css-vignette .overview-text, .tag-top.user-css .article-content .tab-content .article-content-left .user-css-vignette .overview-text {
-    width: 100%;
-  }
-  .user-css .article-content .tab-content .article-content-left .user-css-vignette .custom-sidebar-wrapper, .tag-top.user-css .article-content .tab-content .article-content-left .user-css-vignette .custom-sidebar-wrapper {
-    float: none;
-    margin-top: 20px !important;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .user-css .user-css-vignette .flexor {
-    grid-auto-columns: initial;
-    grid-auto-flow: row;
-  }
-  .user-css .user-css-vignette .flexor .equal-flex {
-    grid-auto-rows: minmax(0, 1fr);
-  }
-}
-@media only screen and (max-width: 400px) {
-  .user-css .custom-sidebar-wrapper {
-    width: 315px !important;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .user-css .custom-sidebar-wrapper {
-    width: 100% !important;
-  }
-  .user-css .custom-sidebar-wrapper .custom-sidebar small {
-    right: 0 !important;
-  }
-}
 @-webkit-keyframes flash {
   0% {
     background-color: white;
@@ -389,6 +305,10 @@
     transform: scaleY(1) scaleX(1);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .user-css, .user-css-extended, .user-css-presentation, .user-css-map-sidebar, .page, .map-context-user, .user-css-map, .tooltipster-content {
   --f1: Orbitron, Verdana;
   --f2: Electrolize, Verdana;
@@ -410,6 +330,7 @@
   --c-lightest: rgb(240, 240, 240);
   --c-dark: rgb(2, 2, 7);
   --c-gray-light: rgb(113, 124, 142);
+  scroll-behavior: smooth;
 }
 
 .user-css-viewer .do-not-print:last-of-type {
@@ -448,6 +369,8 @@
   position: sticky;
   top: 0;
   box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+  grid-template-columns: 5fr 2fr;
+  display: none;
 }
 .user-css-presentation .world-global-header .tooltip, .user-css-presentation .world-global-header .tooltipster-base {
   display: none !important;
@@ -546,11 +469,12 @@
 .user-css-presentation .topnav ul .topnav-link:before {
   top: -1px;
   right: -1px;
+  transform: scaleX(-1);
 }
 .user-css-presentation .topnav ul .topnav-link:after {
   bottom: -1px;
   left: -1px;
-  transform: rotate(180deg);
+  transform: scaleY(-1);
 }
 .user-css-presentation .topnav li {
   -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
@@ -595,6 +519,8 @@
   min-height: 32px;
   text-align: center;
   width: 100%;
+  white-space: nowrap;
+  font-size: clamp(12px, 1em, 1.2em);
   z-index: 150;
 }
 .user-css-presentation .topnav li a:hover, .user-css-presentation .topnav li a:focus, .user-css-presentation .topnav li a:active, .user-css-presentation .topnav li a:focus-within, .user-css-presentation .topnav li a:focus-visible {
@@ -616,32 +542,84 @@
 .user-css-presentation .topnav li:active a {
   filter: brightness(120%);
 }
+.user-css-presentation .right-topnav {
+  height: 100%;
+  background: var(--c-gold-gradient);
+  position: relative;
+  overflow: hidden;
+}
+.user-css-presentation .right-topnav::before, .user-css-presentation .right-topnav::after {
+  content: url(.);
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  position: absolute;
+  background: var(--c-gold-dark);
+  transform: rotate(-54deg);
+  border: 1px solid rgba(2, 2, 7, 0.8);
+  outline: 1px solid rgba(2, 2, 7, 0.8);
+  outline-offset: -9px;
+}
+.user-css-presentation .right-topnav::after {
+  left: 40px;
+}
 .user-css-presentation .worldmenu-inner h1 a, .user-css-presentation .table-of-contents h5 a {
   pointer-events: none;
 }
+.user-css-presentation .search-form {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  margin-top: -45px !important;
+  padding: 5px 0;
+  margin-right: -10px;
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 0;
+}
+.user-css-presentation .search-form .form-group {
+  height: 34px;
+  -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+          clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+  padding: 1px;
+  background: var(--c-gold-dimmer);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: 250ms ease;
+}
+.user-css-presentation .search-form .form-group .type-ahead, .user-css-presentation .search-form .form-group .typeahead-input {
+  height: 100% !important;
+}
+.user-css-presentation .search-form .form-group:hover, .user-css-presentation .search-form .form-group:focus, .user-css-presentation .search-form .form-group:active {
+  background: var(--c-gold-dark);
+}
+.user-css-presentation .search-form .form-group:hover:before, .user-css-presentation .search-form .form-group:hover:after, .user-css-presentation .search-form .form-group:focus:before, .user-css-presentation .search-form .form-group:focus:after, .user-css-presentation .search-form .form-group:active:before, .user-css-presentation .search-form .form-group:active:after {
+  opacity: 1;
+}
 .user-css-presentation .search-form .typeahead-input {
   font-family: var(--f5);
-  color: var(--c-lightest);
+  color: var(--c-gold);
   background-color: var(--c-dark);
   border-radius: 0px;
-  box-shadow: 3px 3px 5px #44444420;
-  -moz-box-shadow: 3px 3px 5px #44444420;
-  -webkit-box-shadow: 3px 3px 5px #44444420;
-  border: 1px solid rgba(113, 124, 142, 0.5);
-  outline: 1px solid rgba(113, 124, 142, 0.5);
   transition: all 250ms cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.user-css-presentation .search-form .typeahead-input:hover, .user-css-presentation .search-form .typeahead-input:focus, .user-css-presentation .search-form .typeahead-input:active {
-  outline: 1px solid var(--c-cyan) !important;
-  border: var(--c-cyan);
-  box-shadow: 0 10px 20px rgba(6, 123, 194, 0.19), 0 6px 6px rgba(6, 123, 194, 0.22);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: 250ms ease;
+  -webkit-clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
+          clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px);
 }
 .user-css-presentation #backtotop {
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   filter: drop-shadow(1px 1px 0 var(--c-gold)) drop-shadow(-1px -1px 0 var(--c-gold)) drop-shadow(1px -1px 0 var(--c-gold)) drop-shadow(-1px 1px 0 var(--c-gold));
   padding: 5px;
-  margin-right: 1vw;
+  margin-right: 11px;
   transition: all 500ms ease;
   bottom: 8%;
 }
@@ -650,7 +628,7 @@
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   display: block;
-  margin: 0 10px !important;
+  margin: 0 5px !important;
   padding: 10px 15px;
   text-align: center;
 }
@@ -680,8 +658,8 @@
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   filter: drop-shadow(1px 1px 0 var(--c-gold)) drop-shadow(-1px -1px 0 var(--c-gold)) drop-shadow(1px -1px 0 var(--c-gold)) drop-shadow(-1px 1px 0 var(--c-gold));
-  padding: 2.5px;
-  margin-left: 1vw;
+  padding: 2.5px 5px;
+  margin-left: 10px;
   transition: all 500ms ease;
   margin-top: -4em;
   z-index: 50;
@@ -691,7 +669,7 @@
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   display: block;
-  margin: 0 !important;
+  margin: 0 5px !important;
   padding: 12px 10px;
   text-align: center;
   transition: all 500ms ease;
@@ -715,10 +693,8 @@
   background: rgba(2, 2, 7, 0.95);
   box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
   border: 1px solid var(--c-gold-dimmer);
-  width: 35%;
-  min-width: 350px;
-  max-width: 500px;
-  left: 70px;
+  width: clamp(300px, 35%, calc(99vw - 60px));
+  left: 80px;
   scrollbar-color: var(--c-gold-dimmer) rgba(2, 2, 7, 0.9);
   font-family: var(--f2) !important;
   -webkit-animation: slideright 450ms ease-in-out;
@@ -977,6 +953,7 @@
   font-family: var(--f2) !important;
   z-index: 100;
   top: 0;
+  display: none;
 }
 .user-css-presentation .article-table-of-contents .article-table-of-contents-inner {
   height: 100%;
@@ -1585,6 +1562,14 @@
 .user-css-vignette h4 {
   padding: 15px 0 6px 0;
 }
+.user-css-vignette h2::before, .user-css-vignette h3::before, .user-css-vignette h4::before, .user-css-vignette h5::before {
+  display: block;
+  content: url(.);
+  margin-top: -48px;
+  height: 48px;
+  visibility: hidden;
+  pointer-events: none;
+}
 .user-css-vignette blockquote {
   background: var(--c-cyan-gradient);
   margin: 10px 0 15px 0;
@@ -1605,6 +1590,12 @@
   position: absolute;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 800;
+  display: none;
+}
+.user-css-vignette blockquote small {
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
 }
 .user-css-vignette blockquote .quotebox {
   background: var(--c-dark);
@@ -1616,10 +1607,11 @@
   padding: 20px;
   -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
           clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: color ease-in-out 250ms;
+  -webkit-animation: flash 400ms 1500ms linear 1 normal;
+          animation: flash 400ms 1500ms linear 1 normal;
 }
 .user-css-vignette blockquote .quotebox:hover, .user-css-vignette blockquote .quotebox:focus {
-  -webkit-animation: flash 400ms linear;
-          animation: flash 400ms linear;
   color: var(--c-cyan);
 }
 .user-css-vignette blockquote p {
@@ -1634,6 +1626,15 @@
   bottom: 3px;
   right: 20px;
   text-align: right;
+}
+.user-css-vignette blockquote small .quotee {
+  display: none;
+}
+.user-css-vignette blockquote small .quote-colon {
+  display: none;
+}
+.user-css-vignette blockquote small .quoted-work {
+  display: none;
 }
 .user-css-vignette blockquote small a {
   text-decoration: none;
@@ -1768,31 +1769,31 @@
 .user-css.page-image .cover {
   border-bottom: var(--c-cyan);
 }
-.user-css.page-article, .user-css.page-article-main {
+.user-css.page-article {
   width: 100%;
   margin-top: 0 !important;
   border-top: 1px solid var(--c-gold-dimmer);
   border-bottom: 1px solid var(--c-gold-dimmer);
   background: rgba(2, 2, 7, 0.9);
   box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
-  overflow-y: hidden;
   margin-bottom: 0;
 }
-.user-css.page-article .article-title, .user-css.page-article .tab-content, .user-css.page-article .article-content-bottom, .user-css.page-article-main .article-title, .user-css.page-article-main .tab-content, .user-css.page-article-main .article-content-bottom {
-  padding-left: 25px;
-  border-left: 1px solid var(--c-gold-dimmer);
+.user-css.page-article .article-title, .user-css.page-article .tab-content, .user-css.page-article .article-content-bottom {
+  padding-left: 0;
+  border-left: none;
   width: auto;
 }
-.user-css.page-article .article-title, .user-css.page-article-main .article-title {
-  margin-left: 289px;
+.user-css.page-article .article-title {
+  margin-left: 0;
+  padding-left: 15px;
 }
-.user-css.page-article .tab-content, .user-css.page-article .article-content-bottom, .user-css.page-article-main .tab-content, .user-css.page-article-main .article-content-bottom {
-  margin-left: 274px;
+.user-css.page-article .tab-content, .user-css.page-article .article-content-bottom {
+  margin-left: 0;
 }
-.user-css.page-article .tab-content, .user-css.page-article-main .tab-content {
+.user-css.page-article .tab-content {
   padding-bottom: 25px;
 }
-.user-css.page-article .article-content, .user-css.page-article-main .article-content {
+.user-css.page-article .article-content {
   border-bottom: 1px solid var(--c-gold-dimmer);
 }
 .user-css .article-content, .user-css p {
@@ -2197,15 +2198,87 @@
   width: calc(100% - 375px);
 }
 .user-css .custom-sidebar-wrapper {
-  padding: 1px;
-  width: 370px;
-  background: var(--c-cyan-gradient);
-  -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
-          clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
-  position: relative;
-  float: right;
-  margin-top: 0;
-  margin-left: 15px;
+  background: var(--c-cyan-dark);
+  position: fixed;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  filter: drop-shadow(1px 1px 0 var(--c-cyan-dark)) drop-shadow(-1px -1px 0 var(--c-cyan-dark)) drop-shadow(1px -1px 0 var(--c-cyan-dark)) drop-shadow(-1px 1px 0 var(--c-cyan-dark));
+  padding: 2.5px 0;
+  transition: all 500ms ease;
+  top: 220px;
+  cursor: pointer;
+  overflow: hidden;
+  height: 62px;
+  width: 60px;
+  z-index: 1200;
+}
+.user-css .custom-sidebar-wrapper small {
+  display: none;
+}
+.user-css .custom-sidebar-wrapper .fa-database {
+  background: rgba(2, 2, 7, 0.7);
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  display: block;
+  margin: 0 3px !important;
+  padding: 12px 0px;
+  text-align: center;
+  transition: 200ms all ease;
+}
+.user-css .custom-sidebar-wrapper .fa-database i {
+  transition: all 400ms ease;
+  display: inline-block;
+}
+.user-css .custom-sidebar-wrapper .fa-database:hover, .user-css .custom-sidebar-wrapper .fa-database:focus {
+  background: var(--c-cyan);
+  color: var(--c-dark);
+  border: var(--c-cyan);
+}
+.user-css .custom-sidebar-wrapper .fa-database:active {
+  filter: brightness(120%);
+}
+.user-css .custom-sidebar-wrapper .custom-sidebar-inner {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 400ms ease-out;
+}
+.user-css .custom-sidebar-wrapper:hover, .user-css .custom-sidebar-wrapper:focus, .user-css .custom-sidebar-wrapper:focus-within, .user-css .custom-sidebar-wrapper:active {
+  overflow: auto;
+  -webkit-clip-path: none;
+          clip-path: none;
+  height: auto;
+  width: auto;
+  background: none;
+  bottom: 0;
+}
+.user-css .custom-sidebar-wrapper:hover .fa-database, .user-css .custom-sidebar-wrapper:focus .fa-database, .user-css .custom-sidebar-wrapper:focus-within .fa-database, .user-css .custom-sidebar-wrapper:active .fa-database {
+  display: none;
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner {
+  opacity: 1;
+  transform: scaleX(1);
+  border: 2px solid var(--c-cyan);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
+  overflow-y: scroll;
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: var(--c-cyan-dark);
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(2, 2, 7, 0.9);
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:hover, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:active, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:focus, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:hover, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:active, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:focus, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:hover, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:active, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:focus, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:hover, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:active, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:focus {
+  scrollbar-color: var(--c-cyan) rgba(2, 2, 7, 0.9);
+}
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar:focus::-webkit-scrollbar-thumb {
+  background: var(--c-cyan);
 }
 .user-css .custom-sidebar-wrapper small {
   font-size: 10px;
@@ -2215,7 +2288,6 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   transform: rotate(90deg);
-  display: block;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 800;
 }
@@ -2225,16 +2297,12 @@
   padding: 5px 0;
   margin: 0;
   background: var(--c-dark);
-  -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-          clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar {
   font-family: var(--f1);
   font-size: 14px;
   color: var(--c-light);
-  padding: 20px 30px 20px 10px;
-  -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-          clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+  padding: 10px;
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar .vermiform {
   font-size: 11px;
@@ -2422,7 +2490,7 @@
 }
 .user-css .custom-sidebar-wrapper::before, .user-css .custom-sidebar-wrapper::after {
   content: url(.);
-  display: block;
+  display: none;
   position: absolute;
   background: var(--c-cyan-dark);
   top: 0;
@@ -2467,4 +2535,127 @@
   transform: translateY(-100%);
   margin: 0 auto;
   display: block;
+}
+
+/** ------------------------ **/
+@media only screen and (min-width: 530px) {
+  .user-css .user-css-vignette blockquote em, .user-css .user-css-vignette blockquote small {
+    display: flex;
+  }
+  .user-css .user-css-vignette blockquote em .quotee, .user-css .user-css-vignette blockquote small .quotee {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .user-css.page-article .article-content .tab-content .user-css-vignette .custom-sidebar-wrapper {
+    display: block;
+  }
+  .user-css .user-css-vignette blockquote em, .user-css .user-css-vignette blockquote small {
+    display: flex;
+  }
+  .user-css .user-css-vignette blockquote em .quotee, .user-css .user-css-vignette blockquote small .quotee {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .user-css-presentation .world-navigation-palette-trigger {
+    display: none;
+  }
+  .user-css-presentation .world-global-header {
+    display: grid;
+  }
+  .user-css-presentation .article-table-of-contents {
+    display: block;
+  }
+
+  .user-css .search-form {
+    display: flex;
+  }
+  .user-css.page-article .article-content .article-title {
+    margin-left: 289px;
+  }
+  .user-css.page-article .article-content .article-title .article-table-of-contents {
+    display: block;
+  }
+  .user-css.page-article .article-title, .user-css.page-article .article-content .tab-content, .user-css.page-article .article-content-bottom {
+    padding-left: 25px;
+    border-left: 1px solid var(--c-gold-dimmer);
+    width: auto;
+  }
+  .user-css.page-article .article-content .tab-content, .user-css.page-article .article-content-bottom {
+    margin-left: 274px;
+  }
+  .user-css.page-article .user-css-vignette blockquote em, .user-css.page-article .user-css-vignette blockquote small {
+    display: flex;
+  }
+  .user-css.page-article .user-css-vignette blockquote em .quotee, .user-css.page-article .user-css-vignette blockquote small .quotee {
+    display: inline-block;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper {
+    background: var(--c-cyan-gradient);
+    position: relative;
+    -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+    filter: none;
+    padding: 1px;
+    top: unset;
+    cursor: unset;
+    overflow-x: hidden;
+    height: auto;
+    width: 370px;
+    margin-top: 0;
+    margin-left: 15px;
+    float: right;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper small {
+    display: block;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper .fa-database {
+    display: none;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper .custom-sidebar-inner {
+    opacity: 1;
+    transform: none;
+    -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+    -webkit-animation: flash 400ms 1500ms linear 1 normal;
+            animation: flash 400ms 1500ms linear 1 normal;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper .custom-sidebar {
+    padding: 20px 30px 20px 10px;
+    -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper::before, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper::after {
+    display: block;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active {
+    overflow-x: hidden;
+    -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+            clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+    width: 370px;
+    background: var(--c-cyan-gradient);
+    bottom: unset;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner {
+    transform: none;
+    border: none;
+    width: auto;
+  }
+  .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
+    overflow-y: unset;
+  }
+}
+@media only screen and (min-width: 1455px) {
+  .user-css-vignette blockquote small {
+    font-size: 8px;
+  }
+  .user-css-vignette blockquote small .quoted-work, .user-css-vignette blockquote small .quote-colon {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .user-css-vignette blockquote small {
+    font-size: 10px;
+  }
 }

@@ -305,6 +305,111 @@
     transform: scaleY(1) scaleX(1);
   }
 }
+@keyframes flash {
+  0% {
+    background-color: white;
+    color: black;
+  }
+  5% {
+    background-color: var(--c-cyan);
+    color: white;
+  }
+  10% {
+    background-color: white;
+    color: black;
+  }
+  15% {
+    background-color: var(--c-cyan);
+    color: white;
+  }
+  20% {
+    background-color: white;
+    color: black;
+  }
+  25% {
+    background-color: var(--c-cyan);
+    color: white;
+  }
+  30% {
+    background-color: white;
+    color: black;
+  }
+  35% {
+    background-color: var(--c-cyan);
+    color: white;
+  }
+  100% {
+    background-color: rgba(2, 2, 7, 0.98);
+    color: var(--c-lightest);
+  }
+}
+@keyframes slideright {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes sesame-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
+@keyframes sesame-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+    display: none;
+  }
+}
+@keyframes sesame-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-120%);
+    display: none;
+  }
+}
+@keyframes sesame-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120%);
+    display: none;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes topnaver {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -343,6 +448,14 @@ html {
 .user-css-viewer *::selection {
   color: #291d02;
   background: var(--c-gold);
+}
+.user-css-viewer a::-moz-selection {
+  color: #291d02;
+  background: var(--c-gold-dimmer);
+}
+.user-css-viewer a::selection {
+  color: #291d02;
+  background: var(--c-gold-dimmer);
 }
 
 .user-css-presentation .navbar {

@@ -1,29 +1,216 @@
+
+@media only screen and (min-width: 530px) {
+
+    .user-css {
+        .user-css-vignette {
+            blockquote {
+                em, small {
+                    display: flex;
+    
+                    .quotee {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .user-css-presentation {
+    }
+    .user-css {
+
+        &.page-article {
+            .article-content .tab-content {
+                .user-css-vignette {
+                    .custom-sidebar-wrapper {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .user-css-vignette {
+            blockquote {
+                em, small {
+                    display: flex;
+    
+                    .quotee {
+                        display: inline-block;
+                    }
+                }
+            }
+    
+        }
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .user-css-presentation {
+    }
+
+    .user-css-vignette {
+        .main-article-link {
+            margin-left: 2em;
+        }
+    }
+}
+
+
 @media only screen and (min-width: 1200px) {
     .user-css-presentation {
 
         .world-navigation-palette-trigger {
             display: none;
         }
+
+        .world-global-header {
+            display: grid;
+        }
+
+        .article-table-of-contents {
+            display: block;
+        }
         
+    }
+
+    .user-css {
+
+        .search-form {
+            display: flex;
+        }
+
+        &.page-article {
+            .article-content {
+                .article-title {
+                    margin-left: 289px;
+                    border-left: 1px solid var(--c-gold-dimmer);
+        
+                    .article-table-of-contents {
+                        display: block;
+                    }
+                }
+            }
+    
+            .article-title, .article-content .tab-content, .article-content-bottom {
+                padding-left: 25px;
+                border-left: 1px solid var(--c-gold-dimmer);
+                width: auto;
+            }
+            
+            .article-content .tab-content, .article-content-bottom {
+                margin-left: 274px;
+            }
+
+            .user-css-vignette {
+                blockquote {
+                    em, small {
+                        display: flex;
+        
+                        .quotee {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .custom-sidebar-wrapper{
+                    background: var(--c-cyan-gradient);
+                    position: relative;
+                    clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+                    filter: none;
+                    padding: 1px;
+                    top: unset;
+                    cursor: unset;
+                    overflow-x: hidden;
+                    height: auto;
+                    width: 370px;
+                    margin-top: 0;
+                    margin-left: 15px;
+                    float: right;
+                
+                
+                    small {
+                        display: block;
+                    }
+                
+                    .fa-database {
+                        display: none;
+                    }
+                
+                    .custom-sidebar-inner {
+                        opacity: 1;
+                        transform: none;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+                        animation:  flash 400ms 1500ms linear 1 normal;
+                    }
+                
+                    .custom-sidebar {
+                        padding: 20px 30px 20px 10px;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
+                
+                    }
+                
+                    &::before, &::after {
+                        display: block;
+                    }
+                
+                    &:hover, &:focus, &:focus-within, &:active {
+                        overflow-x: hidden;
+                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+                        width: 370px;   
+                        background: var(--c-cyan-gradient);
+                        bottom: unset;
+                        
+                        .custom-sidebar-inner {
+                            transform: none;
+                            border: none;
+                            width: auto;
+                
+                            .custom-sidebar {
+                                overflow-y: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+    
+}
+    
+
+@media only screen and (min-width: 1455px) {
+    .user-css-presentation {
+
+    }
+
+    .user-css-vignette {
+        blockquote {
+            small {
+                font-size: 8px;
+                .quoted-work, .quote-colon {
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 1600px) {
+    .user-css-presentation {
 
-}
+    }
 
-@media only screen and (max-width: 991px) {
-
-}
-
-@media only screen and (max-width: 650px) {
-
-}
-
-@media only screen and (max-width: 400px) {
-
-}
-
-@media only screen and (max-width: 360px) {
-
+    .user-css-vignette {
+        blockquote {
+            small {
+                font-size: 10px;
+            }
+        }
+    }
 }

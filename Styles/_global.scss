@@ -1,6 +1,4 @@
-@import "fonts.scss";
-@import "animations.scss";
-
+@import "_animations.scss";
 
 html {
     scroll-behavior: smooth;
@@ -41,6 +39,11 @@ html {
     *::selection {
         color: rgb(41, 29, 2);
         background: var(--c-gold);
+    }
+    a::selection {
+        color: rgb(41, 29, 2); 
+        background: var(--c-gold-dimmer);
+
     }
 }
 
@@ -2504,5 +2507,3 @@ html {
 
 
 }
-
-@import "responsive.scss";

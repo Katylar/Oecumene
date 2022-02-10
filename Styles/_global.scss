@@ -1144,20 +1144,21 @@ html {
                 top: 0;
                 display: block;
                 height: 100%;
-                width: 30px;
                 position: absolute;
                 animation: slideright 500ms ease-out 1 normal forwards;
             }
 
             &::before {
-                left: 155px;
+                left: 134px;
                 background: var(--c-gold-dimmer);
-                animation-delay: 1.25s;
                 z-index: 19;
+                width: 30px;
+                animation-delay: 1.25s;
             }
     
             &::after {
-                left: 205px;
+                left: 183px;
+                width: 25px;
                 background: var(--c-gold-dimmer);                
                 animation-delay: 1.5s;
                 z-index: 18;
@@ -1173,20 +1174,19 @@ html {
             animation: slideright-angler 500ms ease-out 1 normal forwards;
         }
 
-        // &::before {
-        //     height: 25px;
-        //     left: 182px;
-        //     width: 30px;
-        //     background: var(--c-gold-dimmer);
-        //     animation-delay: 1.75s;
-        //     z-index: 17;
-            
-        // }
+        &::before {
+            height: 25px;
+            left: 217px;
+            width: 25px;
+            background: var(--c-gold-dimmer);
+            animation-delay: 1.75s;
+            z-index: 17;
+        }
 
         &::after {
             height: 12px;
-            left: 255px;
-            width: 55px;
+            left: 272px;
+            width: 38px;
             z-index: 16;
             background: var(--c-gold-dimmer);            
             animation-delay: 1.75s;

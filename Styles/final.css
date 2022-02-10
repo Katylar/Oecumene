@@ -1923,20 +1923,21 @@ html {
   top: 0;
   display: block;
   height: 100%;
-  width: 30px;
   position: absolute;
   -webkit-animation: slideright 500ms ease-out 1 normal forwards;
           animation: slideright 500ms ease-out 1 normal forwards;
 }
 .user-css-presentation .article-table-of-contents .striper::before {
-  left: 155px;
+  left: 134px;
   background: var(--c-gold-dimmer);
+  z-index: 19;
+  width: 30px;
   -webkit-animation-delay: 1.25s;
           animation-delay: 1.25s;
-  z-index: 19;
 }
 .user-css-presentation .article-table-of-contents .striper::after {
-  left: 205px;
+  left: 183px;
+  width: 25px;
   background: var(--c-gold-dimmer);
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
@@ -1951,10 +1952,19 @@ html {
   -webkit-animation: slideright-angler 500ms ease-out 1 normal forwards;
           animation: slideright-angler 500ms ease-out 1 normal forwards;
 }
+.user-css-presentation .article-table-of-contents::before {
+  height: 25px;
+  left: 217px;
+  width: 25px;
+  background: var(--c-gold-dimmer);
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  z-index: 17;
+}
 .user-css-presentation .article-table-of-contents::after {
   height: 12px;
-  left: 255px;
-  width: 55px;
+  left: 272px;
+  width: 38px;
   z-index: 16;
   background: var(--c-gold-dimmer);
   -webkit-animation-delay: 1.75s;

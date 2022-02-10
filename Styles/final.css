@@ -757,6 +757,22 @@
     width: calc(100vw - 307px);
   }
 }
+@-webkit-keyframes grow {
+  0% {
+    transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -3254,28 +3270,29 @@ html {
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector {
   display: grid;
-  grid-template-columns: repeat(6, 200px);
+  grid-template-columns: repeat(6, 280px);
+  grid-template-rows: 280px 1fr;
   gap: 1em;
   padding: 1.5em 20px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   padding: 5px;
-  height: 200px;
-  width: 200px;
+  height: 210px;
+  width: 210px;
   background: var(--c-gold-gradient), var(--c-gold-dimmer);
-  transition: 300ms ease-out;
+  transition: 500ms ease-out;
   position: relative;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a .home-hexer {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   background: url(https://www.worldanvil.com/uploads/images/ffc78c4bf15a691ae4f714e585108561.jpg);
@@ -3283,29 +3300,53 @@ html {
   height: 100%;
   background-size: cover;
   position: relative;
-  transition: 300ms linear;
+  transition: 500ms linear;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a .home-hexer::before {
-  content: url(.);
-  position: absolute;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a .home-hexer::after {
-  content: url(https://www.worldanvil.com/uploads/images/f58272769172069703427b677a19a9e5.svg);
-  background: rgba(2, 2, 7, 0.875);
+  content: url(https://www.worldanvil.com/uploads/images/254f8491274d0207d791e6d6a43c8f07.svg);
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   opacity: 0;
-  transition: 300ms linear;
+  transition: 500ms linear;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/f58272769172069703427b677a19a9e5.svg);
+  background: rgba(22, 16, 1, 0.85);
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: 500ms linear;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus {
-  background: var(--c-gold);
-  transform: scale(1.02);
+  background: url(https://www.worldanvil.com/uploads/images/4ddbbd9acc247507f132ee9e83e6f15b.svg), var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover .home-hexer::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus .home-hexer::after {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover .home-hexer::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus .home-hexer::after {
   opacity: 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::after {
+  opacity: 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box {
+  opacity: 1;
+  -webkit-animation: grow 600ms ease-out forwards 1;
+          animation: grow 600ms ease-out forwards 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box .home-hexer-box-inner, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box .home-hexer-box-inner {
+  opacity: 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box::before {
+  opacity: 0.2;
+  -webkit-animation: grow 1.5s ease-out forwards 1, throb 4s 1.5s linear infinite;
+          animation: grow 1.5s ease-out forwards 1, throb 4s 1.5s linear infinite;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(1) ~ .hexer-text:nth-of-type(1) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(1) ~ .hexer-text:nth-of-type(1) h4 {
   color: var(--c-gold);
@@ -3325,9 +3366,30 @@ html {
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(6) ~ .hexer-text:nth-of-type(6) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(6) ~ .hexer-text:nth-of-type(6) h4 {
   color: var(--c-gold);
 }
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(1) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(1) ~ .home-hexer-box {
+  grid-column: 1/2;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(2) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(2) ~ .home-hexer-box {
+  grid-column: 2/3;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(3) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(3) ~ .home-hexer-box {
+  grid-column: 3/4;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(4) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(4) ~ .home-hexer-box {
+  grid-column: 4/5;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(5) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(5) ~ .home-hexer-box {
+  grid-column: 5/6;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(6) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(6) ~ .home-hexer-box {
+  grid-column: 6/7;
+}
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text {
+  text-align: center;
+  color: var(--c-gold-dim);
   grid-row: 2/3;
   transition: 300ms ease;
+  margin: 0 auto auto auto;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text h4 {
   transition: inherit;
@@ -3351,24 +3413,50 @@ html {
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(6) {
   grid-column: 6/7;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector::after {
-  content: url(.);
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .home-hexer-box {
   position: absolute;
   z-index: -1;
-  background: var(--c-gold);
-  height: 4em;
-  width: 5px;
   transition: 400ms ease-in-out;
+  width: 240px;
+  height: 240px;
   opacity: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: url(https://www.worldanvil.com/uploads/images/2e1fe58101c5ad5f5da0d5f8f9627051.svg);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector:before {
-  top: -2px;
-  left: -2px;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .home-hexer-box:before {
+  content: url(https://www.worldanvil.com/uploads/images/f417562b9f31a31143898b099b750753.svg);
+  position: absolute;
+  z-index: -1;
+  transition: 400ms ease-in-out;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  opacity: 0;
+  width: 280px;
+  height: 280px;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector:after {
-  bottom: -2px;
-  right: -2px;
-  transform: rotate(180deg);
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .home-hexer-box-inner {
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  position: absolute;
+  z-index: -1;
+  transition: 400ms ease-in-out;
+  width: 230px;
+  height: 230px;
+  opacity: 1;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: black;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .user-css.page-world-homepage .world-subtitle small {
   font-variant: small-caps;

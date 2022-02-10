@@ -346,3 +346,12 @@
         width: calc(100vw - 307px);
     }
 }
+
+@keyframes grow {
+    0% {
+        transform: scale(0.01);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

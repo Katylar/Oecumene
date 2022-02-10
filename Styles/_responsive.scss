@@ -1,4 +1,12 @@
-
+@media only screen and (min-width: 465px) {
+    .user-css {
+        &.page-world-homepage {
+            .glitch {
+                height: 104px;
+            }
+        }
+    }
+}
 @media only screen and (min-width: 530px) {
 
     .user-css {
@@ -11,6 +19,16 @@
                         display: inline-block;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 678px) {
+    .user-css {
+        &.page-world-homepage {
+            .glitch {
+                top: -10%;
             }
         }
     }
@@ -43,6 +61,15 @@
             }
     
         }
+
+        &.page-world-homepage {
+            .glitch {
+                height: 60px;
+                h2 {
+                    font-size: 58px
+                }
+            }
+        }
     }
 
 }
@@ -54,6 +81,75 @@
     .user-css-vignette {
         .main-article-link {
             margin-left: 2em;
+        }
+    }
+
+    .user-css {
+        &.page-world-homepage {
+            .glitch {
+                height: 136px;
+                top: -28%;
+                h2 {
+                    font-size: 66px
+                }
+            }
+
+            .home-main-area .home-selector-wrapper {
+                .home-selector {
+                    grid-template-columns: repeat(3, 280px);
+                    grid-template-rows: 280px 1fr 280px 1fr;
+    
+                    .hexer-wrapper {
+                        &.hexer-oecumene { grid-row: 1/2; grid-column: 1/2;}
+                        &.hexer-communion { grid-row: 1/2; grid-column: 2/3;}
+                        &.hexer-principalia { grid-row: 1/2; grid-column: 3/4;}
+                        &.hexer-people { grid-row: 3/4; grid-column: 1/2;}
+                        &.hexer-compendium { grid-row: 3/4; grid-column: 2/3;}
+                        &.hexer-history { grid-row: 3/4; grid-column: 3/4;}
+                        
+                        &:hover, &:focus {
+                            &.hexer-oecumene {
+                                &~.home-hexer-box { grid-row: 1/2; grid-column: 1/2;}  
+                            } 
+                            &.hexer-communion {
+                                &~.home-hexer-box { grid-row: 1/2; grid-column: 2/3;}
+                            }
+                            &.hexer-principalia {
+                                &~.home-hexer-box { grid-row: 1/2; grid-column: 3/4;}
+                            }
+                            &.hexer-people {
+                                &~.home-hexer-box { grid-row: 3/4; grid-column: 1/2;}
+                            }
+                            &.hexer-compendium {
+                                &~.home-hexer-box { grid-row: 3/4; grid-column: 2/3;}
+                            }
+                            &.hexer-history {
+                                &~.home-hexer-box { grid-row: 3/4; grid-column: 3/4;}
+                            }
+                        }
+                    }
+                    .hexer-text {
+                        &:nth-of-type(2) { grid-row: 2/3; grid-column: 1/2;}
+                        &:nth-of-type(4) { grid-row: 2/3; grid-column: 2/3;}
+                        &:nth-of-type(6) { grid-row: 2/3; grid-column: 3/4;}
+                        &:nth-of-type(8) { grid-row: 4/5; grid-column: 1/2;}
+                        &:nth-of-type(10) { grid-row: 4/5; grid-column: 2/3;}
+                        &:nth-of-type(12) { grid-row: 4/5; grid-column: 3/4;}
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media-only screen and (min-width: 930px) {
+    .user-css {
+        &.page-world-homepage {
+            .glitch {
+                height: 68px;
+                top: 25%;
+            }
         }
     }
 }
@@ -186,10 +282,16 @@
             }
         }
 
-
+        &.page-world-homepage {
+            .glitch {
+                height: 74px;
+                top: -30%;
+                h2 {
+                    font-size: 72px
+                }
+            }
+        }
     }
-    
-    
 }
     
 
@@ -219,6 +321,55 @@
         blockquote {
             small {
                 font-size: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1750px) {
+    .user-css {
+        &.page-world-homepage .home-main-area .home-selector-wrapper {
+            .home-selector {
+                grid-template-columns: repeat(6, 280px);
+                grid-template-rows: 280px 1fr;
+
+                .hexer-wrapper {
+                    &.hexer-oecumene { grid-row: 1/2; grid-column: 1/2;}
+                    &.hexer-communion { grid-row: 1/2; grid-column: 2/3;}
+                    &.hexer-principalia { grid-row: 1/2; grid-column: 3/4;}
+                    &.hexer-people { grid-row: 1/2; grid-column: 4/5;}
+                    &.hexer-compendium { grid-row: 1/2; grid-column: 5/6;}
+                    &.hexer-history { grid-row: 1/2; grid-column: 6/7;}
+                    
+                    &:hover, &:focus {
+                        &.hexer-oecumene {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 1/2;}  
+                        } 
+                        &.hexer-communion {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 2/3;}
+                        }
+                        &.hexer-principalia {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 3/4;}
+                        }
+                        &.hexer-people {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 4/5;}
+                        }
+                        &.hexer-compendium {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 5/6;}
+                        }
+                        &.hexer-history {
+                            &~.home-hexer-box { grid-row: 1/2; grid-column: 6/7;}
+                        }
+                    }
+                }
+                .hexer-text {
+                    &:nth-of-type(2) { grid-row: 2/3; grid-column: 1/2;}
+                    &:nth-of-type(4) { grid-row: 2/3; grid-column: 2/3;}
+                    &:nth-of-type(6) { grid-row: 2/3; grid-column: 3/4;}
+                    &:nth-of-type(8) { grid-row: 2/3; grid-column: 4/5;}
+                    &:nth-of-type(10) { grid-row: 2/3; grid-column: 5/6;}
+                    &:nth-of-type(12) { grid-row: 2/3; grid-column: 6/7;}
+                }
             }
         }
     }

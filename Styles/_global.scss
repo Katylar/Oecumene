@@ -34,7 +34,7 @@ html {
 .user-css-viewer {
     .do-not-print:last-of-type {
         margin-top: 0;
-        z-index: 1200;
+        // z-index: 1200;
     }
     *::selection {
         color: rgb(41, 29, 2);

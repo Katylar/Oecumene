@@ -803,7 +803,6 @@ html {
 
 .user-css-viewer .do-not-print:last-of-type {
   margin-top: 0;
-  z-index: 1200;
 }
 .user-css-viewer *::-moz-selection {
   color: #291d02;
@@ -3146,6 +3145,7 @@ html {
 .user-css.page-world-homepage .hero-banner {
   background: url(https://www.worldanvil.com/uploads/images/3f6b5ae66aaca249e2f0080efb351ea3.jpg);
   background-size: cover;
+  background-position: center;
   background-color: var(--c-dark);
   height: 520px;
   position: fixed;
@@ -3193,16 +3193,18 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  height: 74px;
+  height: calc(48px * 3);
   background: rgba(0, 0, 0, 0.6);
-  top: -32%;
+  top: -11%;
+  text-align: center;
 }
 .user-css.page-world-homepage .glitch h2 {
+  text-align: center;
   color: white;
   font-family: var(--f1);
   font-weight: 800;
   position: absolute;
-  font-size: 72px;
+  font-size: 48px;
   border-bottom: none;
   margin: 0 auto;
   padding: 0;
@@ -3270,13 +3272,13 @@ html {
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector {
   display: grid;
-  grid-template-columns: repeat(6, 280px);
-  grid-template-rows: 280px 1fr;
   gap: 1em;
   padding: 1.5em 20px;
   justify-content: center;
   align-items: center;
   position: relative;
+  grid-template-columns: 280px;
+  grid-template-rows: 280px 1fr 280px 1fr 280px 1fr 280px 1fr 280px 1fr 280px 1fr;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a {
   display: block;
@@ -3326,102 +3328,142 @@ html {
   opacity: 0;
   transition: 500ms linear;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-oecumene {
+  grid-row: 1/2;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-oecumene a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/bd120ed4fba1acd97ee2c57f6466ba2b.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-communion {
+  grid-row: 3/4;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-communion a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/f60d698ff9bea8f7e0f1f6737f4aa728.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-principalia {
+  grid-row: 5/6;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-principalia a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/3992de1844b0813a7546ef4e389ec681.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-people {
+  grid-row: 7/8;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-people a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/467ab97a5cf77ae7326463905c9f1419.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-compendium {
+  grid-row: 9/10;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-compendium a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/28391dd4b2c038c50c93848b3f436c75.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-history {
+  grid-row: 11/12;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-history a .home-hexer::after {
+  content: url(https://www.worldanvil.com/uploads/images/3073ba7e297b6dcbdec6ec7a4e76d119.png);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover a, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus a {
   background: url(https://www.worldanvil.com/uploads/images/4ddbbd9acc247507f132ee9e83e6f15b.svg), var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover .home-hexer::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus .home-hexer::after {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover a::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover a::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus a::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus a::after {
   opacity: 1;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::after {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover a .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover a .home-hexer::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus a .home-hexer::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus a .home-hexer::after {
   opacity: 1;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus ~ .home-hexer-box {
   opacity: 1;
   -webkit-animation: grow 600ms ease-out forwards 1;
           animation: grow 600ms ease-out forwards 1;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box .home-hexer-box-inner, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box .home-hexer-box-inner {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover ~ .home-hexer-box .home-hexer-box-inner, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus ~ .home-hexer-box .home-hexer-box-inner {
   opacity: 1;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover ~ .home-hexer-box::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus ~ .home-hexer-box::before {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover ~ .home-hexer-box::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus ~ .home-hexer-box::before {
   opacity: 0.2;
   -webkit-animation: grow 1.5s ease-out forwards 1, throb 4s 1.5s linear infinite;
           animation: grow 1.5s ease-out forwards 1, throb 4s 1.5s linear infinite;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(1) ~ .hexer-text:nth-of-type(1) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(1) ~ .hexer-text:nth-of-type(1) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-oecumene ~ .hexer-text:nth-of-type(2) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-oecumene ~ .hexer-text:nth-of-type(2) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(2) ~ .hexer-text:nth-of-type(2) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(2) ~ .hexer-text:nth-of-type(2) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-communion ~ .hexer-text:nth-of-type(4) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-communion ~ .hexer-text:nth-of-type(4) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(3) ~ .hexer-text:nth-of-type(3) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(3) ~ .hexer-text:nth-of-type(3) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-principalia ~ .hexer-text:nth-of-type(6) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-principalia ~ .hexer-text:nth-of-type(6) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(4) ~ .hexer-text:nth-of-type(4) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(4) ~ .hexer-text:nth-of-type(4) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-people ~ .hexer-text:nth-of-type(8) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-people ~ .hexer-text:nth-of-type(8) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(5) ~ .hexer-text:nth-of-type(5) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(5) ~ .hexer-text:nth-of-type(5) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-compendium ~ .hexer-text:nth-of-type(10) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-compendium ~ .hexer-text:nth-of-type(10) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(6) ~ .hexer-text:nth-of-type(6) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(6) ~ .hexer-text:nth-of-type(6) h4 {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-history ~ .hexer-text:nth-of-type(12) h4, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-history ~ .hexer-text:nth-of-type(12) h4 {
   color: var(--c-gold);
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(1) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(1) ~ .home-hexer-box {
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-oecumene ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-oecumene ~ .home-hexer-box {
+  grid-row: 1/2;
   grid-column: 1/2;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(2) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(2) ~ .home-hexer-box {
-  grid-column: 2/3;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-communion ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-communion ~ .home-hexer-box {
+  grid-row: 3/4;
+  grid-column: 1/2;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(3) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(3) ~ .home-hexer-box {
-  grid-column: 3/4;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-principalia ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-principalia ~ .home-hexer-box {
+  grid-row: 5/6;
+  grid-column: 1/2;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(4) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(4) ~ .home-hexer-box {
-  grid-column: 4/5;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-people ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-people ~ .home-hexer-box {
+  grid-row: 7/8;
+  grid-column: 1/2;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(5) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(5) ~ .home-hexer-box {
-  grid-column: 5/6;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-compendium ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-compendium ~ .home-hexer-box {
+  grid-row: 9/10;
+  grid-column: 1/2;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover:nth-of-type(6) ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus:nth-of-type(6) ~ .home-hexer-box {
-  grid-column: 6/7;
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-history ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-history ~ .home-hexer-box {
+  grid-row: 11/12;
+  grid-column: 1/2;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text {
   text-align: center;
   color: var(--c-gold-dim);
-  grid-row: 2/3;
   transition: 300ms ease;
   margin: 0 auto auto auto;
+  grid-column: 1/2;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text h4 {
   transition: inherit;
   font-size: 1.1em;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(1) {
-  grid-column: 1/2;
-}
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(2) {
-  grid-column: 2/3;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(3) {
-  grid-column: 3/4;
+  grid-row: 2/3;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(4) {
-  grid-column: 4/5;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(5) {
-  grid-column: 5/6;
+  grid-row: 4/5;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(6) {
-  grid-column: 6/7;
+  grid-row: 6/7;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(8) {
+  grid-row: 8/9;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(10) {
+  grid-row: 10/11;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(12) {
+  grid-row: 12/13;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .home-hexer-box {
   position: absolute;
   z-index: -1;
-  transition: 400ms ease-in-out;
+  transition: none;
   width: 240px;
   height: 240px;
   opacity: 0;
-  grid-column: 1/2;
-  grid-row: 1/2;
   background: url(https://www.worldanvil.com/uploads/images/2e1fe58101c5ad5f5da0d5f8f9627051.svg);
   left: 0;
   right: 0;
@@ -3431,7 +3473,7 @@ html {
   content: url(https://www.worldanvil.com/uploads/images/f417562b9f31a31143898b099b750753.svg);
   position: absolute;
   z-index: -1;
-  transition: 400ms ease-in-out;
+  transition: none;
   top: -20px;
   left: -20px;
   bottom: -20px;
@@ -3445,12 +3487,10 @@ html {
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   position: absolute;
   z-index: -1;
-  transition: 400ms ease-in-out;
+  transition: none;
   width: 230px;
   height: 230px;
   opacity: 1;
-  grid-column: 1/2;
-  grid-row: 1/2;
   background: black;
   left: 0;
   right: 0;
@@ -3475,12 +3515,22 @@ html {
   display: none !important;
 }
 
+@media only screen and (min-width: 465px) {
+  .user-css.page-world-homepage .glitch {
+    height: 104px;
+  }
+}
 @media only screen and (min-width: 530px) {
   .user-css .user-css-vignette blockquote em, .user-css .user-css-vignette blockquote small {
     display: flex;
   }
   .user-css .user-css-vignette blockquote em .quotee, .user-css .user-css-vignette blockquote small .quotee {
     display: inline-block;
+  }
+}
+@media only screen and (min-width: 678px) {
+  .user-css.page-world-homepage .glitch {
+    top: -10%;
   }
 }
 @media only screen and (min-width: 850px) {
@@ -3493,10 +3543,106 @@ html {
   .user-css .user-css-vignette blockquote em .quotee, .user-css .user-css-vignette blockquote small .quotee {
     display: inline-block;
   }
+  .user-css.page-world-homepage .glitch {
+    height: 60px;
+  }
+  .user-css.page-world-homepage .glitch h2 {
+    font-size: 58px;
+  }
 }
 @media only screen and (min-width: 900px) {
   .user-css-vignette .main-article-link {
     margin-left: 2em;
+  }
+
+  .user-css.page-world-homepage .glitch {
+    height: 136px;
+    top: -28%;
+  }
+  .user-css.page-world-homepage .glitch h2 {
+    font-size: 66px;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector {
+    grid-template-columns: repeat(3, 280px);
+    grid-template-rows: 280px 1fr 280px 1fr;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-oecumene {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-communion {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-principalia {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-people {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-compendium {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-history {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-oecumene ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-oecumene ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-communion ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-communion ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-principalia ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-principalia ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-people ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-people ~ .home-hexer-box {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-compendium ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-compendium ~ .home-hexer-box {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-history ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-history ~ .home-hexer-box {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(2) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(4) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(6) {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(8) {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(10) {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(12) {
+    grid-row: 4/5;
+    grid-column: 3/4;
+  }
+}
+@media-only screen and (min-width: 930px) {
+  .user-css.page-world-homepage .glitch {
+    height: 68px;
+    top: 25%;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -3594,6 +3740,13 @@ html {
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
     overflow-y: unset;
   }
+  .user-css.page-world-homepage .glitch {
+    height: 74px;
+    top: -30%;
+  }
+  .user-css.page-world-homepage .glitch h2 {
+    font-size: 72px;
+  }
 }
 @media only screen and (min-width: 1455px) {
   .user-css-vignette blockquote small {
@@ -3606,5 +3759,83 @@ html {
 @media only screen and (min-width: 1600px) {
   .user-css-vignette blockquote small {
     font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1750px) {
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector {
+    grid-template-columns: repeat(6, 280px);
+    grid-template-rows: 280px 1fr;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-oecumene {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-communion {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-principalia {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-people {
+    grid-row: 1/2;
+    grid-column: 4/5;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-compendium {
+    grid-row: 1/2;
+    grid-column: 5/6;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper.hexer-history {
+    grid-row: 1/2;
+    grid-column: 6/7;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-oecumene ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-oecumene ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-communion ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-communion ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-principalia ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-principalia ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-people ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-people ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 4/5;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-compendium ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-compendium ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 5/6;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:hover.hexer-history ~ .home-hexer-box, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-wrapper:focus.hexer-history ~ .home-hexer-box {
+    grid-row: 1/2;
+    grid-column: 6/7;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(2) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(4) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(6) {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(8) {
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(10) {
+    grid-row: 2/3;
+    grid-column: 5/6;
+  }
+  .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .hexer-text:nth-of-type(12) {
+    grid-row: 2/3;
+    grid-column: 6/7;
   }
 }

@@ -93,6 +93,12 @@
                     }
                 }
             }
+
+            .article-title {
+                &::before {
+                    display: block;
+                }
+            }
     
             .article-title, .article-content .tab-content, .article-content-bottom {
                 padding-left: 25px;

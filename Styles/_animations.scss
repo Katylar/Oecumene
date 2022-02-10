@@ -42,9 +42,26 @@
         opacity: 0;
         transform: translateX(-200%);
     }
+    60% {
+        opacity: 1;
+    }
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes slideright-angler {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%) skew(-60deg);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) skew(-60deg);
     }
 }
 
@@ -318,5 +335,14 @@
     0% {
         background-position: 0 50%;
         
+    }
+}
+@keyframes line-expander {
+    0% {
+        width: 0;
+        
+    }
+    100% {
+        width: calc(100vw - 307px);
     }
 }

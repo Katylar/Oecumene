@@ -1,0 +1,22 @@
+$scan-width: 2px;
+$scan-crt: true;
+$scan-fps: 60;
+$scan-color: rgba(#000, .3);
+$scan-z-index: 2147483648; 
+$scan-moving-line: true;
+$scan-opacity: .75;
+
+
+@mixin scan-crt($scan-crt) {
+    @if $scan-crt == true {
+        animation: scanlines 1s steps($scan-fps) infinite;
+    }
+    @else { animation: none; }
+}
+
+@mixin scan-moving($scan-moving-line) {
+    @if $scan-moving-line == true {
+        animation: scanline 6s linear infinite;
+    }
+    @else { animation: none; }
+}

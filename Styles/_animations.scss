@@ -1,38 +1,38 @@
 @keyframes flash {
     0% {
-        background-color: white;
-        color: black;
+        background-color: var(--c-lightest);
+        color: var(--c-dark);
     }
     5% {
         background-color: var(--c-cyan);
-        color: white;
+        color: var(--c-lightest);
     }
     10% {
-        background-color: white;
-        color: black;
+        background-color: var(--c-lightest);
+        color: var(--c-dark);
     }
     15% {
         background-color: var(--c-cyan);
-        color: white;
+        color: var(--c-lightest);
     }
     20% {
-        background-color: white;
-        color: black;
+        background-color: var(--c-lightest);
+        color: var(--c-dark);
     }
     25% {
         background-color: var(--c-cyan);
-        color: white;
+        color: var(--c-lightest);
     }
     30% {
-        background-color: white;
-        color: black;
+        background-color: var(--c-lightest);
+        color: var(--c-dark);
     }
     35% {
         background-color: var(--c-cyan);
-        color: white;
+        color: var(--c-lightest);
     }  
     100% {
-        background-color: rgba(2, 2, 7, 0.98);;
+        background-color: rgba(2, 2, 7, 0.98);
         color: var(--c-lightest);
     }
 }
@@ -354,4 +354,40 @@
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes grow-center-hr-large {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        width: clamp(300px, 75vw, 1200px);
+    }
+}
+@keyframes grow-center-hr-small {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        width: clamp(300px, 35vw, 600px);
+    }
+}
+@keyframes oscil {
+    0% {
+        background-position-x: -50%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+
 }

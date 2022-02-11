@@ -171,12 +171,44 @@
             }
 
             hr {
-                margin: 20px auto;
-                width: 40%;
+                margin: 30px auto;
+                height: 2px;
+                background: linear-gradient(90deg, rgb(2, 53, 85) 0%, rgb(67, 170, 235) 50%, rgb(2, 53, 85) 100%);
+                // background: linear-gradient(90deg, red 0%, white 50%, red 100%);
+                background-position-x: 50%;
+                animation: grow-center-hr-large 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+                background-size: 200% 100%;
             }
     
             p {
-    
+                color: var(--c-lightest);
+            }
+
+            .archive-blurb {
+                sup, h3 {
+                    font-family: var(--f4);
+                    color: var(--c-gold-dim);
+                    letter-spacing: 1px;
+                    margin-bottom: 0;
+                    line-height: 1;
+                }
+                sup {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+                h3 {
+                    margin-top: -8px;
+                    padding-top: 0;
+                    font-size: 24px;
+                    font-variant: small-caps;
+                }
+                hr {
+                    margin: 15px auto;
+                    animation: grow-center-hr-small 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+                }
+                h5 {
+                    text-transform: none;
+                }
             }
 
             .home-selector {
@@ -199,6 +231,46 @@
                     background: var(--c-gold-gradient), var(--c-gold-dimmer);
                     transition: 500ms ease-out;
                     position: relative;
+                    overflow: hidden; 
+
+                    &:before,
+                    &:after {
+                        display: block;
+                        pointer-events: none;
+                        content: url(.);
+                        position: absolute;
+                    }
+                    
+                    &:before {
+                        width: 100%;
+                        height: $scan-width * 1;
+                        z-index: 200;
+                        background: $scan-color;
+                        opacity: $scan-opacity;
+                        @include scan-moving($scan-moving-line);
+                    }
+            
+                    
+                    &:after {
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 200;
+                        background: linear-gradient(
+                            to bottom,
+                            transparent 50%,
+                            $scan-color 51%
+                        );
+                        background-size: 100% $scan-width*2;
+                        @include scan-crt($scan-crt);
+                    }
+
+                    &:hover, &:focus {
+                        &::before, &::after {
+                            display: none;
+                        }
+                    }
             
                     .home-hexer {
                         display: block;
@@ -399,6 +471,7 @@
                         opacity: 0;
                         width: 280px;
                         height: 280px;
+                        display: none;
                     }
                 }
             
@@ -418,6 +491,89 @@
                     transform: translateY(-50%);
                 }
             }
+        }
+
+        blockquote {
+            background: var(--c-cyan-gradient);
+            margin: 24px 0 5px 0;
+            border: none;
+            padding: 11px;
+            box-shadow: none;
+            border-radius: 0;
+            position: relative;
+            clip-path: polygon(
+                10px 0,
+                30% 0,
+                calc(30% + 10px) 10px,
+                calc(100% - 20px) 10px,
+                calc(100% - 10px) 20px,
+                calc(100% - 10px) 50%,
+                100% calc(50% + 10px),
+                100% calc(100% - 10px),
+                calc(100% - 10px) 100%,
+                calc(100% - 40%) 100%,
+                calc(100% - 40% - 10px) calc(100% - 10px),
+                20px calc(100% - 10px),
+                10px calc(100% - 20px),
+                10px 50%,
+                0 calc(50% - 10px),
+                0 10px
+            );
+            
+            .quotebox {
+                background: var(--c-dark);
+                color: var(--c-cyan-dark);
+                margin: 0;
+                border: none;
+                border-radius: 0;      
+                font-family: var(--f2);     
+                padding: 20px;
+                transition: color ease-in-out 250ms;
+                animation:  flash 400ms 1500ms linear 1 normal;
+                clip-path: polygon(
+                    10px 0,
+                    calc(100% - 10px) 0,
+                    100% 10px,
+                    100%  calc(100% - 10px),
+                    calc(100% - 10px) 100%,
+                    10px 100%,
+                    0 calc(100% - 10px),
+                    0 10px
+                );
+    
+                &:hover, &:focus {
+                    color: var(--c-cyan);
+    
+                    &::before, &::after {
+                        display: none;
+                    }
+                }
+            }
+            p {
+                font-family: var(--f2);
+                display: block;
+            }
+            &::before, &::after {
+                content: url(.);
+                display: block;
+                position: absolute;
+                background: var(--c-cyan-gradient);
+                left: -5px;
+                right: 5px;
+                z-index: 100;
+            }
+    
+            &::before {
+                height: 50%;
+                top: 0;            
+                animation: sesame-up 500ms 1s ease-in 1 normal forwards;
+            }
+            &::after {
+                height: 50%;
+                bottom: 0;
+                animation: sesame-down 500ms 1s ease-in 1 normal forwards;
+            }    
+    
         }
     }
 
@@ -442,6 +598,7 @@
             display: none !important;
         }
     }
+    
     
 
 }

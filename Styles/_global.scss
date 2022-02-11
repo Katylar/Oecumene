@@ -33,7 +33,7 @@ html {
 
 .user-css-viewer {
     .do-not-print:last-of-type {
-        margin-top: 0;
+        // margin-top: 0;
         // z-index: 1200;
     }
     *::selection {
@@ -657,133 +657,12 @@ html {
     .tooltipster-base {
         color: var(--c-light);
     
-        a {
-            color: var(--c-cyan);
-            text-decoration: none;
-            transition: all 100ms ease;
-            border: none;
-            // border-radius: 0;
-            white-space: nowrap;
-    
-            &:hover, &:focus {
-                color: var(--c-gold-dim);
-            }
-    
-            &:active {
-                color: var(--c-gold);
-            }
-        }
-    
-        .tooltipster-box {
-            border-radius: 0;
-            border: none;
-            background: rgba(2, 2, 7, 0.95);
-            box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8); 
-    
-            .tooltipster-content {
-                font-family: var(--f6);
-                font-size: 16px;
-                line-height: 1.5;
-            
-                p {
-                    font-family: var(--f6);
-                    font-size: 16px;
-                    line-height: 1.5;
-                }
-            
-                h2 {
-                    font-family: var(--f2);
-                    color: var(--c-gold-dim);
-                    letter-spacing: 1px;
-                    text-transform: none;
-                    font-variant: small-caps;
-                    border-bottom: 1px solid rgba(88, 61, 3, 0.7);
-                    padding-top: 0;
-                    margin-top: 10px;
-                    text-align: center;
-                }
-            
-                h3 {
-                    font-family: var(--f4);
-                    color: var(--c-gold-dim);
-                    letter-spacing: 1px;
-                    font-size: 24px;
-                }
-            
-                h4 {
-                    font-family: var(--f3);
-                    color: var(--c-gold-dimmer);
-                    letter-spacing: 1px;
-                    font-size: 18px;
-                }
-    
-                .article-subheading, .articletablecontents {
-                    display: none;
-                }
-            }
-
-            .text-center {
-                border-top: 1px solid rgba(88, 61, 3, 0.7);
-                padding: 15px 0 0 0;
-            }
-    
-            .btn-sm.article-link.article-explorer-link {
-                display: inline-block;
-                color: var(--c-cyan-dark);
-                transition: all 150ms ease;
-                padding: 0;
-                position: relative;
-                text-transform: uppercase;
-
-
-                &::after {
-                    content: url(.);
-                    position: absolute;
-                    display: block;
-                    height: 2px;
-                    width: 0;
-                    transition: width 180ms ease;
-                    transform-origin: left;
-                    bottom: -3.5px;
-                    left: 0px;
-                    background: var(--c-gold-dim);
-                }
-    
-                &:hover, &:focus {
-                    color: var(--c-gold-dim);
-    
-                    &::after {
-                        width: 100%;
-                    }
-                }
-    
-                &:active {
-                    color: var(--c-gold);
-    
-                    &::after {
-                        background: var(--c-gold);
-                    }
-                }
-            }
-    
-        }
-    
+        
         .tooltipster-arrow {
             display: none !important;
         }
+        
     } 
-
-    .tooltipster-top {
-        min-width: auto !important;
-        width: auto !important;
-        left: initial !important;
-        right: 0 !important;
-
-        .tooltipster-content {
-            text-align: center;
-        }
-
-    }
 
     .tooltip-arrow {
         display: none !important;
@@ -791,13 +670,13 @@ html {
 
     .tooltip {
         font-family: var(--f2);
-
+    
         &.fade {
             background: var(--c-cyan-dark);
             transition: opacity 400ms ease-in-out;
             clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
             padding: 2px;
-
+    
             .tooltip-inner {
                 &::before, &::after {
                     content: url(.);
@@ -813,14 +692,14 @@ html {
             }
         }
         
-
+    
         &.in {
             opacity: 1;
-
-
+    
+    
             .tooltip-inner {
                 animation: flash 600ms 1;
-
+    
                 &::before {
                     transform: translateY(-100%);
                 }
@@ -835,8 +714,46 @@ html {
             background: rgba(2, 2, 7, 0.98);
             padding: 4px;
             border-radius: 0;
+            text-align: center;
         }
     }
+    
+    .tooltipster-sidetip {
+        font-family: var(--f2);
+        background: var(--c-cyan-dark);
+        transition: opacity 400ms ease-in-out;
+        clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+        padding: 2px;
+
+        &.tooltipster-borderless .tooltipster-box {
+            margin-bottom: 0 !important;
+            background: transparent !important;
+        }
+    
+        .tooltipster-content {
+            animation: flash 600ms 1;
+            clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+            background: rgba(2, 2, 7, 0.98);
+            padding: 4px;
+            border-radius: 0;
+            text-align: center;
+    
+            &::before, &::after {
+                content: url(.);
+                display: none;
+                position: absolute;
+                background: var(--c-cyan);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: 200ms linear;
+    
+            }
+        }
+    }
+
+    
 
     //** ARTICLE TOC **//
     .article-table-of-contents {
@@ -986,86 +903,86 @@ html {
                     }
                 }
 
-                &:nth-child(1) { animation-delay: 2600ms; }
-                &:nth-child(2) { animation-delay: 3000ms; }
-                &:nth-child(3) { animation-delay: 3400ms; }
-                &:nth-child(4) { animation-delay: 3800ms; }
-                &:nth-child(5) { animation-delay: 4200ms; }
-                &:nth-child(6) { animation-delay: 4600ms; }
-                &:nth-child(7) { animation-delay: 5000ms; }
-                &:nth-child(8) { animation-delay: 5400ms; }
-                &:nth-child(9) { animation-delay: 5800ms; }
-                &:nth-child(10) { animation-delay: 6200ms; }
-                &:nth-child(11) { animation-delay: 6600ms; }
-                &:nth-child(12) { animation-delay: 7000ms; }
-                &:nth-child(13) { animation-delay: 7400ms; }
-                &:nth-child(14) { animation-delay: 7800ms; }
-                &:nth-child(15) { animation-delay: 8200ms; }
-                &:nth-child(16) { animation-delay: 8600ms; }
-                &:nth-child(17) { animation-delay: 9000ms; }
-                &:nth-child(18) { animation-delay: 9400ms; }
-                &:nth-child(19) { animation-delay: 9800ms; }
-                &:nth-child(20) { animation-delay: 10200ms; }
-                &:nth-child(21) { animation-delay: 10600ms; }
-                &:nth-child(22) { animation-delay: 11000ms; }
-                &:nth-child(23) { animation-delay: 11400ms; }
-                &:nth-child(24) { animation-delay: 11800ms; }
-                &:nth-child(25) { animation-delay: 12200ms; }
-                &:nth-child(26) { animation-delay: 12600ms; }
-                &:nth-child(27) { animation-delay: 13000ms; }
-                &:nth-child(28) { animation-delay: 13400ms; }
-                &:nth-child(29) { animation-delay: 13800ms; }
-                &:nth-child(30) { animation-delay: 14200ms; }
-                &:nth-child(31) { animation-delay: 14600ms; }
-                &:nth-child(32) { animation-delay: 15000ms; }
-                &:nth-child(33) { animation-delay: 15400ms; }
-                &:nth-child(34) { animation-delay: 15800ms; }
-                &:nth-child(35) { animation-delay: 16200ms; }
-                &:nth-child(36) { animation-delay: 16600ms; }
-                &:nth-child(37) { animation-delay: 17000ms; }
-                &:nth-child(38) { animation-delay: 17400ms; }
-                &:nth-child(39) { animation-delay: 17800ms; }
-                &:nth-child(40) { animation-delay: 18200ms; }
-                &:nth-child(41) { animation-delay: 18600ms; }
-                &:nth-child(42) { animation-delay: 19000ms; }
-                &:nth-child(43) { animation-delay: 19400ms; }
-                &:nth-child(44) { animation-delay: 19800ms; }
-                &:nth-child(45) { animation-delay: 20200ms; }
-                &:nth-child(46) { animation-delay: 20600ms; }
-                &:nth-child(47) { animation-delay: 21000ms; }
-                &:nth-child(48) { animation-delay: 21400ms; }
-                &:nth-child(49) { animation-delay: 21800ms; }
-                &:nth-child(50) { animation-delay: 22200ms; }
-                &:nth-child(51) { animation-delay: 22600ms; }
-                &:nth-child(52) { animation-delay: 23000ms; }
-                &:nth-child(53) { animation-delay: 23400ms; }
-                &:nth-child(54) { animation-delay: 23800ms; }
-                &:nth-child(55) { animation-delay: 24200ms; }
-                &:nth-child(56) { animation-delay: 24600ms; }
-                &:nth-child(57) { animation-delay: 25000ms; }
-                &:nth-child(58) { animation-delay: 25400ms; }
-                &:nth-child(59) { animation-delay: 25800ms; }
-                &:nth-child(60) { animation-delay: 26200ms; }
-                &:nth-child(61) { animation-delay: 26600ms; }
-                &:nth-child(62) { animation-delay: 27000ms; }
-                &:nth-child(63) { animation-delay: 27400ms; }
-                &:nth-child(64) { animation-delay: 27800ms; }
-                &:nth-child(65) { animation-delay: 28200ms; }
-                &:nth-child(66) { animation-delay: 28600ms; }
-                &:nth-child(67) { animation-delay: 29000ms; }
-                &:nth-child(68) { animation-delay: 29400ms; }
-                &:nth-child(69) { animation-delay: 29800ms; }
-                &:nth-child(70) { animation-delay: 30200ms; }
-                &:nth-child(71) { animation-delay: 30600ms; }
-                &:nth-child(72) { animation-delay: 31000ms; }
-                &:nth-child(73) { animation-delay: 31400ms; }
-                &:nth-child(74) { animation-delay: 31800ms; }
-                &:nth-child(75) { animation-delay: 32200ms; }
-                &:nth-child(76) { animation-delay: 32600ms; }
-                &:nth-child(77) { animation-delay: 33000ms; }
-                &:nth-child(78) { animation-delay: 33400ms; }
-                &:nth-child(79) { animation-delay: 33800ms; }
-                &:nth-child(80) { animation-delay: 34200ms; }
+                &:nth-child(1) { animation-delay: 1400ms; }
+                &:nth-child(2) { animation-delay: 1600ms; }
+                &:nth-child(3) { animation-delay: 1800ms; }
+                &:nth-child(4) { animation-delay: 2000ms; }
+                &:nth-child(5) { animation-delay: 2200ms; }
+                &:nth-child(6) { animation-delay: 2400ms; }
+                &:nth-child(7) { animation-delay: 2600ms; }
+                &:nth-child(8) { animation-delay: 2800ms; }
+                &:nth-child(9) { animation-delay: 3000ms; }
+                &:nth-child(10) { animation-delay: 3200ms; }
+                &:nth-child(11) { animation-delay: 3400ms; }
+                &:nth-child(12) { animation-delay: 3600ms; }
+                &:nth-child(13) { animation-delay: 3800ms; }
+                &:nth-child(14) { animation-delay: 4000ms; }
+                &:nth-child(15) { animation-delay: 4200ms; }
+                &:nth-child(16) { animation-delay: 4400ms; }
+                &:nth-child(17) { animation-delay: 4600ms; }
+                &:nth-child(18) { animation-delay: 4800ms; }
+                &:nth-child(19) { animation-delay: 5000ms; }
+                &:nth-child(20) { animation-delay: 5200ms; }
+                &:nth-child(21) { animation-delay: 5400ms; }
+                &:nth-child(22) { animation-delay: 5600ms; }
+                &:nth-child(23) { animation-delay: 5800ms; }
+                &:nth-child(24) { animation-delay: 6000ms; }
+                &:nth-child(25) { animation-delay: 6200ms; }
+                &:nth-child(26) { animation-delay: 6400ms; }
+                &:nth-child(27) { animation-delay: 6600ms; }
+                &:nth-child(28) { animation-delay: 6800ms; }
+                &:nth-child(29) { animation-delay: 7000ms; }
+                &:nth-child(30) { animation-delay: 7200ms; }
+                &:nth-child(31) { animation-delay: 7400ms; }
+                &:nth-child(32) { animation-delay: 7600ms; }
+                &:nth-child(33) { animation-delay: 7800ms; }
+                &:nth-child(34) { animation-delay: 8000ms; }
+                &:nth-child(35) { animation-delay: 8200ms; }
+                &:nth-child(36) { animation-delay: 8400ms; }
+                &:nth-child(37) { animation-delay: 8600ms; }
+                &:nth-child(38) { animation-delay: 8800ms; }
+                &:nth-child(39) { animation-delay: 9000ms; }
+                &:nth-child(40) { animation-delay: 9200ms; }
+                &:nth-child(41) { animation-delay: 9400ms; }
+                &:nth-child(42) { animation-delay: 9600ms; }
+                &:nth-child(43) { animation-delay: 9800ms; }
+                &:nth-child(44) { animation-delay: 10000ms; }
+                &:nth-child(45) { animation-delay: 10200ms; }
+                &:nth-child(46) { animation-delay: 10400ms; }
+                &:nth-child(47) { animation-delay: 10600ms; }
+                &:nth-child(48) { animation-delay: 10800ms; }
+                &:nth-child(49) { animation-delay: 11000ms; }
+                &:nth-child(50) { animation-delay: 11200ms; }
+                &:nth-child(51) { animation-delay: 11400ms; }
+                &:nth-child(52) { animation-delay: 11600ms; }
+                &:nth-child(53) { animation-delay: 11800ms; }
+                &:nth-child(54) { animation-delay: 12000ms; }
+                &:nth-child(55) { animation-delay: 12200ms; }
+                &:nth-child(56) { animation-delay: 12400ms; }
+                &:nth-child(57) { animation-delay: 12600ms; }
+                &:nth-child(58) { animation-delay: 12800ms; }
+                &:nth-child(59) { animation-delay: 13000ms; }
+                &:nth-child(60) { animation-delay: 13200ms; }
+                &:nth-child(61) { animation-delay: 13400ms; }
+                &:nth-child(62) { animation-delay: 13600ms; }
+                &:nth-child(63) { animation-delay: 13800ms; }
+                &:nth-child(64) { animation-delay: 14000ms; }
+                &:nth-child(65) { animation-delay: 14200ms; }
+                &:nth-child(66) { animation-delay: 14400ms; }
+                &:nth-child(67) { animation-delay: 14600ms; }
+                &:nth-child(68) { animation-delay: 14800ms; }
+                &:nth-child(69) { animation-delay: 15000ms; }
+                &:nth-child(70) { animation-delay: 15200ms; }
+                &:nth-child(71) { animation-delay: 15400ms; }
+                &:nth-child(72) { animation-delay: 15600ms; }
+                &:nth-child(73) { animation-delay: 15800ms; }
+                &:nth-child(74) { animation-delay: 16000ms; }
+                &:nth-child(75) { animation-delay: 16200ms; }
+                &:nth-child(76) { animation-delay: 16400ms; }
+                &:nth-child(77) { animation-delay: 16600ms; }
+                &:nth-child(78) { animation-delay: 16800ms; }
+                &:nth-child(79) { animation-delay: 17000ms; }
+                &:nth-child(80) { animation-delay: 17200ms; }
             }
         }
 
@@ -1079,7 +996,7 @@ html {
             position: relative;
             // font-weight: 700;
             text-decoration: none;
-            animation: slideright 400ms 3000ms ease-out 1 normal forwards;
+            animation: slideright 400ms 1650ms ease-out 1 normal forwards;
             opacity: 0;
 
             &::before {
@@ -2568,7 +2485,7 @@ html {
     /** SCANLINER **/
 
     .scanliner {
-        position: relative;
+        // position: relative;
         overflow: hidden; 
 
         &:before,

@@ -97,36 +97,36 @@
 }
 @-webkit-keyframes flash {
   0% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   5% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   10% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   15% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   20% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   25% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   30% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   35% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   100% {
     background-color: rgba(2, 2, 7, 0.98);
@@ -135,36 +135,36 @@
 }
 @keyframes flash {
   0% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   5% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   10% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   15% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   20% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   25% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   30% {
-    background-color: white;
-    color: black;
+    background-color: var(--c-lightest);
+    color: var(--c-dark);
   }
   35% {
     background-color: var(--c-cyan);
-    color: white;
+    color: var(--c-lightest);
   }
   100% {
     background-color: rgba(2, 2, 7, 0.98);
@@ -773,6 +773,74 @@
     transform: scale(1);
   }
 }
+@-webkit-keyframes grow-center-hr-large {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: clamp(300px, 75vw, 1200px);
+  }
+}
+@keyframes grow-center-hr-large {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: clamp(300px, 75vw, 1200px);
+  }
+}
+@-webkit-keyframes grow-center-hr-small {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: clamp(300px, 35vw, 600px);
+  }
+}
+@keyframes grow-center-hr-small {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: clamp(300px, 35vw, 600px);
+  }
+}
+@-webkit-keyframes oscil {
+  0% {
+    background-position-x: -50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+@keyframes oscil {
+  0% {
+    background-position-x: -50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -801,13 +869,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.user-css-viewer .do-not-print:last-of-type {
-  margin-top: 0;
-}
 .user-css-viewer *::-moz-selection {
   color: #291d02;
   background: var(--c-gold);
 }
+
 .user-css-viewer *::selection {
   color: #291d02;
   background: var(--c-gold);
@@ -1280,108 +1346,8 @@ html {
 .user-css-presentation .tooltipster-base {
   color: var(--c-light);
 }
-.user-css-presentation .tooltipster-base a {
-  color: var(--c-cyan);
-  text-decoration: none;
-  transition: all 100ms ease;
-  border: none;
-  white-space: nowrap;
-}
-.user-css-presentation .tooltipster-base a:hover, .user-css-presentation .tooltipster-base a:focus {
-  color: var(--c-gold-dim);
-}
-.user-css-presentation .tooltipster-base a:active {
-  color: var(--c-gold);
-}
-.user-css-presentation .tooltipster-base .tooltipster-box {
-  border-radius: 0;
-  border: none;
-  background: rgba(2, 2, 7, 0.95);
-  box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content {
-  font-family: var(--f6);
-  font-size: 16px;
-  line-height: 1.5;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content p {
-  font-family: var(--f6);
-  font-size: 16px;
-  line-height: 1.5;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content h2 {
-  font-family: var(--f2);
-  color: var(--c-gold-dim);
-  letter-spacing: 1px;
-  text-transform: none;
-  font-variant: small-caps;
-  border-bottom: 1px solid rgba(88, 61, 3, 0.7);
-  padding-top: 0;
-  margin-top: 10px;
-  text-align: center;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content h3 {
-  font-family: var(--f4);
-  color: var(--c-gold-dim);
-  letter-spacing: 1px;
-  font-size: 24px;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content h4 {
-  font-family: var(--f3);
-  color: var(--c-gold-dimmer);
-  letter-spacing: 1px;
-  font-size: 18px;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content .article-subheading, .user-css-presentation .tooltipster-base .tooltipster-box .tooltipster-content .articletablecontents {
-  display: none;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .text-center {
-  border-top: 1px solid rgba(88, 61, 3, 0.7);
-  padding: 15px 0 0 0;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link {
-  display: inline-block;
-  color: var(--c-cyan-dark);
-  transition: all 150ms ease;
-  padding: 0;
-  position: relative;
-  text-transform: uppercase;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link::after {
-  content: url(.);
-  position: absolute;
-  display: block;
-  height: 2px;
-  width: 0;
-  transition: width 180ms ease;
-  transform-origin: left;
-  bottom: -3.5px;
-  left: 0px;
-  background: var(--c-gold-dim);
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:hover, .user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:focus {
-  color: var(--c-gold-dim);
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:hover::after, .user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:focus::after {
-  width: 100%;
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:active {
-  color: var(--c-gold);
-}
-.user-css-presentation .tooltipster-base .tooltipster-box .btn-sm.article-link.article-explorer-link:active::after {
-  background: var(--c-gold);
-}
 .user-css-presentation .tooltipster-base .tooltipster-arrow {
   display: none !important;
-}
-.user-css-presentation .tooltipster-top {
-  min-width: auto !important;
-  width: auto !important;
-  left: initial !important;
-  right: 0 !important;
-}
-.user-css-presentation .tooltipster-top .tooltipster-content {
-  text-align: center;
 }
 .user-css-presentation .tooltip-arrow {
   display: none !important;
@@ -1426,6 +1392,40 @@ html {
   background: rgba(2, 2, 7, 0.98);
   padding: 4px;
   border-radius: 0;
+  text-align: center;
+}
+.user-css-presentation .tooltipster-sidetip {
+  font-family: var(--f2);
+  background: var(--c-cyan-dark);
+  transition: opacity 400ms ease-in-out;
+  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  padding: 2px;
+}
+.user-css-presentation .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
+  margin-bottom: 0 !important;
+  background: transparent !important;
+}
+.user-css-presentation .tooltipster-sidetip .tooltipster-content {
+  -webkit-animation: flash 600ms 1;
+          animation: flash 600ms 1;
+  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  background: rgba(2, 2, 7, 0.98);
+  padding: 4px;
+  border-radius: 0;
+  text-align: center;
+}
+.user-css-presentation .tooltipster-sidetip .tooltipster-content::before, .user-css-presentation .tooltipster-sidetip .tooltipster-content::after {
+  content: url(.);
+  display: none;
+  position: absolute;
+  background: var(--c-cyan);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 200ms linear;
 }
 .user-css-presentation .article-table-of-contents {
   position: absolute;
@@ -1553,324 +1553,324 @@ html {
   background: var(--c-gold);
 }
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(1) {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(2) {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(3) {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(4) {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(5) {
+  -webkit-animation-delay: 2200ms;
+          animation-delay: 2200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(6) {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(7) {
   -webkit-animation-delay: 2600ms;
           animation-delay: 2600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(2) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(8) {
+  -webkit-animation-delay: 2800ms;
+          animation-delay: 2800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(9) {
   -webkit-animation-delay: 3000ms;
           animation-delay: 3000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(3) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(10) {
+  -webkit-animation-delay: 3200ms;
+          animation-delay: 3200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(11) {
   -webkit-animation-delay: 3400ms;
           animation-delay: 3400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(4) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(12) {
+  -webkit-animation-delay: 3600ms;
+          animation-delay: 3600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(13) {
   -webkit-animation-delay: 3800ms;
           animation-delay: 3800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(5) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(14) {
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(15) {
   -webkit-animation-delay: 4200ms;
           animation-delay: 4200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(6) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(16) {
+  -webkit-animation-delay: 4400ms;
+          animation-delay: 4400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(17) {
   -webkit-animation-delay: 4600ms;
           animation-delay: 4600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(7) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(18) {
+  -webkit-animation-delay: 4800ms;
+          animation-delay: 4800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(19) {
   -webkit-animation-delay: 5000ms;
           animation-delay: 5000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(8) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(20) {
+  -webkit-animation-delay: 5200ms;
+          animation-delay: 5200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(21) {
   -webkit-animation-delay: 5400ms;
           animation-delay: 5400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(9) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(22) {
+  -webkit-animation-delay: 5600ms;
+          animation-delay: 5600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(23) {
   -webkit-animation-delay: 5800ms;
           animation-delay: 5800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(10) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(24) {
+  -webkit-animation-delay: 6000ms;
+          animation-delay: 6000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(25) {
   -webkit-animation-delay: 6200ms;
           animation-delay: 6200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(11) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(26) {
+  -webkit-animation-delay: 6400ms;
+          animation-delay: 6400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(27) {
   -webkit-animation-delay: 6600ms;
           animation-delay: 6600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(12) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(28) {
+  -webkit-animation-delay: 6800ms;
+          animation-delay: 6800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(29) {
   -webkit-animation-delay: 7000ms;
           animation-delay: 7000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(13) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(30) {
+  -webkit-animation-delay: 7200ms;
+          animation-delay: 7200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(31) {
   -webkit-animation-delay: 7400ms;
           animation-delay: 7400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(14) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(32) {
+  -webkit-animation-delay: 7600ms;
+          animation-delay: 7600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(33) {
   -webkit-animation-delay: 7800ms;
           animation-delay: 7800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(15) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(34) {
+  -webkit-animation-delay: 8000ms;
+          animation-delay: 8000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(35) {
   -webkit-animation-delay: 8200ms;
           animation-delay: 8200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(16) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(36) {
+  -webkit-animation-delay: 8400ms;
+          animation-delay: 8400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(37) {
   -webkit-animation-delay: 8600ms;
           animation-delay: 8600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(17) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(38) {
+  -webkit-animation-delay: 8800ms;
+          animation-delay: 8800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(39) {
   -webkit-animation-delay: 9000ms;
           animation-delay: 9000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(18) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(40) {
+  -webkit-animation-delay: 9200ms;
+          animation-delay: 9200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(41) {
   -webkit-animation-delay: 9400ms;
           animation-delay: 9400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(19) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(42) {
+  -webkit-animation-delay: 9600ms;
+          animation-delay: 9600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(43) {
   -webkit-animation-delay: 9800ms;
           animation-delay: 9800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(20) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(44) {
+  -webkit-animation-delay: 10000ms;
+          animation-delay: 10000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(45) {
   -webkit-animation-delay: 10200ms;
           animation-delay: 10200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(21) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(46) {
+  -webkit-animation-delay: 10400ms;
+          animation-delay: 10400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(47) {
   -webkit-animation-delay: 10600ms;
           animation-delay: 10600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(22) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(48) {
+  -webkit-animation-delay: 10800ms;
+          animation-delay: 10800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(49) {
   -webkit-animation-delay: 11000ms;
           animation-delay: 11000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(23) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(50) {
+  -webkit-animation-delay: 11200ms;
+          animation-delay: 11200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(51) {
   -webkit-animation-delay: 11400ms;
           animation-delay: 11400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(24) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(52) {
+  -webkit-animation-delay: 11600ms;
+          animation-delay: 11600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(53) {
   -webkit-animation-delay: 11800ms;
           animation-delay: 11800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(25) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(54) {
+  -webkit-animation-delay: 12000ms;
+          animation-delay: 12000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(55) {
   -webkit-animation-delay: 12200ms;
           animation-delay: 12200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(26) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(56) {
+  -webkit-animation-delay: 12400ms;
+          animation-delay: 12400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(57) {
   -webkit-animation-delay: 12600ms;
           animation-delay: 12600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(27) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(58) {
+  -webkit-animation-delay: 12800ms;
+          animation-delay: 12800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(59) {
   -webkit-animation-delay: 13000ms;
           animation-delay: 13000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(28) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(60) {
+  -webkit-animation-delay: 13200ms;
+          animation-delay: 13200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(61) {
   -webkit-animation-delay: 13400ms;
           animation-delay: 13400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(29) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(62) {
+  -webkit-animation-delay: 13600ms;
+          animation-delay: 13600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(63) {
   -webkit-animation-delay: 13800ms;
           animation-delay: 13800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(30) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(64) {
+  -webkit-animation-delay: 14000ms;
+          animation-delay: 14000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(65) {
   -webkit-animation-delay: 14200ms;
           animation-delay: 14200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(31) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(66) {
+  -webkit-animation-delay: 14400ms;
+          animation-delay: 14400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(67) {
   -webkit-animation-delay: 14600ms;
           animation-delay: 14600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(32) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(68) {
+  -webkit-animation-delay: 14800ms;
+          animation-delay: 14800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(69) {
   -webkit-animation-delay: 15000ms;
           animation-delay: 15000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(33) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(70) {
+  -webkit-animation-delay: 15200ms;
+          animation-delay: 15200ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(71) {
   -webkit-animation-delay: 15400ms;
           animation-delay: 15400ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(34) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(72) {
+  -webkit-animation-delay: 15600ms;
+          animation-delay: 15600ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(73) {
   -webkit-animation-delay: 15800ms;
           animation-delay: 15800ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(35) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(74) {
+  -webkit-animation-delay: 16000ms;
+          animation-delay: 16000ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(75) {
   -webkit-animation-delay: 16200ms;
           animation-delay: 16200ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(36) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(76) {
+  -webkit-animation-delay: 16400ms;
+          animation-delay: 16400ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(77) {
   -webkit-animation-delay: 16600ms;
           animation-delay: 16600ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(37) {
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(78) {
+  -webkit-animation-delay: 16800ms;
+          animation-delay: 16800ms;
+}
+.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(79) {
   -webkit-animation-delay: 17000ms;
           animation-delay: 17000ms;
 }
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(38) {
-  -webkit-animation-delay: 17400ms;
-          animation-delay: 17400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(39) {
-  -webkit-animation-delay: 17800ms;
-          animation-delay: 17800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(40) {
-  -webkit-animation-delay: 18200ms;
-          animation-delay: 18200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(41) {
-  -webkit-animation-delay: 18600ms;
-          animation-delay: 18600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(42) {
-  -webkit-animation-delay: 19000ms;
-          animation-delay: 19000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(43) {
-  -webkit-animation-delay: 19400ms;
-          animation-delay: 19400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(44) {
-  -webkit-animation-delay: 19800ms;
-          animation-delay: 19800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(45) {
-  -webkit-animation-delay: 20200ms;
-          animation-delay: 20200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(46) {
-  -webkit-animation-delay: 20600ms;
-          animation-delay: 20600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(47) {
-  -webkit-animation-delay: 21000ms;
-          animation-delay: 21000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(48) {
-  -webkit-animation-delay: 21400ms;
-          animation-delay: 21400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(49) {
-  -webkit-animation-delay: 21800ms;
-          animation-delay: 21800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(50) {
-  -webkit-animation-delay: 22200ms;
-          animation-delay: 22200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(51) {
-  -webkit-animation-delay: 22600ms;
-          animation-delay: 22600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(52) {
-  -webkit-animation-delay: 23000ms;
-          animation-delay: 23000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(53) {
-  -webkit-animation-delay: 23400ms;
-          animation-delay: 23400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(54) {
-  -webkit-animation-delay: 23800ms;
-          animation-delay: 23800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(55) {
-  -webkit-animation-delay: 24200ms;
-          animation-delay: 24200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(56) {
-  -webkit-animation-delay: 24600ms;
-          animation-delay: 24600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(57) {
-  -webkit-animation-delay: 25000ms;
-          animation-delay: 25000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(58) {
-  -webkit-animation-delay: 25400ms;
-          animation-delay: 25400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(59) {
-  -webkit-animation-delay: 25800ms;
-          animation-delay: 25800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(60) {
-  -webkit-animation-delay: 26200ms;
-          animation-delay: 26200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(61) {
-  -webkit-animation-delay: 26600ms;
-          animation-delay: 26600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(62) {
-  -webkit-animation-delay: 27000ms;
-          animation-delay: 27000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(63) {
-  -webkit-animation-delay: 27400ms;
-          animation-delay: 27400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(64) {
-  -webkit-animation-delay: 27800ms;
-          animation-delay: 27800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(65) {
-  -webkit-animation-delay: 28200ms;
-          animation-delay: 28200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(66) {
-  -webkit-animation-delay: 28600ms;
-          animation-delay: 28600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(67) {
-  -webkit-animation-delay: 29000ms;
-          animation-delay: 29000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(68) {
-  -webkit-animation-delay: 29400ms;
-          animation-delay: 29400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(69) {
-  -webkit-animation-delay: 29800ms;
-          animation-delay: 29800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(70) {
-  -webkit-animation-delay: 30200ms;
-          animation-delay: 30200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(71) {
-  -webkit-animation-delay: 30600ms;
-          animation-delay: 30600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(72) {
-  -webkit-animation-delay: 31000ms;
-          animation-delay: 31000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(73) {
-  -webkit-animation-delay: 31400ms;
-          animation-delay: 31400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(74) {
-  -webkit-animation-delay: 31800ms;
-          animation-delay: 31800ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(75) {
-  -webkit-animation-delay: 32200ms;
-          animation-delay: 32200ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(76) {
-  -webkit-animation-delay: 32600ms;
-          animation-delay: 32600ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(77) {
-  -webkit-animation-delay: 33000ms;
-          animation-delay: 33000ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(78) {
-  -webkit-animation-delay: 33400ms;
-          animation-delay: 33400ms;
-}
-.user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(79) {
-  -webkit-animation-delay: 33800ms;
-          animation-delay: 33800ms;
-}
 .user-css-presentation .article-table-of-contents .articletoc .article-toc-link:nth-child(80) {
-  -webkit-animation-delay: 34200ms;
-          animation-delay: 34200ms;
+  -webkit-animation-delay: 17200ms;
+          animation-delay: 17200ms;
 }
 .user-css-presentation .article-table-of-contents .overview-link {
   margin-bottom: 6px;
@@ -1881,8 +1881,8 @@ html {
   border-radius: 0;
   position: relative;
   text-decoration: none;
-  -webkit-animation: slideright 400ms 3000ms ease-out 1 normal forwards;
-          animation: slideright 400ms 3000ms ease-out 1 normal forwards;
+  -webkit-animation: slideright 400ms 1650ms ease-out 1 normal forwards;
+          animation: slideright 400ms 1650ms ease-out 1 normal forwards;
   opacity: 0;
 }
 .user-css-presentation .article-table-of-contents .overview-link::before {
@@ -3080,7 +3080,6 @@ html {
   color: var(--c-gray-light);
 }
 .user-css .scanliner {
-  position: relative;
   overflow: hidden;
 }
 .user-css .scanliner:before, .user-css .scanliner:after {
@@ -3267,8 +3266,41 @@ html {
   color: var(--c-gold);
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper hr {
-  margin: 20px auto;
-  width: 40%;
+  margin: 30px auto;
+  height: 2px;
+  background: linear-gradient(90deg, #023555 0%, #43aaeb 50%, #023555 100%);
+  background-position-x: 50%;
+  -webkit-animation: grow-center-hr-large 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+          animation: grow-center-hr-large 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+  background-size: 200% 100%;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper p {
+  color: var(--c-lightest);
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb sup, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb h3 {
+  font-family: var(--f4);
+  color: var(--c-gold-dim);
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb sup {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb h3 {
+  margin-top: -8px;
+  padding-top: 0;
+  font-size: 24px;
+  font-variant: small-caps;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb hr {
+  margin: 15px auto;
+  -webkit-animation: grow-center-hr-small 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+          animation: grow-center-hr-small 5s ease-out forwards 1, oscil 2s linear infinite alternate;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .archive-blurb h5 {
+  text-transform: none;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector {
   display: grid;
@@ -3291,6 +3323,36 @@ html {
   background: var(--c-gold-gradient), var(--c-gold-dimmer);
   transition: 500ms ease-out;
   position: relative;
+  overflow: hidden;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:after {
+  display: block;
+  pointer-events: none;
+  content: url(.);
+  position: absolute;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:before {
+  width: 100%;
+  height: 2px;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  -webkit-animation: scanline 6s linear infinite;
+          animation: scanline 6s linear infinite;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: scanlines 1s steps(60) infinite;
+          animation: scanlines 1s steps(60) infinite;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::after {
+  display: none;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a .home-hexer {
   display: block;
@@ -3481,6 +3543,7 @@ html {
   opacity: 0;
   width: 280px;
   height: 280px;
+  display: none;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector .home-hexer-box-inner {
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -3497,6 +3560,62 @@ html {
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
+}
+.user-css.page-world-homepage .home-main-area blockquote {
+  background: var(--c-cyan-gradient);
+  margin: 24px 0 5px 0;
+  border: none;
+  padding: 11px;
+  box-shadow: none;
+  border-radius: 0;
+  position: relative;
+  -webkit-clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
+          clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
+}
+.user-css.page-world-homepage .home-main-area blockquote .quotebox {
+  background: var(--c-dark);
+  color: var(--c-cyan-dark);
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  font-family: var(--f2);
+  padding: 20px;
+  transition: color ease-in-out 250ms;
+  -webkit-animation: flash 400ms 1500ms linear 1 normal;
+          animation: flash 400ms 1500ms linear 1 normal;
+  -webkit-clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+          clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+}
+.user-css.page-world-homepage .home-main-area blockquote .quotebox:hover, .user-css.page-world-homepage .home-main-area blockquote .quotebox:focus {
+  color: var(--c-cyan);
+}
+.user-css.page-world-homepage .home-main-area blockquote .quotebox:hover::before, .user-css.page-world-homepage .home-main-area blockquote .quotebox:hover::after, .user-css.page-world-homepage .home-main-area blockquote .quotebox:focus::before, .user-css.page-world-homepage .home-main-area blockquote .quotebox:focus::after {
+  display: none;
+}
+.user-css.page-world-homepage .home-main-area blockquote p {
+  font-family: var(--f2);
+  display: block;
+}
+.user-css.page-world-homepage .home-main-area blockquote::before, .user-css.page-world-homepage .home-main-area blockquote::after {
+  content: url(.);
+  display: block;
+  position: absolute;
+  background: var(--c-cyan-gradient);
+  left: -5px;
+  right: 5px;
+  z-index: 100;
+}
+.user-css.page-world-homepage .home-main-area blockquote::before {
+  height: 50%;
+  top: 0;
+  -webkit-animation: sesame-up 500ms 1s ease-in 1 normal forwards;
+          animation: sesame-up 500ms 1s ease-in 1 normal forwards;
+}
+.user-css.page-world-homepage .home-main-area blockquote::after {
+  height: 50%;
+  bottom: 0;
+  -webkit-animation: sesame-down 500ms 1s ease-in 1 normal forwards;
+          animation: sesame-down 500ms 1s ease-in 1 normal forwards;
 }
 .user-css.page-world-homepage .world-subtitle small {
   font-variant: small-caps;

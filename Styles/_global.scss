@@ -1143,6 +1143,9 @@ html {
         font-style: italic;
         font-size: 13px;
         margin-bottom: 10px;
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: fade-right 1s 4s forwards ease-out 1;
 
         a {
             color: var(--c-cyan);
@@ -1284,6 +1287,16 @@ html {
             width: 100%;
             overflow: hidden;
             padding: 1px;
+        }
+
+        .swiper {
+            position: absolute;
+            top: 1px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow-x: hidden;
+            animation: disaperator 1ms 4s linear forwards 1;
 
             &::after {
                 content: url(.);
@@ -1291,10 +1304,10 @@ html {
                 // width: 100%;
                 display: block;
                 position: absolute;
-                top: 7px;
-                left: 7px;
-                right: 15px;
-                bottom: 7px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 5%, var(--c-dark) 100%);
                 z-index: 99;
                 animation: sesame-right 2s 2s ease-out forwards 1;
@@ -1350,7 +1363,10 @@ html {
             content: url(.);
             display: block;
             position: absolute;
-            background: var(--c-cyan-gradient);
+            background: linear-gradient(90deg, var(--c-cyan-darkest) 0%, var(--c-cyan) 50%, var(--c-cyan-darkest) 100%);
+            background-position-x: 50%;
+            animation: oscil 3s linear infinite alternate;
+            background-size: 200% 100%;
             z-index: 100;
             width: 35%;
             height: 50%;

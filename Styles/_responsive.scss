@@ -19,6 +19,10 @@
                         display: inline-block;
                     }
                 }
+
+                &::after {
+                    width: 40%;
+                }
             }
         }
     }
@@ -29,6 +33,13 @@
         &.page-world-homepage {
             .glitch {
                 top: -10%;
+            }
+        }
+        .user-css-vignette {
+            blockquote {
+                &::after {
+                    width: 35%;
+                }
             }
         }
     }
@@ -47,19 +58,6 @@
                     }
                 }
             }
-        }
-
-        .user-css-vignette {
-            blockquote {
-                em, small {
-                    display: flex;
-    
-                    .quotee {
-                        display: inline-block;
-                    }
-                }
-            }
-    
         }
 
         &.page-world-homepage {
@@ -154,6 +152,25 @@
     }
 }
 
+@media-only screen and (min-width: 1000px) {
+    .user-css {
+        .user-css-vignette {
+            blockquote {
+                em, small {
+    
+                    .quote-colon, .quoted-work {
+                        display: inline-block;
+                    }
+                }
+    
+                &::after {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
 
 @media only screen and (min-width: 1200px) {
     .user-css-presentation {
@@ -214,6 +231,13 @@
                         .quotee {
                             display: inline-block;
                         }
+                        .quote-colon, .quoted-work {
+                            display: none;
+                        }
+                    }
+
+                    &::after {
+                        width: 40%;
                     }
                 }
 
@@ -293,6 +317,25 @@
         }
     }
 }
+
+@media only screen and (min-width: 1300px) {
+    .user-css {
+        &.page-article {
+            .user-css-vignette {
+                blockquote {
+                    small {
+                        .quote-colon, .quoted-work {
+                            display: inline-block;
+                        }
+                    }
+                    &::after {
+                        width: 65%;
+                    }
+                }        
+            }
+        }
+    }
+}
     
 
 @media only screen and (min-width: 1455px) {
@@ -300,27 +343,21 @@
 
     }
 
-    .user-css-vignette {
-        blockquote {
-            small {
-                font-size: 8px;
-                .quoted-work, .quote-colon {
-                    display: inline-block;
-                }
-            }
-        }
-    }
+
 }
 
 @media only screen and (min-width: 1600px) {
     .user-css-presentation {
 
     }
-
-    .user-css-vignette {
-        blockquote {
-            small {
-                font-size: 10px;
+    .user-css {
+        &.page-article {
+            .user-css-vignette {
+                blockquote {
+                    &::after {
+                        width: 45%;
+                    }
+                }        
             }
         }
     }
@@ -370,6 +407,16 @@
                     &:nth-of-type(10) { grid-row: 2/3; grid-column: 5/6;}
                     &:nth-of-type(12) { grid-row: 2/3; grid-column: 6/7;}
                 }
+            }
+        }
+
+        &.page-article {
+            .user-css-vignette{
+                blockquote {
+                    &::after {
+                        width: 35%;
+                    }
+                }  
             }
         }
     }

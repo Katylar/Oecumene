@@ -841,6 +841,26 @@
     background-position-x: 100%;
   }
 }
+@-webkit-keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -2048,15 +2068,13 @@ html {
   pointer-events: none;
 }
 .user-css-vignette blockquote {
-  background: var(--c-cyan-gradient);
-  margin: 10px 0 15px 0;
+  background: transparent;
+  margin: 10px 5px 25px 5px;
   border: none;
-  padding: 21px 11px;
+  padding: 5px;
   box-shadow: none;
   border-radius: 0;
   position: relative;
-  -webkit-clip-path: polygon(10px 0, 30% 0, calc(30% + 20px) 20px, calc(100% - 20px) 20px, calc(100% - 10px) 30px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 20px), 20px calc(100% - 20px), 10px calc(100% - 30px), 10px 50%, 0 calc(50% - 10px), 0 10px);
-          clip-path: polygon(10px 0, 30% 0, calc(30% + 20px) 20px, calc(100% - 20px) 20px, calc(100% - 10px) 30px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 20px), 20px calc(100% - 20px), 10px calc(100% - 30px), 10px 50%, 0 calc(50% - 10px), 0 10px);
 }
 .user-css-vignette blockquote em, .user-css-vignette blockquote small {
   font-family: var(--f1);
@@ -2068,6 +2086,7 @@ html {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 800;
   display: none;
+  z-index: 101;
 }
 .user-css-vignette blockquote small {
   display: flex;
@@ -2078,15 +2097,16 @@ html {
   background: var(--c-dark);
   color: var(--c-cyan-dark);
   margin: 0;
-  border: none;
   border-radius: 0;
   font-family: var(--f2);
   padding: 20px;
   -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
           clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-  transition: color ease-in-out 250ms;
-  -webkit-animation: flash 400ms 1500ms linear 1 normal;
-          animation: flash 400ms 1500ms linear 1 normal;
+  border: 1px solid var(--c-cyan-dark);
+  -webkit-animation: flash 400ms 3.5s linear 1 normal;
+          animation: flash 400ms 3.5s linear 1 normal;
+  position: relative;
+  overflow: hidden;
 }
 .user-css-vignette blockquote .quotebox:hover, .user-css-vignette blockquote .quotebox:focus {
   color: var(--c-cyan);
@@ -2094,16 +2114,64 @@ html {
 .user-css-vignette blockquote .quotebox:hover::before, .user-css-vignette blockquote .quotebox:hover::after, .user-css-vignette blockquote .quotebox:focus::before, .user-css-vignette blockquote .quotebox:focus::after {
   display: none;
 }
+.user-css-vignette blockquote .quotebox:before, .user-css-vignette blockquote .quotebox:after {
+  display: block;
+  pointer-events: none;
+  content: url(.);
+  position: absolute;
+}
+.user-css-vignette blockquote .quotebox:before {
+  width: 100%;
+  height: 2px;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  -webkit-animation: scanline 6s linear infinite;
+          animation: scanline 6s linear infinite;
+}
+.user-css-vignette blockquote .quotebox:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: scanlines 1s steps(60) infinite;
+          animation: scanlines 1s steps(60) infinite;
+}
+.user-css-vignette blockquote .actual-quote {
+  transition: color ease-in-out 250ms;
+  -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+          clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  background: var(--c-cyan-dark);
+  width: 100%;
+  overflow: hidden;
+  padding: 1px;
+}
+.user-css-vignette blockquote .actual-quote::after {
+  content: url(.);
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 15px;
+  bottom: 7px;
+  background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 5%, var(--c-dark) 100%);
+  z-index: 99;
+  -webkit-animation: sesame-right 2s 2s ease-out forwards 1;
+          animation: sesame-right 2s 2s ease-out forwards 1;
+}
 .user-css-vignette blockquote p {
   font-family: var(--f2);
   display: block;
 }
 .user-css-vignette blockquote em {
-  top: -3px;
+  top: -9px;
   left: 20px;
 }
 .user-css-vignette blockquote small {
-  bottom: 3px;
+  bottom: -2px;
   right: 20px;
   text-align: right;
 }
@@ -2135,21 +2203,20 @@ html {
   display: block;
   position: absolute;
   background: var(--c-cyan-gradient);
-  left: -5px;
-  right: 5px;
   z-index: 100;
+  width: 35%;
+  height: 50%;
+  -webkit-clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 25px 20px, 20px 25px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
+          clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 25px 20px, 20px 25px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
 }
 .user-css-vignette blockquote::before {
-  height: 50%;
-  top: 0;
-  -webkit-animation: sesame-up 500ms 1s ease-in 1 normal forwards;
-          animation: sesame-up 500ms 1s ease-in 1 normal forwards;
+  top: -5px;
+  left: -5px;
 }
 .user-css-vignette blockquote::after {
-  height: 50%;
-  bottom: 0;
-  -webkit-animation: sesame-down 500ms 1s ease-in 1 normal forwards;
-          animation: sesame-down 500ms 1s ease-in 1 normal forwards;
+  transform: rotate(180deg);
+  bottom: -5px;
+  right: -5px;
 }
 
 .user-css {
@@ -2587,6 +2654,21 @@ html {
   position: absolute;
   top: 3px;
   transition: none;
+  opacity: 0;
+  -webkit-animation: fadein 200ms 2s forwards linear 1;
+          animation: fadein 200ms 2s forwards linear 1;
+}
+.user-css .breadcrumb .world-category-breadcrumb-link {
+  opacity: 0;
+  transform: translateX(-100%);
+  -webkit-animation: fade-right 200ms 1.5s forwards ease-out 1;
+          animation: fade-right 200ms 1.5s forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-wrapper {
+  opacity: 0;
+  transform: translateX(-100%);
+  -webkit-animation: fade-right 200ms 1.7s forwards ease-out 1;
+          animation: fade-right 200ms 1.7s forwards ease-out 1;
 }
 .user-css .article-subheading {
   padding-left: 0;
@@ -2804,9 +2886,6 @@ html {
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar-inner {
   opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 400ms ease-out;
 }
 .user-css .custom-sidebar-wrapper:hover, .user-css .custom-sidebar-wrapper:focus, .user-css .custom-sidebar-wrapper:focus-within, .user-css .custom-sidebar-wrapper:active {
   overflow-y: scroll;
@@ -2858,7 +2937,7 @@ html {
 .user-css .custom-sidebar-wrapper .custom-sidebar-inner {
   border: none;
   border-radius: 0;
-  padding: 5px 0;
+  padding: 0;
   margin: 0;
   background: var(--c-dark);
 }
@@ -2952,6 +3031,21 @@ html {
 .user-css .custom-sidebar-wrapper .custom-sidebar em {
   font-size: 12.5px;
   font-style: normal;
+}
+.user-css .custom-sidebar-wrapper .custom-sidebar::after {
+  content: url(.);
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 5%, var(--c-dark) 100%);
+  z-index: 99;
+  -webkit-animation: sesame-right 2s 2s ease-out forwards 1;
+          animation: sesame-right 2s 2s ease-out forwards 1;
 }
 .user-css .custom-sidebar-wrapper .sidebar-1, .user-css .custom-sidebar-wrapper .motto {
   text-align: center;
@@ -3051,27 +3145,6 @@ html {
 }
 .user-css .custom-sidebar-wrapper .tagged-articles-list:last-of-type {
   margin-bottom: 0;
-}
-.user-css .custom-sidebar-wrapper::before, .user-css .custom-sidebar-wrapper::after {
-  content: url(.);
-  display: none;
-  position: absolute;
-  background: var(--c-cyan-dark);
-  top: 0;
-  bottom: 0;
-  z-index: 100;
-}
-.user-css .custom-sidebar-wrapper::before {
-  width: 50%;
-  left: 0;
-  -webkit-animation: sesame-left 500ms 1s ease-in 1 normal forwards;
-          animation: sesame-left 500ms 1s ease-in 1 normal forwards;
-}
-.user-css .custom-sidebar-wrapper::after {
-  width: 50%;
-  right: 0;
-  -webkit-animation: sesame-right 500ms 1s ease-in 1 normal forwards;
-          animation: sesame-right 500ms 1s ease-in 1 normal forwards;
 }
 .user-css.tag-top .breadcrumb {
   display: none;
@@ -3569,8 +3642,8 @@ html {
   box-shadow: none;
   border-radius: 0;
   position: relative;
-  -webkit-clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
-          clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 20px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
+  -webkit-clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 10px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
+          clip-path: polygon(10px 0, 30% 0, calc(30% + 10px) 10px, calc(100% - 20px) 10px, calc(100% - 10px) 20px, calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 40%) 100%, calc(100% - 40% - 10px) calc(100% - 10px), 20px calc(100% - 10px), 10px calc(100% - 20px), 10px 50%, 0 calc(50% - 10px), 0 10px);
 }
 .user-css.page-world-homepage .home-main-area blockquote .quotebox {
   background: var(--c-dark);
@@ -3829,12 +3902,12 @@ html {
     transform: none;
     -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
             clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-    -webkit-animation: flash 400ms 1500ms linear 1 normal;
-            animation: flash 400ms 1500ms linear 1 normal;
+    -webkit-animation: flash 400ms 3.5s linear 1 normal;
+            animation: flash 400ms 3.5s linear 1 normal;
     overflow-x: hidden;
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper .custom-sidebar {
-    padding: 20px 30px 20px 10px;
+    padding: 25px 30px 25px 10px;
     -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
             clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
   }

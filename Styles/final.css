@@ -2503,6 +2503,7 @@ html {
   pointer-events: none;
   content: url(.);
   position: absolute;
+  display: none;
 }
 .user-css #cover:before {
   width: 100%;
@@ -2895,13 +2896,13 @@ html {
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   filter: drop-shadow(1px 1px 0 var(--c-cyan-dark)) drop-shadow(-1px -1px 0 var(--c-cyan-dark)) drop-shadow(1px -1px 0 var(--c-cyan-dark)) drop-shadow(-1px 1px 0 var(--c-cyan-dark));
   padding: 2.5px 0;
-  transition: all 500ms ease;
   top: 220px;
   cursor: pointer;
   overflow: hidden;
   height: 62px;
   width: 60px;
   z-index: 1200;
+  margin-right: 15px;
 }
 .user-css .custom-sidebar-wrapper small {
   display: none;
@@ -2932,7 +2933,6 @@ html {
   opacity: 0;
 }
 .user-css .custom-sidebar-wrapper:hover, .user-css .custom-sidebar-wrapper:focus, .user-css .custom-sidebar-wrapper:focus-within, .user-css .custom-sidebar-wrapper:active {
-  overflow-y: scroll;
   -webkit-clip-path: none;
           clip-path: none;
   height: auto;
@@ -2952,19 +2952,21 @@ html {
   width: -moz-fit-content;
   width: fit-content;
   overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 235px);
 }
-.user-css .custom-sidebar-wrapper:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active::-webkit-scrollbar-thumb {
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner::-webkit-scrollbar-thumb {
   border-radius: 0;
   background: var(--c-cyan-dark);
 }
-.user-css .custom-sidebar-wrapper:hover::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus-within::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:active::-webkit-scrollbar-track {
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner::-webkit-scrollbar-track, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner::-webkit-scrollbar-track {
   border-radius: 0;
   background: rgba(2, 2, 7, 0.9);
 }
-.user-css .custom-sidebar-wrapper:hover:hover, .user-css .custom-sidebar-wrapper:hover:active, .user-css .custom-sidebar-wrapper:hover:focus, .user-css .custom-sidebar-wrapper:focus:hover, .user-css .custom-sidebar-wrapper:focus:active, .user-css .custom-sidebar-wrapper:focus:focus, .user-css .custom-sidebar-wrapper:focus-within:hover, .user-css .custom-sidebar-wrapper:focus-within:active, .user-css .custom-sidebar-wrapper:focus-within:focus, .user-css .custom-sidebar-wrapper:active:hover, .user-css .custom-sidebar-wrapper:active:active, .user-css .custom-sidebar-wrapper:active:focus {
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:hover, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:active, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:focus, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:hover, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:active, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:focus, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:hover, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:active, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:focus, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:hover, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:active, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:focus {
   scrollbar-color: var(--c-cyan) rgba(2, 2, 7, 0.9);
 }
-.user-css .custom-sidebar-wrapper:hover:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active:focus::-webkit-scrollbar-thumb {
+.user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:hover .custom-sidebar-inner:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus .custom-sidebar-inner:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:focus-within .custom-sidebar-inner:focus::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:hover::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:active::-webkit-scrollbar-thumb, .user-css .custom-sidebar-wrapper:active .custom-sidebar-inner:focus::-webkit-scrollbar-thumb {
   background: var(--c-cyan);
 }
 .user-css .custom-sidebar-wrapper small {
@@ -4012,8 +4014,15 @@ html {
   .user-css.page-article .user-css-vignette blockquote em .quote-colon, .user-css.page-article .user-css-vignette blockquote em .quoted-work, .user-css.page-article .user-css-vignette blockquote small .quote-colon, .user-css.page-article .user-css-vignette blockquote small .quoted-work {
     display: none;
   }
+  .user-css.page-article .user-css-vignette blockquote small {
+    right: 25px;
+  }
+  .user-css.page-article .user-css-vignette blockquote .actual-quote {
+    width: calc(100% - 5px);
+  }
   .user-css.page-article .user-css-vignette blockquote::after {
     width: 40%;
+    right: 0;
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper {
     background: var(--c-cyan-gradient);
@@ -4030,6 +4039,7 @@ html {
     margin-top: 0;
     margin-left: 15px;
     float: right;
+    margin-right: 0;
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper small {
     display: block;
@@ -4045,6 +4055,8 @@ html {
     -webkit-animation: flash 400ms 3.5s linear 1 normal;
             animation: flash 400ms 3.5s linear 1 normal;
     overflow-x: hidden;
+    overflow-y: unset;
+    height: unset;
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper .custom-sidebar {
     padding: 25px 30px 25px 10px;
@@ -4071,6 +4083,10 @@ html {
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
     overflow-y: unset;
+  }
+  .user-css.page-article #cover:before, .user-css.page-article #cover:after {
+    display: block;
+    pointer-events: none;
   }
   .user-css.page-world-homepage .glitch {
     height: 74px;

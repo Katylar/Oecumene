@@ -236,8 +236,17 @@
                         }
                     }
 
+                    small {
+                        right: 25px;
+                    }
+
+                    .actual-quote {
+                        width: calc(100% - 5px);
+                    }
+
                     &::after {
                         width: 40%;
+                        right: 0;
                     }
                 }
 
@@ -255,6 +264,7 @@
                     margin-top: 0;
                     margin-left: 15px;
                     float: right;
+                    margin-right: 0;
                 
                 
                     small {
@@ -271,6 +281,8 @@
                         clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
                         animation:  flash 400ms 3.5s linear 1 normal;
                         overflow-x: hidden;
+                        overflow-y: unset;
+                        height: unset;
                     }
                 
                     .custom-sidebar {
@@ -302,6 +314,14 @@
                             }
                         }
                     }
+                }
+            }
+
+            #cover {        
+                &:before,
+                &:after {
+                    display: block;
+                    pointer-events: none;
                 }
             }
         }

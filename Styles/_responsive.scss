@@ -3,18 +3,19 @@
         &.page-world-homepage {
             .glitch {
                 height: 104px;
+                top: -260px;
             }
         }
     }
 }
 @media only screen and (min-width: 530px) {
-
     .user-css {
         .user-css-vignette {
             blockquote {
-                em, small {
+                em,
+                small {
                     display: flex;
-    
+
                     .quotee {
                         display: inline-block;
                     }
@@ -32,7 +33,8 @@
     .user-css {
         &.page-world-homepage {
             .glitch {
-                top: -10%;
+                top: 238px;
+                height: 50px;
             }
         }
         .user-css-vignette {
@@ -49,7 +51,6 @@
     .user-css-presentation {
     }
     .user-css {
-
         &.page-article {
             .article-content .tab-content {
                 .user-css-vignette {
@@ -64,80 +65,138 @@
             .glitch {
                 height: 60px;
                 h2 {
-                    font-size: 58px
+                    font-size: 58px;
                 }
             }
         }
     }
-
 }
 
 @media only screen and (min-width: 900px) {
     .user-css-presentation {
     }
 
-    .user-css-vignette {
-        .main-article-link {
-            margin-left: 2em;
-        }
-    }
-
+    
     .user-css {
+        .user-css-vignette {
+            .main-article-link {
+                margin-left: 2em;
+            }
+        }
+
         &.page-world-homepage {
             .glitch {
                 height: 136px;
-                top: -28%;
+                top: -284px;
+                padding: 0 10px;
                 h2 {
-                    font-size: 66px
+                    font-size: 66px;
                 }
             }
 
-            .home-main-area .home-selector-wrapper {
-                .home-selector {
-                    grid-template-columns: repeat(3, 280px);
-                    grid-template-rows: 280px 1fr 280px 1fr;
-    
-                    .hexer-wrapper {
-                        &.hexer-oecumene { grid-row: 1/2; grid-column: 1/2;}
-                        &.hexer-communion { grid-row: 1/2; grid-column: 2/3;}
-                        &.hexer-principalia { grid-row: 1/2; grid-column: 3/4;}
-                        &.hexer-people { grid-row: 3/4; grid-column: 1/2;}
-                        &.hexer-compendium { grid-row: 3/4; grid-column: 2/3;}
-                        &.hexer-history { grid-row: 3/4; grid-column: 3/4;}
-                        
-                        &:hover, &:focus {
+            .home-main-area {
+                padding-bottom: 50vh;
+                .home-selector-wrapper {
+                    .home-selector {
+                        grid-template-columns: repeat(3, 280px);
+                        grid-template-rows: 280px 1fr 280px 1fr;
+
+                        .hexer-wrapper {
                             &.hexer-oecumene {
-                                &~.home-hexer-box { grid-row: 1/2; grid-column: 1/2;}  
-                            } 
+                                grid-row: 1/2;
+                                grid-column: 1/2;
+                            }
                             &.hexer-communion {
-                                &~.home-hexer-box { grid-row: 1/2; grid-column: 2/3;}
+                                grid-row: 1/2;
+                                grid-column: 2/3;
                             }
                             &.hexer-principalia {
-                                &~.home-hexer-box { grid-row: 1/2; grid-column: 3/4;}
+                                grid-row: 1/2;
+                                grid-column: 3/4;
                             }
                             &.hexer-people {
-                                &~.home-hexer-box { grid-row: 3/4; grid-column: 1/2;}
+                                grid-row: 3/4;
+                                grid-column: 1/2;
                             }
                             &.hexer-compendium {
-                                &~.home-hexer-box { grid-row: 3/4; grid-column: 2/3;}
+                                grid-row: 3/4;
+                                grid-column: 2/3;
                             }
                             &.hexer-history {
-                                &~.home-hexer-box { grid-row: 3/4; grid-column: 3/4;}
+                                grid-row: 3/4;
+                                grid-column: 3/4;
+                            }
+
+                            &:hover,
+                            &:focus {
+                                &.hexer-oecumene {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 1/2;
+                                        grid-column: 1/2;
+                                    }
+                                }
+                                &.hexer-communion {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 1/2;
+                                        grid-column: 2/3;
+                                    }
+                                }
+                                &.hexer-principalia {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 1/2;
+                                        grid-column: 3/4;
+                                    }
+                                }
+                                &.hexer-people {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 3/4;
+                                        grid-column: 1/2;
+                                    }
+                                }
+                                &.hexer-compendium {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 3/4;
+                                        grid-column: 2/3;
+                                    }
+                                }
+                                &.hexer-history {
+                                    & ~ .home-hexer-box {
+                                        grid-row: 3/4;
+                                        grid-column: 3/4;
+                                    }
+                                }
                             }
                         }
-                    }
-                    .hexer-text {
-                        &:nth-of-type(2) { grid-row: 2/3; grid-column: 1/2;}
-                        &:nth-of-type(4) { grid-row: 2/3; grid-column: 2/3;}
-                        &:nth-of-type(6) { grid-row: 2/3; grid-column: 3/4;}
-                        &:nth-of-type(8) { grid-row: 4/5; grid-column: 1/2;}
-                        &:nth-of-type(10) { grid-row: 4/5; grid-column: 2/3;}
-                        &:nth-of-type(12) { grid-row: 4/5; grid-column: 3/4;}
+                        .hexer-text {
+                            &:nth-of-type(2) {
+                                grid-row: 2/3;
+                                grid-column: 1/2;
+                            }
+                            &:nth-of-type(4) {
+                                grid-row: 2/3;
+                                grid-column: 2/3;
+                            }
+                            &:nth-of-type(6) {
+                                grid-row: 2/3;
+                                grid-column: 3/4;
+                            }
+                            &:nth-of-type(8) {
+                                grid-row: 4/5;
+                                grid-column: 1/2;
+                            }
+                            &:nth-of-type(10) {
+                                grid-row: 4/5;
+                                grid-column: 2/3;
+                            }
+                            &:nth-of-type(12) {
+                                grid-row: 4/5;
+                                grid-column: 3/4;
+                            }
+                        }
                     }
                 }
             }
         }
-        
     }
 }
 
@@ -146,7 +205,7 @@
         &.page-world-homepage {
             .glitch {
                 height: 68px;
-                top: 25%;
+                top: 253px;
             }
         }
     }
@@ -156,13 +215,14 @@
     .user-css {
         .user-css-vignette {
             blockquote {
-                em, small {
-    
-                    .quote-colon, .quoted-work {
+                em,
+                small {
+                    .quote-colon,
+                    .quoted-work {
                         display: inline-block;
                     }
                 }
-    
+
                 &::after {
                     width: 40%;
                 }
@@ -171,10 +231,8 @@
     }
 }
 
-
 @media only screen and (min-width: 1200px) {
     .user-css-presentation {
-
         .world-navigation-palette-trigger {
             display: none;
         }
@@ -186,11 +244,10 @@
         .article-table-of-contents {
             display: block;
         }
-        
     }
 
-    .user-css {
 
+    .user-css {
         .search-form {
             display: flex;
         }
@@ -200,7 +257,7 @@
                 .article-title {
                     margin-left: 289px;
                     border-left: 1px solid var(--c-gold-dimmer);
-        
+
                     .article-table-of-contents {
                         display: block;
                     }
@@ -212,26 +269,31 @@
                     display: block;
                 }
             }
-    
-            .article-title, .article-content .tab-content, .article-content-bottom {
+
+            .article-title,
+            .article-content .tab-content,
+            .article-content-bottom {
                 padding-left: 25px;
                 border-left: 1px solid var(--c-gold-dimmer);
                 width: auto;
             }
-            
-            .article-content .tab-content, .article-content-bottom {
+
+            .article-content .tab-content,
+            .article-content-bottom {
                 margin-left: 274px;
             }
 
             .user-css-vignette {
                 blockquote {
-                    em, small {
+                    em,
+                    small {
                         display: flex;
-        
+
                         .quotee {
                             display: inline-block;
                         }
-                        .quote-colon, .quoted-work {
+                        .quote-colon,
+                        .quoted-work {
                             display: none;
                         }
                     }
@@ -250,10 +312,27 @@
                     }
                 }
 
-                .custom-sidebar-wrapper{
+                .custom-sidebar-wrapper {
                     background: var(--c-cyan-gradient);
                     position: relative;
-                    clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
+                    clip-path: polygon(
+                        calc(100% - 40px) 0px,
+                        calc(100% - 20px) 20px,
+                        calc(100% - 20px) 55px,
+                        100% 75px,
+                        100% 175px,
+                        calc(100% - 20px) 195px,
+                        calc(100% - 20px) calc(100% - 20px),
+                        calc(100% - 30px) calc(100% - 10px),
+                        calc(100% - 90px) calc(100% - 10px),
+                        calc(100% - 100px) 100%,
+                        10px 100%,
+                        0px calc(100% - 10px),
+                        0% 30px,
+                        10px 20px,
+                        80px 20px,
+                        100px 0%
+                    );
                     filter: none;
                     padding: 1px;
                     top: unset;
@@ -265,50 +344,95 @@
                     margin-left: 15px;
                     float: right;
                     margin-right: 0;
-                
-                
+
                     small {
                         display: block;
                     }
-                
+
                     .fa-database {
                         display: none;
                     }
-                
+
                     .custom-sidebar-inner {
                         opacity: 1;
                         transform: none;
-                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-                        animation:  flash 400ms 3.5s linear 1 normal;
+                        clip-path: polygon(
+                            calc(100% - 40px) 0px,
+                            calc(100% - 20px) 20px,
+                            calc(100% - 20px) calc(100% - 20px),
+                            calc(100% - 30px) calc(100% - 10px),
+                            calc(100% - 115px) calc(100% - 10px),
+                            calc(100% - 125px) 100%,
+                            10px 100%,
+                            0px calc(100% - 10px),
+                            0% 30px,
+                            10px 20px,
+                            100px 20px,
+                            120px 0%
+                        );
+                        animation: flash 400ms 3.5s linear 1 normal;
                         overflow-x: hidden;
                         overflow-y: unset;
                         height: unset;
                     }
-                
+
                     .custom-sidebar {
                         padding: 25px 30px 25px 10px;
-                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-                
+                        clip-path: polygon(
+                            calc(100% - 40px) 0px,
+                            calc(100% - 20px) 20px,
+                            calc(100% - 20px) calc(100% - 20px),
+                            calc(100% - 30px) calc(100% - 10px),
+                            calc(100% - 115px) calc(100% - 10px),
+                            calc(100% - 125px) 100%,
+                            10px 100%,
+                            0px calc(100% - 10px),
+                            0% 30px,
+                            10px 20px,
+                            100px 20px,
+                            120px 0%
+                        );
                     }
-                
-                    &::before, &::after {
+
+                    &::before,
+                    &::after {
                         display: block;
                     }
-                
-                    &:hover, &:focus, &:focus-within, &:active {
+
+                    &:hover,
+                    &:focus,
+                    &:focus-within,
+                    &:active {
                         overflow-x: hidden;
                         overflow-y: unset;
-                        clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) 55px, 100% 75px, 100% 175px, calc(100% - 20px) 195px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 90px) calc(100% - 10px), calc(100% - 100px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 80px 20px, 100px 0%);
-                        width: 370px;   
+                        clip-path: polygon(
+                            calc(100% - 40px) 0px,
+                            calc(100% - 20px) 20px,
+                            calc(100% - 20px) 55px,
+                            100% 75px,
+                            100% 175px,
+                            calc(100% - 20px) 195px,
+                            calc(100% - 20px) calc(100% - 20px),
+                            calc(100% - 30px) calc(100% - 10px),
+                            calc(100% - 90px) calc(100% - 10px),
+                            calc(100% - 100px) 100%,
+                            10px 100%,
+                            0px calc(100% - 10px),
+                            0% 30px,
+                            10px 20px,
+                            80px 20px,
+                            100px 0%
+                        );
+                        width: 370px;
                         background: var(--c-cyan-gradient);
                         bottom: unset;
                         padding: 1px;
-                        
+
                         .custom-sidebar-inner {
                             transform: none;
                             border: none;
                             width: auto;
-                
+
                             .custom-sidebar {
                                 overflow-y: unset;
                             }
@@ -317,7 +441,7 @@
                 }
             }
 
-            #cover {        
+            #cover {
                 &:before,
                 &:after {
                     display: block;
@@ -329,9 +453,9 @@
         &.page-world-homepage {
             .glitch {
                 height: 74px;
-                top: -30%;
+                top: -300px;
                 h2 {
-                    font-size: 72px
+                    font-size: 72px;
                 }
             }
         }
@@ -344,31 +468,27 @@
             .user-css-vignette {
                 blockquote {
                     small {
-                        .quote-colon, .quoted-work {
+                        .quote-colon,
+                        .quoted-work {
                             display: inline-block;
                         }
                     }
                     &::after {
                         width: 65%;
                     }
-                }        
+                }
             }
         }
     }
 }
-    
 
 @media only screen and (min-width: 1455px) {
     .user-css-presentation {
-
     }
-
-
 }
 
 @media only screen and (min-width: 1600px) {
     .user-css-presentation {
-
     }
     .user-css {
         &.page-article {
@@ -377,7 +497,7 @@
                     &::after {
                         width: 45%;
                     }
-                }        
+                }
             }
         }
     }
@@ -391,52 +511,107 @@
                 grid-template-rows: 280px 1fr;
 
                 .hexer-wrapper {
-                    &.hexer-oecumene { grid-row: 1/2; grid-column: 1/2;}
-                    &.hexer-communion { grid-row: 1/2; grid-column: 2/3;}
-                    &.hexer-principalia { grid-row: 1/2; grid-column: 3/4;}
-                    &.hexer-people { grid-row: 1/2; grid-column: 4/5;}
-                    &.hexer-compendium { grid-row: 1/2; grid-column: 5/6;}
-                    &.hexer-history { grid-row: 1/2; grid-column: 6/7;}
-                    
-                    &:hover, &:focus {
+                    &.hexer-oecumene {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                    }
+                    &.hexer-communion {
+                        grid-row: 1/2;
+                        grid-column: 2/3;
+                    }
+                    &.hexer-principalia {
+                        grid-row: 1/2;
+                        grid-column: 3/4;
+                    }
+                    &.hexer-people {
+                        grid-row: 1/2;
+                        grid-column: 4/5;
+                    }
+                    &.hexer-compendium {
+                        grid-row: 1/2;
+                        grid-column: 5/6;
+                    }
+                    &.hexer-history {
+                        grid-row: 1/2;
+                        grid-column: 6/7;
+                    }
+
+                    &:hover,
+                    &:focus {
                         &.hexer-oecumene {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 1/2;}  
-                        } 
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 1/2;
+                            }
+                        }
                         &.hexer-communion {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 2/3;}
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 2/3;
+                            }
                         }
                         &.hexer-principalia {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 3/4;}
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 3/4;
+                            }
                         }
                         &.hexer-people {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 4/5;}
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 4/5;
+                            }
                         }
                         &.hexer-compendium {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 5/6;}
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 5/6;
+                            }
                         }
                         &.hexer-history {
-                            &~.home-hexer-box { grid-row: 1/2; grid-column: 6/7;}
+                            & ~ .home-hexer-box {
+                                grid-row: 1/2;
+                                grid-column: 6/7;
+                            }
                         }
                     }
                 }
                 .hexer-text {
-                    &:nth-of-type(2) { grid-row: 2/3; grid-column: 1/2;}
-                    &:nth-of-type(4) { grid-row: 2/3; grid-column: 2/3;}
-                    &:nth-of-type(6) { grid-row: 2/3; grid-column: 3/4;}
-                    &:nth-of-type(8) { grid-row: 2/3; grid-column: 4/5;}
-                    &:nth-of-type(10) { grid-row: 2/3; grid-column: 5/6;}
-                    &:nth-of-type(12) { grid-row: 2/3; grid-column: 6/7;}
+                    &:nth-of-type(2) {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                    }
+                    &:nth-of-type(4) {
+                        grid-row: 2/3;
+                        grid-column: 2/3;
+                    }
+                    &:nth-of-type(6) {
+                        grid-row: 2/3;
+                        grid-column: 3/4;
+                    }
+                    &:nth-of-type(8) {
+                        grid-row: 2/3;
+                        grid-column: 4/5;
+                    }
+                    &:nth-of-type(10) {
+                        grid-row: 2/3;
+                        grid-column: 5/6;
+                    }
+                    &:nth-of-type(12) {
+                        grid-row: 2/3;
+                        grid-column: 6/7;
+                    }
                 }
             }
         }
 
         &.page-article {
-            .user-css-vignette{
+            .user-css-vignette {
                 blockquote {
                     &::after {
                         width: 35%;
                     }
-                }  
+                }
             }
         }
     }

@@ -1,0 +1,125 @@
+.user-css-presentation {
+    .worldmenu-inner h1 a,
+    .table-of-contents h5 a {
+        pointer-events: none;
+    }
+}
+
+.user-css {
+    &.page-world-homepage {
+        .article-panel {
+            .heading {
+                display: flex;
+                height: 52px;
+                justify-content: center;
+                align-items: center;
+            }
+            .excerpt {
+                display: none;
+            }
+        }
+    }
+
+    &.page-image {
+        background-image: none;
+        box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+        border: 1px solid var(--c-gold-dimmer);
+        position: relative;
+        background: var(--c-lightest);
+        border: 1px solid var(--c-cyan);
+
+        .world-owners {
+            font-family: var(--f6);
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--c-light);
+
+            a {
+                color: var(--c-cyan);
+                text-decoration: none;
+                transition: all 100ms ease;
+                border: none;
+                border-radius: 0;
+                white-space: nowrap;
+
+                &:hover,
+                &:focus {
+                    color: var(--c-gold-dim);
+                }
+
+                &:active {
+                    color: var(--c-gold);
+                }
+            }
+        }
+
+        .world-subtitle small {
+            font-variant: small-caps;
+            letter-spacing: 1px;
+            color: var(--c-gold-dark);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .bottomnotch,
+        .topnotch {
+            position: absolute;
+            background: var(--c-gold-dimmer);
+            height: 25px;
+            width: 145px;
+            display: block;
+        }
+
+        .copyright-attribution {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        .bottomnotch {
+            clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
+            bottom: -1px;
+            right: -1px;
+        }
+
+        .topnotch {
+            clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
+            top: 0;
+            left: -202px;
+        }
+
+        .article-table-of-contents {
+            display: none !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            color: var(--c-dark);
+        }
+
+        a {
+            color: var(--c-cyan);
+        }
+
+        .nav-strip {
+            padding: 10px;
+            background-color: var(--c-cyan);
+            font-family: var(--f3);
+            font-size: 14px;
+            font-weight: 400;
+            z-index: 2;
+
+            a {
+                color: var(--c-lightest);
+            }
+        }
+
+        .cover {
+            border-bottom: var(--c-cyan);
+        }
+    }
+}

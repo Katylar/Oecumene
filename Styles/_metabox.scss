@@ -1,0 +1,58 @@
+.user-css-extended {
+    font-family: var(--f2);
+    color: var(--c-cyan);
+    z-index: 400 !important;
+    position: relative;
+
+    .page.article-extended-tabs {
+        background: rgba(2, 2, 7, 0.9);
+        box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
+        font-family: var(--f2);
+        width: calc(100vw - 80px);
+
+        .extendedbody-metadata.nav-item {
+            padding-bottom: 0;
+            font-family: var(--f2);
+        }
+
+        a.nav-link {
+            font-family: var(--f1);
+            color: var(--c-gold-dark);
+            background: var(--c-gold-dim);
+            border: 0 solid var(--c-gold-dim);
+            letter-spacing: 1px;
+        }
+
+        .metadata-label {
+            color: var(--c-gray-light);
+            font-family: var(--f2);
+        }
+
+        .metadata-value a, .badge-wip {
+            color: var(--c-cyan-dark);
+            font-family: var(--f2);
+
+            &:hover, &:focus {
+                color: var(--c-cyan);
+            }
+        }
+
+        .metadata-value .explorer-tag {
+            color: var(--c-light);
+            background: var(--c-cyan-dark);
+            border: 0 solid var(--c-cyan-dark);
+            font-family: var(--f2);
+
+            &:hover, &:focus {
+                background: var(--c-cyan);
+                border: 0 solid var(--c-cyan);
+                color: var(--c-light);
+            }
+        }
+
+        .label {
+            border-radius: 5px 0 5px 0;
+            font-family: var(--f2);
+        }
+    }
+}

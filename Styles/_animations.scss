@@ -1,5 +1,8 @@
 @keyframes flash {
     0% {
+        background-color: rgba(2, 2, 7, 0.98);
+    }
+    1% {
         background-color: var(--c-lightest);
         color: var(--c-dark);
     }
@@ -30,7 +33,7 @@
     35% {
         background-color: var(--c-cyan);
         color: var(--c-lightest);
-    }  
+    }
     100% {
         background-color: rgba(2, 2, 7, 0.98);
         color: var(--c-lightest);
@@ -327,21 +330,18 @@
 
 @keyframes scanline {
     0% {
-        transform: translate3d(0,200000%,0);
-        
+        transform: translate3d(0, 200000%, 0);
     }
 }
 
 @keyframes scanlines {
     0% {
         background-position: 0 50%;
-        
     }
 }
 @keyframes line-expander {
     0% {
         width: 0;
-        
     }
     100% {
         width: calc(100vw - 307px);
@@ -362,7 +362,7 @@
         width: 0;
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 1;
     }
     100% {
@@ -375,7 +375,7 @@
         width: 0;
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 1;
     }
     100% {
@@ -390,7 +390,6 @@
     100% {
         background-position-x: 100%;
     }
-
 }
 
 @keyframes fade-right {
@@ -416,3 +415,23 @@
         visibility: hidden;
     }
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--c-cyan-darkest);
+    }
+}
+

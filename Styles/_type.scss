@@ -1,0 +1,105 @@
+.user-css {
+    .article-content,
+    p {
+        font-family: var(--f6);
+        font-size: 16px;
+        line-height: 1.5;
+
+        strong,
+        b {
+            font-weight: 900;
+        }
+    }
+
+    .article-title h1 {
+        font-weight: 500;
+        padding-top: 0;
+    }
+
+    h1 {
+        font-family: var(--f1);
+        color: var(--c-gold);
+        font-variant: small-caps;
+    }
+
+    h2 {
+        font-family: var(--f2);
+        color: var(--c-gold-dim);
+        letter-spacing: 1px;
+        text-transform: none;
+        font-variant: small-caps;
+        position: relative;
+        border-bottom: none;
+
+        &::before,
+        &::after {
+            content: url(.);
+            position: absolute;
+            bottom: -3px;
+            height: 2px;
+            visibility: visible;
+            transition: 200ms linear;
+        }
+
+        &::before {
+            left: 0;
+            width: 2em;
+            background: var(--c-gold-dim);
+            opacity: 0.8;
+            animation: throb 4s linear infinite;
+        }
+
+        &::after {
+            left: 2.25em;
+            background: var(--c-gold-dark);
+            opacity: 0.7;
+            width: 0;
+            animation: hr-extender 4s 4s ease-in-out forwards 1;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--c-gold);
+
+            &:before {
+                background: var(--c-gold);
+                opacity: 1;
+            }
+
+            &::after {
+                background: var(--c-gold-dimmer);
+                opacity: 1;
+            }
+        }
+    }
+
+    h3 {
+        font-family: var(--f4);
+        color: var(--c-gold-dim);
+        letter-spacing: 1px;
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    h4 {
+        font-family: var(--f3);
+        color: var(--c-gold-dimmer);
+
+        letter-spacing: 1px;
+
+        font-size: 18px;
+    }
+
+    h5 {
+        font-family: var(--f5);
+        color: var(--c-gold-dark);
+
+        letter-spacing: 1px;
+    }
+
+    hr {
+        border-top: 1px solid var(--c-gold-dark);
+        opacity: 0.7;
+    }
+}

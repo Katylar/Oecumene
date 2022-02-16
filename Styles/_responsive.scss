@@ -17,6 +17,16 @@
             }
         }
 
+        &.tag-top {
+            .article-content {
+                .world-global-article-introduction {
+                    .breadcrumb {
+                        display: none !important;
+                    }
+                }
+            }            
+        }
+
         
     }
 }

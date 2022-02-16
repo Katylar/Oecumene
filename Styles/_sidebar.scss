@@ -156,6 +156,7 @@
                 padding-left: 0;
 
                 li {
+                    padding: 0;
                     margin-bottom: 8px;
 
                     &:nth-last-child(1) {
@@ -245,6 +246,7 @@
                 z-index: 99;
                 animation: sesame-right 2s 2s ease-out forwards 1;
             }
+
         }
 
         .sidebar-1,
@@ -371,6 +373,75 @@
 
             &:last-of-type {
                 margin-bottom: 0;
+            }
+        }
+
+        .sidebar-polity {
+            table {
+                th {
+                    font-family: var(--f2);
+                    color: var(--c-gray-light);
+                    font-size: 12.5px;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .sidebar-title {
+        }
+
+        .custom-sidebar .matrix-table {
+            table {
+                th {
+                    background: none !important;
+                    padding: 8px 0;
+                    line-height: 1.4;
+                    border-top: none;
+                    font-family: var(--f2);
+                    color: var(--c-gray-light);
+                    font-size: 12.5px;
+                    vertical-align: top;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .person-profile-wrapper {
+
+            .user-css-image-thumbnail, .incumbent-header, .incumbent-name, .incumbent-since {
+                display: block;
+            }
+        
+            .user-css-image-thumbnail {
+                padding: 0;
+                max-width: 100%;
+                overflow: hidden;
+                font-size: 12px;
+            }
+        
+            .incumbent-header {
+                margin-top: 10px;
+                text-align: center;
+                letter-spacing: 1px;
+                font-family: var(--f2);
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 12px;
+                color: var(--c-gray-light);
+                padding-top: 0;
+            }
+            .incumbent-name {
+                text-align: center;
+                font-size: 13px;
+                padding-bottom: 4px;
+            }
+            .incumbent-since {
+                text-align: center;
+                font-family: var(--f2);
+                color: var(--c-gray-light);
+                font-size: 12.5px;
+                line-height: 1.4;
+                border-top: none;
             }
         }
     }

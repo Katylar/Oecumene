@@ -2683,8 +2683,8 @@ html {
   display: block;
   height: 20px;
   opacity: 0;
-  -webkit-animation: fadein 5ms 2s forwards 1 linear;
-          animation: fadein 5ms 2s forwards 1 linear;
+  -webkit-animation: fadein 5ms 1.4s forwards 1 linear;
+          animation: fadein 5ms 1.4s forwards 1 linear;
   font-size: 10px;
   display: none;
   /** BREADCRUMB ANIMATION **/
@@ -2742,10 +2742,48 @@ html {
   padding-right: 2px;
   opacity: 0;
 }
+.user-css .breadcrumb .breadcrumb-article-icon {
+  display: none;
+}
 .user-css .breadcrumb i.fa-ellipsis-h, .user-css .breadcrumb i.fa-chevron-right {
   display: none;
 }
+.user-css .breadcrumb .breadcrumb-article-parent-categories-links-wrapper a {
+  -webkit-animation: fadein 200ms 1500ms forwards ease-out 1;
+          animation: fadein 200ms 1500ms forwards ease-out 1;
+  position: relative;
+}
+.user-css .breadcrumb .breadcrumb-article-parent-categories-links-wrapper a::before {
+  content: url(.);
+  position: absolute;
+  top: 1px;
+  right: -10px;
+  bottom: 1px;
+  width: 2px;
+  transform: skew(-30deg);
+  background: var(--c-cyan);
+  -webkit-animation: fadein 200ms 1400ms forwards ease-out 1;
+          animation: fadein 200ms 1400ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-parent-link-wrapper a {
+  -webkit-animation: fadein 200ms 1650ms forwards ease-out 1;
+          animation: fadein 200ms 1650ms forwards ease-out 1;
+  position: relative;
+}
+.user-css .breadcrumb .breadcrumb-article-parent-link-wrapper a::before {
+  content: url(.);
+  position: absolute;
+  top: 1px;
+  right: -10px;
+  bottom: 1px;
+  width: 2px;
+  transform: skew(-30deg);
+  background: var(--c-cyan);
+  -webkit-animation: fadein 200ms 1550ms forwards ease-out 1;
+          animation: fadein 200ms 1550ms forwards ease-out 1;
+}
 .user-css .breadcrumb .breadcrumb-article-links-wrapper a {
+  opacity: 0;
   -webkit-animation: fadein 200ms 3300ms forwards ease-out 1;
           animation: fadein 200ms 3300ms forwards ease-out 1;
   position: relative;
@@ -3752,6 +3790,7 @@ html {
   padding-left: 0;
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar ul li {
+  padding: 0;
   margin-bottom: 8px;
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar ul li:nth-last-child(1) {
@@ -3936,6 +3975,56 @@ html {
 .user-css .custom-sidebar-wrapper .tagged-articles-list:last-of-type {
   margin-bottom: 0;
 }
+.user-css .custom-sidebar-wrapper .sidebar-polity table th {
+  font-family: var(--f2);
+  color: var(--c-gray-light);
+  font-size: 12.5px;
+  vertical-align: top;
+}
+.user-css .custom-sidebar-wrapper .custom-sidebar .matrix-table table th {
+  background: none !important;
+  padding: 8px 0;
+  line-height: 1.4;
+  border-top: none;
+  font-family: var(--f2);
+  color: var(--c-gray-light);
+  font-size: 12.5px;
+  vertical-align: top;
+  font-weight: 400;
+}
+.user-css .custom-sidebar-wrapper .person-profile-wrapper .user-css-image-thumbnail, .user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-header, .user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-name, .user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-since {
+  display: block;
+}
+.user-css .custom-sidebar-wrapper .person-profile-wrapper .user-css-image-thumbnail {
+  padding: 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+}
+.user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-header {
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: var(--f2);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--c-gray-light);
+  padding-top: 0;
+}
+.user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-name {
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 4px;
+}
+.user-css .custom-sidebar-wrapper .person-profile-wrapper .incumbent-since {
+  text-align: center;
+  font-family: var(--f2);
+  color: var(--c-gray-light);
+  font-size: 12.5px;
+  line-height: 1.4;
+  border-top: none;
+}
 
 .user-css-extended {
   font-family: var(--f2);
@@ -4094,6 +4183,9 @@ html {
   }
   .user-css.page-article .article-content .world-global-article-introduction .breadcrumb {
     display: block;
+  }
+  .user-css.tag-top .article-content .world-global-article-introduction .breadcrumb {
+    display: none !important;
   }
 }
 @media only screen and (min-width: 530px) {

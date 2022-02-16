@@ -6,6 +6,18 @@
                 top: -260px;
             }
         }
+
+        &.page-article {
+            .article-content {
+                .world-global-article-introduction {
+                    .breadcrumb {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        
     }
 }
 @media only screen and (min-width: 530px) {
@@ -23,6 +35,20 @@
 
                 &::after {
                     width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 590px) {
+    .user-css {
+        &.page-article {
+            .article-content {
+                .world-global-article-introduction {
+                    .breadcrumb {
+                        font-size: 13px;
+                    }
                 }
             }
         }

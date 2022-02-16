@@ -130,6 +130,7 @@
 
     .breadcrumb {
         padding: 0 5px;
+        margin-left: -9px;
         margin-bottom: 0px;
         list-style: none;
         background-color: none;
@@ -140,11 +141,13 @@
         height: 20px;
         opacity: 0;
         animation: fadein 5ms 2s forwards 1 linear;
+        font-size: 10px;
+        display: none;
 
         .breadcrumb-article-link,
         .world-category-breadcrumb-link {
-            margin-right: 8px;
-            margin-left: -10px;
+            margin-right: 12px;
+            // margin-left: -10px;
             color: var(--c-cyan-dark);
             text-decoration: none;
             transition: all 180ms ease;
@@ -187,13 +190,6 @@
             // animation: fade-right 200ms 1.5s forwards ease-out 1;
         }
 
-        .breadcrumb-article-wrapper {
-            position: relative;
-            opacity: 0;
-            // transform: translateX(-100%);
-            // animation: fade-right 200ms 1.7s forwards ease-out 1;
-        }
-
         .breadcrumb-article-current {
             margin-left: -5px;
             color: var(--c-cyan-darkest);
@@ -205,25 +201,9 @@
             opacity: 0;
         }
 
-        i.fa-ellipsis-h {
-            display: none;
-        }
-
-        i.fa-chevron-right {
-            margin-right: 18px;
-            margin-left: -10px;
-            transition: none;
-
-            &::before {
-                content: url(https://www.worldanvil.com/uploads/images/f58272769172069703427b677a19a9e5.svg) !important;
-                width: 10px;
-                display: block;
-                position: absolute;
-                top: 3px;
-                transition: none;
-                opacity: 0;
-                // animation: fadein 200ms 2s forwards linear 1;
-                animation: fadein 400ms forwards ease-out 1;
+        i {
+            &.fa-ellipsis-h, &.fa-chevron-right {
+                display: none;
             }
         }
 
@@ -232,35 +212,56 @@
         .breadcrumb-article-links-wrapper {
 
             a {
-                animation: fadein 400ms 4100ms forwards ease-out 1;
+                animation: fadein 200ms 3300ms forwards ease-out 1;
+                position: relative;
+        
+                &::before {
+                    content: url(.);
+                    position: absolute;
+                    top: 1px;
+                    right: -10px;
+                    bottom: 1px;
+                    width: 2px;
+                    transform: skew(-30deg);
+                    background: var(--c-cyan);
+                    animation: fadein 200ms 3200ms forwards ease-out 1;
+                }
             }
-    
-            .fa-chevron-right::before {
-                animation: fadein 400ms 4400ms forwards ease-out 1;
-            }
-    
+        
             .breadcrumb-article-parent-categories-links-wrapper * {
-                animation: fadein 400ms forwards ease-out 1;
-    
-                &:nth-child(1) { animation-delay: 2000ms; &::before {animation-delay: 2000ms; } }
-                &:nth-child(2) { animation-delay: 2300ms; &::before {animation-delay: 2300ms; } }
-                &:nth-child(3) { animation-delay: 2600ms; &::before {animation-delay: 2600ms; } }
-                &:nth-child(4) { animation-delay: 2900ms; &::before {animation-delay: 2900ms; } }
-                &:nth-child(5) { animation-delay: 3200ms; &::before {animation-delay: 3200ms; } }
-                &:nth-child(6) { animation-delay: 3500ms; &::before {animation-delay: 3500ms; } }
-                &:nth-child(7) { animation-delay: 3800ms; &::before {animation-delay: 3800ms; } }
-                &:nth-child(8) { animation-delay: 4100ms; &::before {animation-delay: 4100ms; } }
-                &:nth-child(9) { animation-delay: 4400ms; &::before {animation-delay: 4400ms; } }
+                animation: fadein 200ms forwards ease-out 1;
+        
+                &:nth-child(1) { animation-delay: 2000ms; &::before {animation-delay: 2100ms; } }
+                &:nth-child(2) { animation-delay: 2150ms; &::before {animation-delay: 2050ms; } }
+                &:nth-child(3) { animation-delay: 2300ms; &::before {animation-delay: 2250ms; } }
+                &:nth-child(4) { animation-delay: 2450ms; &::before {animation-delay: 2350ms; } }
+                &:nth-child(5) { animation-delay: 2600ms; &::before {animation-delay: 2500ms; } }
+                &:nth-child(6) { animation-delay: 2750ms; &::before {animation-delay: 26500ms; } }
+                &:nth-child(7) { animation-delay: 2900ms; &::before {animation-delay: 2800ms; } }
+                &:nth-child(8) { animation-delay: 3150ms; &::before {animation-delay: 3050ms; } }
+                &:nth-child(9) { animation-delay: 3300ms; &::before {animation-delay: 3200ms; } }
             }
-    
+        
         }
 
         .breadcrumb-article-wrapper {
-            animation: fadein 400ms 4700ms forwards ease-out 1;
+            margin-left: 6px;
+
+
             .breadcrumb-article-current {
+                opacity: 0;
+                padding-right: 6px;
+                transition: opacity 400ms ease;
                 animation: 
-                    fadein 400ms 4700ms forwards ease-out 1,
+                    fade-6 400ms 3450ms forwards ease-out,
                     blink-caret 800ms infinite;
+            }
+
+            &:hover, &:focus {
+                .breadcrumb-article-current {
+                    opacity: 1;
+                    color: var(--c-cyan);
+                }
             }
         }
     }

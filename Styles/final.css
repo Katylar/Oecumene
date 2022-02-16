@@ -304,18 +304,12 @@
   }
 }
 @-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -2198,32 +2192,6 @@ html {
   position: relative;
   overflow: hidden;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:after {
-  display: block;
-  pointer-events: none;
-  content: url(.);
-  position: absolute;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:before {
-  width: 100%;
-  height: 2px;
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-  -webkit-animation: scanline 6s linear infinite;
-          animation: scanline 6s linear infinite;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 200;
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
-  background-size: 100% 4px;
-  -webkit-animation: scanlines 1s steps(60) infinite;
-          animation: scanlines 1s steps(60) infinite;
-}
 .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:hover::after, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::before, .user-css.page-world-homepage .home-main-area .home-selector-wrapper .home-selector a:focus::after {
   display: none;
 }
@@ -2676,7 +2644,7 @@ html {
           animation: scanlines 1s steps(60) infinite;
 }
 .user-css #cover:hover::before, .user-css #cover:hover::after, .user-css #cover:focus::before, .user-css #cover:focus::after, .user-css #cover:active::before, .user-css #cover:active::after {
-  display: none;
+  display: none !important;
 }
 .user-css .breadcrumb-wrapper,
 .user-css .breadcrumb,
@@ -2703,6 +2671,10 @@ html {
   background: none;
   display: block;
   height: 20px;
+  opacity: 0;
+  -webkit-animation: fadein 5ms 2s forwards 1 linear;
+          animation: fadein 5ms 2s forwards 1 linear;
+  /** BREADCRUMB ANIMATION **/
 }
 .user-css .breadcrumb .breadcrumb-article-link,
 .user-css .breadcrumb .world-category-breadcrumb-link {
@@ -2747,16 +2719,10 @@ html {
 }
 .user-css .breadcrumb .world-category-breadcrumb-link, .user-css .breadcrumb .breadcrumb-category-article-redirect-link {
   opacity: 0;
-  transform: translateX(-100%);
-  -webkit-animation: fade-right 200ms 1.5s forwards ease-out 1;
-          animation: fade-right 200ms 1.5s forwards ease-out 1;
 }
 .user-css .breadcrumb .breadcrumb-article-wrapper {
   position: relative;
   opacity: 0;
-  transform: translateX(-100%);
-  -webkit-animation: fade-right 200ms 1.7s forwards ease-out 1;
-          animation: fade-right 200ms 1.7s forwards ease-out 1;
 }
 .user-css .breadcrumb .breadcrumb-article-current {
   margin-left: -5px;
@@ -2766,8 +2732,7 @@ html {
   letter-spacing: 1px;
   border-right: 2px solid var(--c-cyan-darkest);
   padding-right: 2px;
-  -webkit-animation: blink-caret 0.75s step-end infinite;
-          animation: blink-caret 0.75s step-end infinite;
+  opacity: 0;
 }
 .user-css .breadcrumb i.fa-ellipsis-h {
   display: none;
@@ -2785,8 +2750,100 @@ html {
   top: 3px;
   transition: none;
   opacity: 0;
-  -webkit-animation: fadein 200ms 2s forwards linear 1;
-          animation: fadein 200ms 2s forwards linear 1;
+  -webkit-animation: fadein 400ms forwards ease-out 1;
+          animation: fadein 400ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper a {
+  -webkit-animation: fadein 400ms 4100ms forwards ease-out 1;
+          animation: fadein 400ms 4100ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .fa-chevron-right::before {
+  -webkit-animation: fadein 400ms 4400ms forwards ease-out 1;
+          animation: fadein 400ms 4400ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper * {
+  -webkit-animation: fadein 400ms forwards ease-out 1;
+          animation: fadein 400ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(1) {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(1)::before {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(2) {
+  -webkit-animation-delay: 2300ms;
+          animation-delay: 2300ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(2)::before {
+  -webkit-animation-delay: 2300ms;
+          animation-delay: 2300ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(3) {
+  -webkit-animation-delay: 2600ms;
+          animation-delay: 2600ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(3)::before {
+  -webkit-animation-delay: 2600ms;
+          animation-delay: 2600ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(4) {
+  -webkit-animation-delay: 2900ms;
+          animation-delay: 2900ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(4)::before {
+  -webkit-animation-delay: 2900ms;
+          animation-delay: 2900ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(5) {
+  -webkit-animation-delay: 3200ms;
+          animation-delay: 3200ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(5)::before {
+  -webkit-animation-delay: 3200ms;
+          animation-delay: 3200ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(6) {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(6)::before {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(7) {
+  -webkit-animation-delay: 3800ms;
+          animation-delay: 3800ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(7)::before {
+  -webkit-animation-delay: 3800ms;
+          animation-delay: 3800ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(8) {
+  -webkit-animation-delay: 4100ms;
+          animation-delay: 4100ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(8)::before {
+  -webkit-animation-delay: 4100ms;
+          animation-delay: 4100ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(9) {
+  -webkit-animation-delay: 4400ms;
+          animation-delay: 4400ms;
+}
+.user-css .breadcrumb .breadcrumb-article-links-wrapper .breadcrumb-article-parent-categories-links-wrapper *:nth-child(9)::before {
+  -webkit-animation-delay: 4400ms;
+          animation-delay: 4400ms;
+}
+.user-css .breadcrumb .breadcrumb-article-wrapper {
+  -webkit-animation: fadein 400ms 4700ms forwards ease-out 1;
+          animation: fadein 400ms 4700ms forwards ease-out 1;
+}
+.user-css .breadcrumb .breadcrumb-article-wrapper .breadcrumb-article-current {
+  -webkit-animation: fadein 400ms 4700ms forwards ease-out 1, blink-caret 800ms infinite;
+          animation: fadein 400ms 4700ms forwards ease-out 1, blink-caret 800ms infinite;
 }
 .user-css .article-subheading {
   padding-left: 0;

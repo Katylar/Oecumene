@@ -107,10 +107,7 @@
 }
 
 @keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
+    to {
         opacity: 1;
     }
 }
@@ -434,4 +431,3 @@
         border-color: var(--c-cyan-darkest);
     }
 }
-

@@ -748,7 +748,7 @@
     width: 0;
   }
   100% {
-    width: calc(100vw - 307px);
+    width: 100vw;
   }
 }
 @keyframes line-expander {
@@ -756,7 +756,7 @@
     width: 0;
   }
   100% {
-    width: calc(100vw - 307px);
+    width: 100vw;
   }
 }
 @-webkit-keyframes grow {
@@ -931,6 +931,8 @@
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #815b09 #1a1100;
 }
 
 .user-css,
@@ -947,6 +949,7 @@ html {
   --c-gold-dim: rgb(187, 128, 0);
   --c-gold-dimmer: rgb(129, 91, 9);
   --c-gold-dark: rgb(88, 61, 3);
+  --c-gold-darkest: rgb(26, 17, 0);
   --c-gold-gradient: linear-gradient(
       90deg,
       rgba(88, 61, 3, 1) 0%,
@@ -968,6 +971,19 @@ html {
   --c-dark: rgb(2, 2, 7);
   --c-gray-light: rgb(113, 124, 142);
   scroll-behavior: smooth;
+}
+
+.user-css-presentation::-webkit-scrollbar {
+  width: 8px;
+}
+.user-css-presentation::-webkit-scrollbar-track {
+  background: var(--c-gold-darkest);
+}
+.user-css-presentation::-webkit-scrollbar-thumb {
+  background: var(--c-gold-dimmer);
+}
+.user-css-presentation::-webkit-scrollbar-thumb:hover, .user-css-presentation::-webkit-scrollbar-thumb:focus {
+  background: var(--c-gold);
 }
 
 .user-css-viewer .do-not-print:last-of-type {
@@ -4208,7 +4224,7 @@ html {
 }
 @media only screen and (min-width: 678px) {
   .user-css.page-world-homepage .glitch {
-    top: 238px;
+    top: -238px;
     height: 50px;
   }
   .user-css .user-css-vignette blockquote::after {
@@ -4318,13 +4334,13 @@ html {
     grid-column: 3/4;
   }
 }
-@media-only screen and (min-width: 930px) {
+@media only screen and (min-width: 934px) {
   .user-css.page-world-homepage .glitch {
     height: 68px;
-    top: 253px;
+    top: -255px;
   }
 }
-@media-only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .user-css .user-css-vignette blockquote em .quote-colon,
 .user-css .user-css-vignette blockquote em .quoted-work,
 .user-css .user-css-vignette blockquote small .quote-colon,

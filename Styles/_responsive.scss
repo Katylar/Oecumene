@@ -69,7 +69,7 @@
     .user-css {
         &.page-world-homepage {
             .glitch {
-                top: 238px;
+                top: -238px;
                 height: 50px;
             }
         }
@@ -110,6 +110,7 @@
 
 @media only screen and (min-width: 900px) {
     .user-css-presentation {
+        
     }
 
     
@@ -236,18 +237,18 @@
     }
 }
 
-@media-only screen and (min-width: 930px) {
+@media only screen and (min-width: 934px) {
     .user-css {
         &.page-world-homepage {
             .glitch {
                 height: 68px;
-                top: 253px;
+                top: -255px;
             }
         }
     }
 }
 
-@media-only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     .user-css {
         .user-css-vignette {
             blockquote {

@@ -1,0 +1,149 @@
+[container:custom-sidebar-wrapper]
+[section:fas fa-2x fa-database] [/section]
+    [small]Data_File[/small]
+    [container:custom-sidebar-inner]
+        [container:custom-sidebar sidebar-office]
+            [container:sidebar-1]
+                Prime Minister for Peace and Order
+            [/container]
+            [hr]
+                [container:sidebar-symbol]
+                    [container:sidebar-flag]
+                        [img:2994769]
+                        Flag
+                    [/container]
+                    [container:sidebar-icon]
+                        [img:2994764]
+                        Icon
+                    [/container]
+                [/container]
+            [hr]
+            [container:person-profile-wrapper]
+                [img:https://thispersondoesnotexist.com/image]
+                [container:incumbent-header]
+                    Incumbent
+                [/container]
+                [container:incumbent-name]
+                    @[Bruce Wayne](article:687b55be-352d-43db-ad66-8755db955f6b)
+                [/container]
+                [container:incumbent-since]
+                    since 25 September 12.609
+                [/container]            
+            [/container]
+            [hr]
+            [container:sidebar-2]Titles & Styles[/container]
+            [table]
+                [tr]
+                    [td:42]
+                        Official
+                    [/td]
+                    [td:68]
+                        Prime Minister for Peace and Order
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:42]
+                        Colloquial
+                    [/td]
+                    [td:68]
+                        [ul]
+                            [li]
+                                Premier
+                            [/li]
+                            [li]
+                                Prime Minister
+                            [/li]
+                            [li]
+                                PM
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:42]
+                        Informal
+                    [/td]
+                    [td:68]
+                        [ul]
+                            [li]
+                                Mx Premier
+                            [/li]
+                            [li]
+                                adam Premier
+                            [/li]
+                            [li]
+                                Mr Premier
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:42]
+                        Formal
+                    [/td]
+                    [td:68]
+                        The Most Valorous
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:42]
+                        Diplomatic,
+                        [br]
+                        Reference
+                    [/td]
+                    [td:68]
+                        [ul]
+                            [li]
+                                Their Valor
+                            [/li]
+                            [li]
+                                Her Valor
+                            [/li]
+                            [li]
+                                His Valor
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:42]
+                        Diplomatic,
+                        [br]
+                        Spoken
+                    [/td]
+                    [td:68]
+                        Your Valor
+                    [/td]
+                [/tr]                
+            [/table]     
+            [hr]
+            [container:sidebar-2]Information[/container]
+            [table]
+                [tr]
+                    [td:42]
+                        Type
+                    [/td]
+                    [td:68]
+                        Office
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:42]
+                        Scope
+                    [/td]
+                    [td:68]
+                        All Principal Familes
+                    [/td]
+                [/tr]   
+                [tr]
+                    [td:42]
+                        Established
+                    [/td]
+                    [td:68]
+                        13 August 12.308
+                    [/td]
+                [/tr]                
+            [/table]     
+        [/container]
+    [/container]
+[/container]

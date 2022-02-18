@@ -1721,7 +1721,7 @@ html {
   margin-left: 10px;
   transition: all 500ms ease;
   margin-top: -4em;
-  z-index: 50;
+  z-index: 1201;
 }
 .user-css-presentation .world-navigation-palette-trigger i {
   background: rgba(2, 2, 7, 0.9);
@@ -3672,7 +3672,7 @@ html {
   overflow: hidden;
   height: 62px;
   width: 60px;
-  z-index: 1200;
+  z-index: 1201;
   margin-right: 15px;
 }
 .user-css .custom-sidebar-wrapper small {

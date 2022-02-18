@@ -1,0 +1,161 @@
+[container:custom-sidebar-wrapper]
+    [section:fas fa-2x fa-database] [/section]
+    [small]Data_File[/small]
+    [container:custom-sidebar-inner]
+        [container:custom-sidebar sidebar-title]
+            [container:sidebar-1]
+            Genitorine
+            [/container]
+            [hr]
+                [container:sidebar-symbol]
+                    [container:sidebar-flag]
+                        [img:2994769]
+                        Flag
+                    [/container]
+                    [container:sidebar-icon]
+                        [img:2994764]
+                        Icon
+                    [/container]
+                [/container]
+            [hr]
+            [container:person-profile-wrapper]
+                [img:https://thispersondoesnotexist.com/image]
+                [container:incumbent-header]
+                    Incumbent
+                [/container]
+                [container:incumbent-name]
+                    @[Bruce Wayne](article:687b55be-352d-43db-ad66-8755db955f6b)
+                [/container]
+                [container:incumbent-since]
+                    since 25 September 12.609
+                [/container]            
+            [/container]
+            [hr]
+            [container:sidebar-2]Form[/container]
+            [container:matrix-table]
+            [table]
+                [tr]
+                    [th:24]
+                        Gender
+                    [/th]
+                    [th:38]
+                        Singular
+                    [/td]
+                    [th:38]
+                        Plural
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:24]
+                        Neutral
+                    [/td]
+                    [td:38]
+                        Genitorine
+                    [/td]
+                    [td:38]
+                        Genitorines
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:24]
+                        Feminine
+                    [/td]
+                    [td:38]
+                        Madrina
+                    [/td]
+                    [td:38]
+                        Madrinas
+                    [/td]
+                [/tr]                
+                [tr]
+                    [td:24]
+                        Masculine
+                    [/td]
+                    [td:38]
+                        Padrino
+                    [/td]
+                    [td:38]
+                        Padrinos
+                    [/td]
+                [/tr]
+            [/table]  
+            [/container]
+            [hr]
+            [container:sidebar-2]Style[/container]
+            [table]
+                [tr]
+                    [td:24]
+                        Informal
+                    [/td]
+                    [td:76]
+                        [ul]
+                            [li]
+                                Doné (D[sup]é[/sup])
+                            [/li]
+                            [li]
+                                Doña (D[sup]a[/sup])
+                            [/li]
+                            [li]
+                                Don (D)
+                            [/li]                    
+                        [/ul]
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:24]
+                        Formal, Reference
+                    [/td]
+                    [td:76]
+                        [ul]
+                            [li]
+                                Their Grand Benevolence (TGB)
+                            [/li]
+                            [li]
+                                Her Grand Benevolence (HGB)
+                            [/li]
+                            [li]
+                                His Grand Benevolence (HGB)
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:24]
+                        Formal, Spoken
+                    [/td]
+                    [td:76]
+                        Your Grand Benevolence
+                    [/td]
+                [/tr]    
+            [/table]     
+            [hr]
+            [container:sidebar-2]Information[/container]
+            [table]
+                [tr]
+                    [td:24]
+                        Type
+                    [/td]
+                    [td:76]
+                        Honorific, Unique
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:24]
+                        Scope
+                    [/td]
+                    [td:76]
+                        All Principal Familes
+                    [/td]
+                [/tr]   
+                [tr]
+                    [td:24]
+                        Established
+                    [/td]
+                    [td:76]
+                        13 August 12.308
+                    [/td]
+                [/tr]                
+            [/table]     
+        [/container]
+    [/container]
+[/container]

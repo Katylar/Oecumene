@@ -1,0 +1,326 @@
+[container:custom-sidebar-wrapper]
+    [section:fas fa-2x fa-database] [/section]
+    [container:custom-sidebar-inner]
+		[container:custom-sidebar sidebar-polity]
+			[small]Data File[/small]
+			[container:sidebar-1]
+				Communion of Worlds
+			[/container]
+			[hr]
+				[container:sidebar-symbol]
+					[container:sidebar-flag]
+						[img:2994769]
+						Flag
+					[/container]
+					[container:sidebar-icon]
+						[img:2994764]
+						Icon
+					[/container]
+				[/container]
+			[hr]
+			[container:motto]
+				[container:sidebar-2]Motto[/container]
+				Together, we can do so much.
+			[/container]
+			[hr]
+				[container:starmap]
+					[container:sidebar-2]Location[/container]
+					[img:3008117]
+					@[The Œcumene](article:b0f21a25-a5a5-4bdf-aa8c-cdb24a53d38b)
+				[/container]
+			[hr]
+			[container:sidebar-2]Key Settlements[/container]
+			[table]
+				[tr]
+					[td:42]
+						Capital
+						[br]
+						[container:vermiform]and [i]Largest[/i][/container]
+					[/td]
+					[td:68]
+						@[Armistice](article:10bb472a-bd64-41ec-b5ff-7161f1de403c)
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Largest
+					[/td]
+					[td:68]
+						@[Atlantis](article:82c6092f-5fc1-4488-84cd-2e83e948a30d)
+					[/td]
+				[/tr]        
+			[/table]  
+			[hr]
+			[container:sidebar-2]Languages[/container]
+			[table]
+				[tr]
+					[td:42]
+						Official
+						[br]
+						[container:vermiform]and [i]Lingua Franca[/i][/container]
+					[/td]
+					[td:68]
+						@[Anglica Nova](article:68470631-a723-46bb-97a3-dca750860306)
+					[/td]
+				[/tr]    
+			[/table]     
+			[hr]
+			[container:sidebar-2]Population[/container]
+			[table]
+				[tr]
+					[th:42]
+						Total
+					[/th]
+					[th:68]
+						XXXX
+					[/th]
+				[/tr]
+				[tr]          
+					[td:42]
+						@[Human](article:5dcea812-a0aa-4583-887e-fc56cf44580a)
+					[/td]
+					[td:68]
+						XXXXX (65%)
+					[/td]
+				[/tr]
+				[tr]             
+					[td:42]
+						@[Ingenian](article:86d7d17c-6d9e-4d1e-8d37-9296fa95952f)
+					[/td]
+					[td:68]
+						XXXXX (35%)
+					[/td]       
+				[/tr]
+			[/table]   
+			[hr]
+			[container:sidebar-2]Demonyms[/container]
+			[table]
+				[tr]
+					[td:42]
+						Formal
+					[/td]
+					[td:68]
+						[ul]
+							[li]
+								Communionist
+							[/li]
+							[li]
+								Communioner
+							[/li]
+						[/ul]
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Derogatory
+					[/td]
+					[td:68]
+						Onionist
+					[/td]
+				[/tr]        
+			[/table] 
+			[hr]
+			[container:sidebar-2]Leadership[/container]
+			[table]
+				[tr]
+					[td:42]
+						@[Chancellor](article:a1cef451-830c-477b-a951-db6da7510f26)
+					[/td]
+					[td:68]
+						XXX
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						@[Head Speaker](article:d7d2f71a-9eb7-45fa-a1d1-2016c632089a)
+					[/td]
+					[td:68]
+						XXX
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						@[Premier](article:7e2c6997-36e2-48b8-a421-c8cd34658280)
+					[/td]
+					[td:68]
+						XXX
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						@[Chief Justice](article:62bb5ec6-9657-4027-8c26-66b1d54dc53c)
+					[/td]
+					[td:68]
+						XXX
+					[/td]
+				[/tr]
+			[/table] 
+			[hr]
+			[container:sidebar-2]Structure[/container]
+			[table]
+				[tr]
+					[td:42]
+						Official Organs
+					[/td]
+					[td:68]
+						[ul]
+							[li]
+								@[The Chancery](article:310cd221-2ecd-4b60-9de2-0e9d679fef58)
+							[/li]
+							[li]
+								@[The Ministry](article:e7314326-64d0-4cb2-b089-964e92b4464e)
+							[/li]
+							[li]
+								@[The Parliament](article:17840179-eb12-450a-a60e-9ed8cdf5e65f)
+							[/li]
+							[li]
+								@[The Interworld Court](article:728c05c0-cda5-4f61-a8dc-3dd2504c4b71)
+							[/li]
+						[/ul]
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Military
+					[/td]
+					[td:68]
+						@[The Peacekeepers](article:7a52407b-6868-45db-9d6d-89f1ce233b06)
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Constituent Polities
+					[/td]
+					[td:68]
+						[ul]
+							[li]
+								@[Commonwealth](article:88762aaf-75d4-4ece-bd1b-8a060317f786)
+							[/li]
+							[li]
+								@[Tsuki](article:f6aa9960-bfd0-418e-8d90-08ff169e55c7)
+							[/li]
+							[li]
+								@[Quingdom](article:9d4a8411-5a3f-4502-b2b3-dc9a3929ce31)
+							[/li]
+							[li]
+								@[Friedland](article:e304ce98-6bee-44fc-bf77-e8fcee131159)
+							[/li]
+							[li]
+								@[Union](article:2ad9762e-6f5d-4cd2-bb4b-a574154405f6)
+							[/li]
+							[li]
+								@[Risingers](article:424f16d5-a617-4514-82f5-3d19010f8c40)
+							[/li]
+							[li]
+								@[CEC](article:1627e919-5032-4b31-80a4-f06f8a02cd8d)
+							[/li]
+							[li]
+								@[Bayerworlds](article:b1d7d195-8e0a-4ea3-911b-f81ae322a524)
+							[/li]
+							[li]
+								@[Welkin](article:d6910f58-aac5-4c40-9ef3-ad0f908c4912)
+							[/li]
+							[li]
+								@[Nexus](article:90ba19f4-659a-49a7-805b-0cafe0501742) [i](Observer)[/i]
+							[/li]
+							[li]
+								@[Syndicate](article:ca0f2962-321c-4693-bd67-8cdbe52a417b) [i](Protectorate)[/i]
+							[/li]
+						[/ul]
+					[/td]
+				[/tr]
+			[/table] 
+			[hr]
+			[container:sidebar-2]Formation[/container]
+			[table]
+				[tr]
+					[td:42]
+						Treaty of Luna
+					[/td]
+					[td:68]
+						25 September 12.185 HE
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Communion Charter
+					[/td]
+					[td:68]
+						13 August 12.320 HE
+					[/td]
+				[/tr]
+				[tr]
+					[td:42]
+						Last Polity Admitted
+					[/td]
+					[td:68]
+						23 January 12.328 HE
+					[/td]
+				[/tr] 
+			[/table]       
+			[hr]
+			[container:sidebar-2]Currency[/container]
+			[table]
+				[tr]
+					[td:42]
+						Official
+					[/td]
+					[td:68]
+					@[Solarian Monetary Unit](article:98aad887-8301-41b5-9052-b004a767de89)
+					[/td]
+				[/tr]    
+				[tr]
+					[td:42]
+						In Use
+					[/td]
+					[td:68]
+						[ul]
+							[li]
+								@[Grimarks](article:c74e16fe-69ab-41a9-a13d-d77629bfa678)
+							[/li]
+							[li]
+								@[Chromes](article:baf9eea3-6354-477d-bf68-865fb874ff7a)
+							[/li]
+							[li]
+								@[Corporate Scrips](article:0d534fc6-65a7-4d2f-908d-5f421a795382)
+							[/li]
+						[/ul]
+					[/td]
+				[/tr] 
+			[/table]          
+			[hr]
+			[container:sidebar-2]Socioeconomic Metrics[/container]
+			[table]
+				[tr]
+					[td:42]
+						GDP
+					[/td]
+					[td:68]
+						Ø XXXXXX
+					[/td]
+				[/tr]
+				[tr] 
+					[td:42]
+						Gini
+					[/td]
+					[td:68]
+						0.561
+					[/td]
+				[/tr]
+				[tr]            
+					[td:42]
+						HDI
+					[/td]
+					[td:68]
+						0.921
+					[/td]       
+				[/tr]
+			[/table]
+			[hr]
+			[center]
+				[container:sidebar-2]Preceded By[/container]
+				@[League of the Œcumene](article:52fe43df-1e64-4553-b9bb-cdcf6963209e)
+			[/center]
+		[/container]
+    [/container]
+[/container]

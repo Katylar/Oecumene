@@ -704,7 +704,7 @@
 
             .home-selector-for-trads {
                 display: none;
-                grid-template-columns: 150px 150px 150px 150px 340px;
+                grid-template-columns: 150px 150px 150px 150px 332px;
                 gap: 1em;
                 padding: 1.5em 20px;
                 justify-content: center;
@@ -848,6 +848,20 @@
                         bottom: 0;
                         background-repeat: no-repeat;
                         transition: 300ms linear;
+
+                        &::after {
+                            content: url(.);
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: linear-gradient(180deg, var(--c-gray-light) 0%, var(--c-dark) 15%, var(--c-dark) 100%);
+                            z-index: 99;
+                            animation: sesame-down-wipe 2s 2s ease-out forwards 1;
+                            transform-origin: bottom center;
+                        }
                     }
 
                     &:before,

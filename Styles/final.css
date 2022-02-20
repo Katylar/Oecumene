@@ -252,8 +252,9 @@
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(120%);
     display: none;
+    visibility: hidden;
   }
 }
 @keyframes sesame-down {
@@ -261,8 +262,29 @@
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(120%);
     display: none;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes sesame-down-wipe {
+  99% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(0%);
+    display: none;
+    visibility: hidden;
+  }
+}
+@keyframes sesame-down-wipe {
+  99% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(0%);
+    display: none;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes sesame-left {
@@ -1015,6 +1037,16 @@
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@-webkit-keyframes fill-in-down {
+  to {
+    height: 100%;
+  }
+}
+@keyframes fill-in-down {
+  to {
+    height: 100%;
   }
 }
 html {
@@ -2683,7 +2715,7 @@ html {
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
   display: none;
-  grid-template-columns: 150px 150px 150px 150px 340px;
+  grid-template-columns: 150px 150px 150px 150px 332px;
   gap: 1em;
   padding: 1.5em 20px;
   justify-content: center;
@@ -2807,6 +2839,20 @@ html {
   bottom: 0;
   background-repeat: no-repeat;
   transition: 300ms linear;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper .bar-image::after {
+  content: url(.);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, var(--c-gray-light) 0%, var(--c-dark) 15%, var(--c-dark) 100%);
+  z-index: 99;
+  -webkit-animation: sesame-down-wipe 2s 2s ease-out forwards 1;
+          animation: sesame-down-wipe 2s 2s ease-out forwards 1;
+  transform-origin: bottom center;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:before, .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:after {
   content: url(.);

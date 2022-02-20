@@ -82,8 +82,19 @@
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(100%);
+        transform: translateY(120%);
         display: none;
+        visibility: hidden;
+    }
+}
+@keyframes sesame-down-wipe {
+    99% {
+        transform: scaleY(0%);
+    }
+    100% {
+        transform: scaleY(0%);
+        display: none;
+        visibility: hidden;
     }
 }
 @keyframes sesame-left {
@@ -484,5 +495,11 @@
     100% {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes fill-in-down {
+    to {
+        height: 100%;
     }
 }

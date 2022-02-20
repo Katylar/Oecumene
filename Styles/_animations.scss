@@ -472,3 +472,17 @@
         transform: scaleY(1) scaleX(1);
     }    
 }
+
+@keyframes fadeout {
+    0% {
+
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

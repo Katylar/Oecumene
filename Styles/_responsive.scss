@@ -493,6 +493,18 @@
                     font-size: 72px;
                 }
             }
+
+
+
+            .home-main-area {
+                .home-selector {
+                    display: none;
+                }
+                .home-selector-for-trads {
+                    display: grid;
+                }
+            }
+
         }
     }
 }

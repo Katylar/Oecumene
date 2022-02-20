@@ -141,7 +141,7 @@
             background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)),
                 url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
             background-size: cover;
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 3em 20px;
             padding-bottom: 190vh;
             color: var(--c-cyan-dark);
@@ -425,7 +425,7 @@
                         display: block;
                         margin: auto;
                         clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-                        background: url(https://www.worldanvil.com/uploads/images/ffc78c4bf15a691ae4f714e585108561.jpg);
+                        background: url(https://www.worldanvil.com/uploads/images/e6bfc8cd02805427f11fce34bee90ded.jpg);
                         width: 100%;
                         height: 100%;
                         background-size: cover;
@@ -680,8 +680,192 @@
 
             .home-selector-for-trads {
                 display: grid;
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-columns: 150px 150px 150px 150px 340px;
                 gap: 1em;
+                padding: 1.5em 20px;
+                justify-content: center;
+
+                a {
+                    &:hover, &:focus {
+                        text-decoration: none !important;
+                    }
+                }
+
+                .bar-wrapper {
+                    height: 680px;
+                    width: 150px;
+                    border: 1px solid rgba(113, 124, 142, 0.4);
+                    padding: 1em;
+                    position: relative;
+                    display: flex;
+                    transition: 1s ease-in-out;
+
+                    .archive-text-wrapper, .archive-text-wrapper em {
+                        display: block;
+                        color: var(--c-lightest);
+                        text-align: left;
+                        width: max-content;
+                        padding: 0;
+                        margin: 0;
+                        line-height: 1;
+                        font-family: var(--f3);
+                    }
+
+                    .archive-text-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        align-items: flex-start;
+                        transform: rotate(180deg);
+                        writing-mode: vertical-lr;
+                        z-index: 125;
+                        position: relative;
+                        margin: 0 auto;
+
+                        em {
+                            font-style: normal;
+                        }
+
+                        .archive-designation, .archive-type {
+                            text-transform: uppercase;
+                        }
+
+                        .archive-designation {
+                            margin-left: 2.25em;
+                            letter-spacing: 1.1px;
+                            font-size: 11px;
+                            font-weight: 900;
+                        }
+    
+                        .archive-name {
+                            font-family: var(--f2);
+                            letter-spacing: 1.1px;
+                            text-transform: none;
+                            font-variant: small-caps;
+                            font-size: 65px;
+                            line-height: 0.65;
+                            font-weight: 900;
+                        }
+    
+                        .archive-type {
+                            font-size: 9px;
+                            letter-spacing: 2px;
+                            color: var(--c-gray-light);
+                        }
+                    }    
+
+                    .bar-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-repeat: no-repeat;
+                        z-index: -1;
+                    }
+
+                    &.bar-oecumene {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
+                            background-position: 64% 92%;
+                        }
+                    }
+                    &.bar-communion {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/3b992ab16750e79b19d762072d41a12d.jpg);
+                            background-position: 64% 85%;
+                        }
+                    }
+                    &.bar-principalia {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/e6bfc8cd02805427f11fce34bee90ded.jpg);
+                            background-position-x: 76%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &.bar-peoples {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/da5205744d769fc4dac845e329be58ff.jpg);
+                            background-position: 51% 82%;
+                            background-size: 320%;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &.bar-compendium {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.35) 0%,rgba(2, 2, 7, 0.35) 100%), url(https://www.worldanvil.com/uploads/images/0f60bb9fe307de5ca13f7823575fabdf.jpg);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &.bar-histories {
+                        .bar-image {
+                            background: linear-gradient(90deg,rgba(2, 2, 7, 0.65) 0%,rgba(2, 2, 7, 0.65) 100%), url(https://www.worldanvil.com/uploads/images/e3268e8d41d624fb86e476e6af950b22.jpg);
+                            background-position: 51% 82%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+
+                .extra-boxes {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    gap: 1em;
+
+                    .bar-wrapper {
+                        height: 100%;
+                        width: 100%;
+
+                        .bar-image{
+
+                        }
+                        
+                        .archive-designation, .archive-type, .archive-name {
+                            writing-mode: unset;
+                            display: block;
+                            color: var(--c-lightest);
+                            text-align: left;
+                            width: max-content;
+                            padding: 0;
+                            margin: 0;
+                            line-height: 1;
+                            font-family: var(--f3);
+                        }
+
+                        .archive-designation {
+                            letter-spacing: 1.1px;
+                            font-size: 10px;
+                            font-weight: 900;
+                            margin: 0 0 0 auto;
+                        }
+
+                        em {
+                            position: absolute;
+                            bottom: 1em;
+                            left: 1em;
+                            font-style: normal;
+                        }
+
+                        .archive-type {
+                            margin-bottom: 1em;
+                            font-size: 9px;
+                            letter-spacing: 2px;
+                            color: var(--c-gray-light);
+                            text-transform: uppercase;
+                        }
+
+                        .archive-name {
+                            font-family: var(--f2);
+                            letter-spacing: 1.1px;
+                            text-transform: none;
+                            font-variant: small-caps;
+                            font-size: 36px;
+                            font-weight: 900;
+                        }
+                    }
+                }
             }
         }
     

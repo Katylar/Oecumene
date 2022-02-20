@@ -929,6 +929,74 @@
     opacity: 0.6;
   }
 }
+@-webkit-keyframes selector-frame-tl {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    top: -4px;
+    left: -4px;
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    top: -8px;
+    left: -8px;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes selector-frame-tl {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    top: -4px;
+    left: -4px;
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    top: -8px;
+    left: -8px;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@-webkit-keyframes selector-frame-br {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    bottom: -4px;
+    right: -4px;
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    bottom: -8px;
+    right: -8px;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes selector-frame-br {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.8) scaleX(0.1);
+  }
+  50% {
+    bottom: -4px;
+    right: -4px;
+    transform: scaleY(1) scaleX(0.2);
+  }
+  100% {
+    opacity: 1;
+    bottom: -8px;
+    right: -8px;
+    transform: scaleY(1) scaleX(1);
+  }
+}
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
@@ -2573,14 +2641,32 @@ html {
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:hover, .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:focus {
   text-decoration: none !important;
 }
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads a:hover .bar-wrapper, .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:focus .bar-wrapper {
+  border: 1px solid var(--c-light);
+  outline: 1px solid rgba(113, 124, 142, 0.4);
+  outline-offset: -0.5em;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads a:hover .bar-wrapper .bar-image, .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:focus .bar-wrapper .bar-image {
+  opacity: 0.4;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads a:hover .bar-wrapper::before, .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:focus .bar-wrapper::before {
+  -webkit-animation: 400ms ease-out selector-frame-tl forwards 1;
+          animation: 400ms ease-out selector-frame-tl forwards 1;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads a:hover .bar-wrapper::after, .user-css.page-world-homepage .home-main-area .home-selector-for-trads a:focus .bar-wrapper::after {
+  -webkit-animation: 400ms ease-out selector-frame-br forwards 1;
+          animation: 400ms ease-out selector-frame-br forwards 1;
+}
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper {
   height: 680px;
   width: 150px;
   border: 1px solid rgba(113, 124, 142, 0.4);
+  outline: 0px solid rgba(113, 124, 142, 0.4);
   padding: 1em;
   position: relative;
   display: flex;
-  transition: 1s ease-in-out;
+  transition: all 300ms linear;
+  background: var(--c-dark);
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper .archive-text-wrapper, .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper .archive-text-wrapper em {
   display: block;
@@ -2639,7 +2725,27 @@ html {
   right: 0;
   bottom: 0;
   background-repeat: no-repeat;
+  transition: 300ms linear;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:before, .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:after {
+  content: url(.);
+  position: absolute;
   z-index: -1;
+  background: var(--c-gold-dim);
+  height: 30%;
+  width: 30%;
+  -webkit-clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+          clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  transition: 400ms ease-in-out;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:before {
+  top: 0;
+  left: 0;
+}
+.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper:after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-oecumene .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
@@ -2700,6 +2806,7 @@ html {
   font-size: 10px;
   font-weight: 900;
   margin: 0 0 0 auto;
+  z-index: 500;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .extra-boxes .bar-wrapper em {
   position: absolute;

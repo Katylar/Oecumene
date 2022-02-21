@@ -63,22 +63,26 @@ html {
             background: var(--c-gold);
         }
     }
+    
+    .user-css-viewer {
+        .do-not-print:last-of-type {
+            z-index: 1200;
+            margin-top: 0;
+            opacity: 1;
+            background: var(--c-dark) !important;
+        }
+    
+        *::selection {
+            color: rgb(41, 29, 2);
+            background: var(--c-gold);
+        }
+        a::selection {
+            color: rgb(41, 29, 2);
+            background: var(--c-gold-dimmer);
+        }
+    }
 }
 
-.user-css-viewer {
-    .do-not-print:last-of-type {
-        z-index: 1200;
-    }
-
-    *::selection {
-        color: rgb(41, 29, 2);
-        background: var(--c-gold);
-    }
-    a::selection {
-        color: rgb(41, 29, 2);
-        background: var(--c-gold-dimmer);
-    }
-}
 
 .user-css {
 

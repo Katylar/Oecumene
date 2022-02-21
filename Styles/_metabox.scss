@@ -8,7 +8,8 @@
         background: rgba(2, 2, 7, 0.9);
         box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
         font-family: var(--f2);
-        width: calc(100vw - 80px);
+        // width: calc(100vw - 80px);
+        width: 100%;
 
         .extendedbody-metadata.nav-item {
             padding-bottom: 0;
@@ -17,9 +18,9 @@
 
         a.nav-link {
             font-family: var(--f1);
-            color: var(--c-gold-dark);
-            background: var(--c-gold-dim);
-            border: 0 solid var(--c-gold-dim);
+            color: var(--c-gold-darkest);
+            background: var(--c-gold-dimmer);
+            border: 0 solid var(--c-gold-dimmer);
             letter-spacing: 1px;
         }
 

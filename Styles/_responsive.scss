@@ -132,7 +132,7 @@
             }
 
             .home-main-area {
-                padding-bottom: 50vh;
+                // padding-bottom: 65vh;
                 .home-selector {
                     grid-template-columns: repeat(3, 280px);
                     grid-template-rows: 280px 1fr 280px 1fr;
@@ -405,7 +405,6 @@
                             100px 20px,
                             120px 0%
                         );
-                        animation: flash 400ms 3.5s linear 1 normal;
                         overflow-x: hidden;
                         overflow-y: unset;
                         height: unset;
@@ -523,6 +522,18 @@
                     &::after {
                         width: 65%;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .user-css {
+        &.page-world-homepage {
+            .home-main-area {
+                .home-selector-for-trads {
+                    transform: scale(1);
                 }
             }
         }

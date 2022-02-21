@@ -1105,23 +1105,25 @@ html {
 .user-css-presentation::-webkit-scrollbar-thumb:hover, .user-css-presentation::-webkit-scrollbar-thumb:focus {
   background: var(--c-gold);
 }
-
-.user-css-viewer .do-not-print:last-of-type {
+.user-css-presentation .user-css-viewer .do-not-print:last-of-type {
   z-index: 1200;
+  margin-top: 0;
+  opacity: 1;
+  background: var(--c-dark) !important;
 }
-.user-css-viewer *::-moz-selection {
+.user-css-presentation .user-css-viewer *::-moz-selection {
   color: #291d02;
   background: var(--c-gold);
 }
-.user-css-viewer *::selection {
+.user-css-presentation .user-css-viewer *::selection {
   color: #291d02;
   background: var(--c-gold);
 }
-.user-css-viewer a::-moz-selection {
+.user-css-presentation .user-css-viewer a::-moz-selection {
   color: #291d02;
   background: var(--c-gold-dimmer);
 }
-.user-css-viewer a::selection {
+.user-css-presentation .user-css-viewer a::selection {
   color: #291d02;
   background: var(--c-gold-dimmer);
 }
@@ -1762,6 +1764,9 @@ html {
 .user-css-presentation .right-topnav::after {
   left: 40px;
 }
+.user-css-presentation .user-css-viewer .main-container.user-css.page-article-main form.form-inline.search-form {
+  background: transparent !important;
+}
 .user-css-presentation .search-form {
   position: -webkit-sticky;
   position: sticky;
@@ -2117,8 +2122,6 @@ html {
   padding: 0;
   margin-top: 420px !important;
   margin-bottom: 0 !important;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 1050;
 }
@@ -2132,6 +2135,10 @@ html {
 .user-css.page-world-homepage .col-md-12 {
   margin-inline: 0;
   padding-inline: 0;
+}
+.user-css.page-world-homepage .row .user-custom-content.user-custom-content-4.m-b-20,
+.user-css.page-world-homepage .col-md-12 .user-custom-content.user-custom-content-4.m-b-20 {
+  margin-bottom: 0 !important;
 }
 .user-css.page-world-homepage .row:nth-of-type(4) {
   display: none;
@@ -2246,7 +2253,6 @@ html {
   background-size: cover;
   overflow: hidden;
   padding: 3em 20px;
-  padding-bottom: 190vh;
   color: var(--c-cyan-dark);
   text-align: center;
 }
@@ -2324,8 +2330,6 @@ html {
   -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
           clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
   border: 1px solid var(--c-cyan-dark);
-  -webkit-animation: flash 400ms 3.5s linear 1 normal;
-          animation: flash 400ms 3.5s linear 1 normal;
   position: relative;
   overflow: hidden;
 }
@@ -2719,6 +2723,8 @@ html {
   gap: 1em;
   padding: 1.5em 20px;
   justify-content: center;
+  transform: scale(0.825);
+  transform-origin: top;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads a {
   position: relative;
@@ -3427,8 +3433,6 @@ html {
   -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
           clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
   border: 1px solid var(--c-cyan-dark);
-  -webkit-animation: flash 400ms 3.5s linear 1 normal;
-          animation: flash 400ms 3.5s linear 1 normal;
   position: relative;
   overflow: hidden;
 }
@@ -4493,7 +4497,7 @@ html {
   background: rgba(2, 2, 7, 0.9);
   box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
   font-family: var(--f2);
-  width: calc(100vw - 80px);
+  width: 100%;
 }
 .user-css-extended .page.article-extended-tabs .extendedbody-metadata.nav-item {
   padding-bottom: 0;
@@ -4501,9 +4505,9 @@ html {
 }
 .user-css-extended .page.article-extended-tabs a.nav-link {
   font-family: var(--f1);
-  color: var(--c-gold-dark);
-  background: var(--c-gold-dim);
-  border: 0 solid var(--c-gold-dim);
+  color: var(--c-gold-darkest);
+  background: var(--c-gold-dimmer);
+  border: 0 solid var(--c-gold-dimmer);
   letter-spacing: 1px;
 }
 .user-css-extended .page.article-extended-tabs .metadata-label {
@@ -4695,9 +4699,6 @@ html {
   .user-css.page-world-homepage .glitch h2 {
     font-size: 66px;
   }
-  .user-css.page-world-homepage .home-main-area {
-    padding-bottom: 50vh;
-  }
   .user-css.page-world-homepage .home-main-area .home-selector {
     grid-template-columns: repeat(3, 280px);
     grid-template-rows: 280px 1fr 280px 1fr;
@@ -4879,8 +4880,6 @@ html {
     transform: none;
     -webkit-clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
             clip-path: polygon(calc(100% - 40px) 0px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), calc(100% - 30px) calc(100% - 10px), calc(100% - 115px) calc(100% - 10px), calc(100% - 125px) 100%, 10px 100%, 0px calc(100% - 10px), 0% 30px, 10px 20px, 100px 20px, 120px 0%);
-    -webkit-animation: flash 400ms 3.5s linear 1 normal;
-            animation: flash 400ms 3.5s linear 1 normal;
     overflow-x: hidden;
     overflow-y: unset;
     height: unset;
@@ -4936,6 +4935,11 @@ html {
   }
   .user-css.page-article .user-css-vignette blockquote::after {
     width: 65%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
+    transform: scale(1);
   }
 }
 @media only screen and (min-width: 1600px) {

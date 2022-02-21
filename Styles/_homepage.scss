@@ -1,10 +1,11 @@
+
+
 .user-css {
     &.page-world-homepage {
         width: 100%;
         padding: 0;
         margin-top: 420px !important;
         margin-bottom: 0 !important;
-        position: sticky;
         top: 0;
         z-index: 1050;
     
@@ -19,6 +20,10 @@
         .col-md-12 {
             margin-inline: 0;
             padding-inline: 0;
+
+            .user-custom-content.user-custom-content-4.m-b-20 {
+                margin-bottom: 0 !important;
+            }
         }
     
         .row {
@@ -143,7 +148,7 @@
             background-size: cover;
             overflow: hidden;
             padding: 3em 20px;
-            padding-bottom: 190vh;
+            // padding-bottom: 190vh;
             color: var(--c-cyan-dark);
             text-align: center;
 
@@ -231,7 +236,6 @@
                     padding: 20px;
                     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
                     border: 1px solid var(--c-cyan-dark);
-                    animation: flash 400ms 3.5s linear 1 normal;
     
                     &:hover,
                     &:focus {
@@ -708,6 +712,8 @@
                 gap: 1em;
                 padding: 1.5em 20px;
                 justify-content: center;
+                transform: scale(0.825);
+                transform-origin: top;
 
                 a {
                     position: relative;

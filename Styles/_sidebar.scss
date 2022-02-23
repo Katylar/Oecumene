@@ -26,6 +26,7 @@
             padding: 12px 0px;
             text-align: center;
             transition: 200ms all ease;
+            color: white;
 
             i {
                 transition: all 400ms ease;
@@ -241,7 +242,7 @@
                 left: 0px;
                 right: 0px;
                 bottom: 0px;
-                background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 5%, var(--c-dark) 100%);
+                background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 12.5%, var(--c-dark) 100%);
                 z-index: 99;
                 animation: sesame-right 2s 2s ease-out forwards 1;
             }

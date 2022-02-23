@@ -63,7 +63,7 @@ html {
             background: var(--c-gold);
         }
     }
-    
+
     .user-css-viewer {
         .do-not-print:last-of-type {
             z-index: 1200;
@@ -118,6 +118,8 @@ html {
         bottom: -85px;
         right: -10px;
         display: block;
+
+        display: none;
     }
 
     .copyright-attribution {
@@ -138,6 +140,7 @@ html {
             width: 60px;
             position: absolute;
             background: var(--c-gold-dimmer);
+            display: none;
         }
 
         &::after {
@@ -150,6 +153,7 @@ html {
             width: 60px;
             position: absolute;
             background: var(--c-gold-dimmer);
+            display: none;
         }
     }
 

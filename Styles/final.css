@@ -1161,6 +1161,7 @@ html {
   bottom: -85px;
   right: -10px;
   display: block;
+  display: none;
 }
 .user-css .copyright-attribution {
   font-size: 0.7em;
@@ -1181,6 +1182,7 @@ html {
   width: 60px;
   position: absolute;
   background: var(--c-gold-dimmer);
+  display: none;
 }
 .user-css .copyright-attribution::after {
   content: url(.);
@@ -1193,6 +1195,7 @@ html {
   width: 60px;
   position: absolute;
   background: var(--c-gold-dimmer);
+  display: none;
 }
 .user-css .artist-credits.cover-credits {
   position: relative;
@@ -1764,7 +1767,7 @@ html {
 .user-css-presentation .right-topnav::after {
   left: 40px;
 }
-.user-css-presentation .user-css-viewer .main-container.user-css.page-article-main form.form-inline.search-form {
+.user-css-presentation .user-css-viewer .user-css.page-article-main form.form-inline.search-form {
   background: transparent !important;
 }
 .user-css-presentation .search-form {
@@ -3503,6 +3506,10 @@ html {
 .user-css .user-css-vignette blockquote p {
   font-family: var(--f2);
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .user-css .user-css-vignette blockquote em {
   top: -9px;
@@ -3548,8 +3555,8 @@ html {
   z-index: 100;
   width: 35%;
   height: 50%;
-  -webkit-clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 25px 20px, 20px 25px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
-          clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 25px 20px, 20px 25px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
+  -webkit-clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 20px 20px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
+          clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, calc(100% - 10px) 20px, 20px 20px, 20px calc(100% - 10px), 10px 100%, 0 calc(100% - 10px), 0 10px);
 }
 .user-css .user-css-vignette blockquote::before {
   top: -5px;
@@ -4148,6 +4155,7 @@ html {
   padding: 12px 0px;
   text-align: center;
   transition: 200ms all ease;
+  color: white;
 }
 .user-css .custom-sidebar-wrapper .fa-database i {
   transition: all 400ms ease;
@@ -4327,7 +4335,7 @@ html {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 5%, var(--c-dark) 100%);
+  background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 12.5%, var(--c-dark) 100%);
   z-index: 99;
   -webkit-animation: sesame-right 2s 2s ease-out forwards 1;
           animation: sesame-right 2s 2s ease-out forwards 1;
@@ -4505,7 +4513,7 @@ html {
 }
 .user-css-extended .page.article-extended-tabs a.nav-link {
   font-family: var(--f1);
-  color: var(--c-gold-darkest);
+  color: var(--c-gold-dark);
   background: var(--c-gold-dimmer);
   border: 0 solid var(--c-gold-dimmer);
   letter-spacing: 1px;

@@ -93,7 +93,7 @@
   font-family: Icono;
   font-style: normal;
   font-weight: 400;
-  src: url(https://rawcdn.githack.com/Katylar/Oecumene/f92147f350fb2615117e4f88dee0af2a9cdedfc5/oecumene.woff);
+  src: url(https://rawcdn.githack.com/Katylar/Oecumene/0fc121102405cee25f58daf833bd6eb8d480405b/oecumene.woff);
 }
 @-webkit-keyframes flash {
   0% {
@@ -2890,17 +2890,9 @@ html {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
   background-position: 64% 92%;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-oecumene .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/bd120ed4fba1acd97ee2c57f6466ba2b.png);
-  background-size: cover;
-}
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-communion .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/3b992ab16750e79b19d762072d41a12d.jpg);
   background-position: 64% 85%;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-communion .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/f60d698ff9bea8f7e0f1f6737f4aa728.png);
-  background-size: cover;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-principalia .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/e6bfc8cd02805427f11fce34bee90ded.jpg);
@@ -2908,19 +2900,11 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-principalia .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/3992de1844b0813a7546ef4e389ec681.png);
-  background-size: cover;
-}
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-peoples .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/da5205744d769fc4dac845e329be58ff.jpg);
   background-position: 51% 82%;
   background-size: 320%;
   background-repeat: no-repeat;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-peoples .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/467ab97a5cf77ae7326463905c9f1419.png);
-  background-size: cover;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-compendium .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.35) 0%, rgba(2, 2, 7, 0.35) 100%), url(https://www.worldanvil.com/uploads/images/0f60bb9fe307de5ca13f7823575fabdf.jpg);
@@ -2928,19 +2912,11 @@ html {
   background-repeat: no-repeat;
   background-position-x: 25%;
 }
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-compendium .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/28391dd4b2c038c50c93848b3f436c75.png);
-  background-size: cover;
-}
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-histories .bar-image {
   background: linear-gradient(90deg, rgba(2, 2, 7, 0.65) 0%, rgba(2, 2, 7, 0.65) 100%), url(https://www.worldanvil.com/uploads/images/e3268e8d41d624fb86e476e6af950b22.jpg);
   background-position: 51% 82%;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-histories .selector-icon {
-  background: url(https://www.worldanvil.com/uploads/images/3073ba7e297b6dcbdec6ec7a4e76d119.png);
-  background-size: cover;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .extra-boxes {
   display: grid;
@@ -3001,16 +2977,16 @@ html {
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 185px;
-  width: 185px;
+  font-size: 160px;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .selector-icon {
+  font-family: var(--i);
+  color: var(--c-gold);
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  height: 120px;
-  width: 120px;
-  background-size: cover;
+  font-size: 100px;
+  text-align: center;
   margin: 0 auto;
   left: 0;
   right: 0;

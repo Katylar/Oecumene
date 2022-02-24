@@ -898,21 +898,12 @@
                             background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
                             background-position: 64% 92%;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/bd120ed4fba1acd97ee2c57f6466ba2b.png);
-                            background-size: cover;
-                        }
                     }
                     &.bar-communion {
                         .bar-image {
                             background: linear-gradient(90deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 35%,rgba(2, 2, 7, 1) 100%), linear-gradient(180deg,rgba(2, 2, 7, 0.05) 0%,rgba(2, 2, 7, 0.2) 15%,rgba(2, 2, 7, 1) 100%), url(https://www.worldanvil.com/uploads/images/3b992ab16750e79b19d762072d41a12d.jpg);
                             background-position: 64% 85%;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/f60d698ff9bea8f7e0f1f6737f4aa728.png);
-                            background-size: cover;
-                        }
-
                     }
                     &.bar-principalia {
                         .bar-image {
@@ -921,11 +912,6 @@
                             background-size: cover;
                             background-repeat: no-repeat;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/3992de1844b0813a7546ef4e389ec681.png);
-                            background-size: cover;
-                        }
-
                     }
                     &.bar-peoples {
                         .bar-image {
@@ -934,11 +920,6 @@
                             background-size: 320%;
                             background-repeat: no-repeat;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/467ab97a5cf77ae7326463905c9f1419.png);
-                            background-size: cover;
-                        }
-
                     }
                     &.bar-compendium {
                         .bar-image {
@@ -947,11 +928,6 @@
                             background-repeat: no-repeat;
                             background-position-x: 25%;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/28391dd4b2c038c50c93848b3f436c75.png);
-                            background-size: cover;
-                        }
-
                     }
                     &.bar-histories {
                         .bar-image {
@@ -960,11 +936,6 @@
                             background-size: cover;
                             background-repeat: no-repeat;
                         }
-                        .selector-icon {
-                            background: url(https://www.worldanvil.com/uploads/images/3073ba7e297b6dcbdec6ec7a4e76d119.png);
-                            background-size: cover;
-                        }
-
                     }
                 }
 
@@ -1033,19 +1004,19 @@
                             top: 0;
                             bottom: 0;
                             margin: auto;
-                            height: 185px;
-                            width: 185px;
+                            font-size: 160px;
                         }
                     }
                 }
 
                 .selector-icon {
+                    font-family: var(--i);
+                    color: var(--c-gold);
                     opacity: 0;
                     visibility: hidden;
                     position: absolute;
-                    height: 120px;
-                    width: 120px;
-                    background-size: cover;
+                    font-size: 100px;
+                    text-align: center;
                     margin: 0 auto;
                     left: 0;
                     right: 0;

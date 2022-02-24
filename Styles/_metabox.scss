@@ -1,7 +1,7 @@
 .user-css-extended {
     font-family: var(--f2);
     color: var(--c-cyan);
-    z-index: 400 !important;
+    z-index: -1 !important;
     position: relative;
 
     .page.article-extended-tabs {
@@ -10,6 +10,7 @@
         font-family: var(--f2);
         // width: calc(100vw - 80px);
         width: 100%;
+        // z-index: 400 !important;
 
         .extendedbody-metadata.nav-item {
             padding-bottom: 0;

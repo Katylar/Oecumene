@@ -1824,7 +1824,7 @@ html {
   margin-right: 11px;
   transition: all 500ms ease;
   bottom: 8%;
-  z-index: 1000;
+  z-index: 1500;
 }
 .user-css-presentation #backtotop .backtotop-button {
   background: rgba(2, 2, 7, 0.9);
@@ -4140,7 +4140,7 @@ html {
   overflow: hidden;
   height: 62px;
   width: 60px;
-  z-index: 1201;
+  z-index: 1501;
   margin-right: 15px;
 }
 .user-css .custom-sidebar-wrapper small {
@@ -4498,7 +4498,7 @@ html {
 .user-css-extended {
   font-family: var(--f2);
   color: var(--c-cyan);
-  z-index: 400 !important;
+  z-index: -1 !important;
   position: relative;
 }
 .user-css-extended .page.article-extended-tabs {
@@ -4934,6 +4934,10 @@ html {
   }
   .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
     display: grid;
+  }
+
+  .user-css-extended {
+    z-index: unset;
   }
 }
 @media only screen and (min-width: 1300px) {

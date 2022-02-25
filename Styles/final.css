@@ -93,7 +93,7 @@
   font-family: Icono;
   font-style: normal;
   font-weight: 400;
-  src: url(https://rawcdn.githack.com/Katylar/Oecumene/0fc121102405cee25f58daf833bd6eb8d480405b/oecumene.woff);
+  src: url(https://rawcdn.githack.com/Katylar/Oecumene/6921af1fceb8e171e3db095c5510fb50492b4842/oecumene.woff);
 }
 @-webkit-keyframes flash {
   0% {
@@ -1047,6 +1047,16 @@
 @keyframes fill-in-down {
   to {
     height: 100%;
+  }
+}
+@-webkit-keyframes turn {
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes turn {
+  to {
+    transform: rotate(0deg);
   }
 }
 html {
@@ -2975,9 +2985,12 @@ html {
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .extra-boxes .bar-wrapper .selector-icon {
   top: 0;
-  bottom: 0;
+  bottom: 48px;
   margin: auto;
   font-size: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .selector-icon {
   font-family: var(--i);
@@ -4360,45 +4373,60 @@ html {
   margin-top: 7px;
 }
 .user-css .custom-sidebar-wrapper .sidebar-symbol {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1em;
+  place-items: center;
+  place-content: center;
+  margin: 5px 0;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon {
+  display: grid;
+  grid-template-rows: 120px 1fr;
+  gap: 10px;
+  place-items: center;
+  cursor: default;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag sub, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon sub {
+  bottom: unset;
   font-family: var(--f6);
   font-size: 11px;
   line-height: 1;
   color: var(--c-light);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   text-align: center;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .user-css-image-thumbnail,
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .user-css-image-thumbnail {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .user-css-image-thumbnail {
   height: 120px;
   max-height: 120px;
   padding: 0 !important;
   margin-bottom: 8px !important;
   display: flex;
   align-items: center;
+  transition: 300ms ease-in-out;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .user-css-image-thumbnail img,
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .user-css-image-thumbnail img {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .user-css-image-thumbnail img {
   max-height: 120px;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .artist-credits,
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .artist-credits {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag .artist-credits {
   display: none;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .user-css-image-thumbnail {
-  background: var(--c-lightest) !important;
-  border: 2px solid var(--c-cyan) !important;
-  border-radius: 0 10px !important;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 10px;
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag:hover .user-css-image-thumbnail, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag:focus .user-css-image-thumbnail {
+  filter: drop-shadow(1px 1px 0 var(--c-cyan)) drop-shadow(-1px -1px 0 var(--c-cyan)) drop-shadow(1px -1px 0 var(--c-cyan)) drop-shadow(-1px 1px 0 var(--c-cyan));
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .user-css-image-thumbnail img {
-  text-align: center;
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon {
+  color: var(--c-light);
+  transition: 300ms ease-in-out;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon .icono {
   display: block;
-  margin: auto;
-  padding: 5px;
+  font-size: 105px;
+  line-height: 1;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:hover, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:focus {
+  color: var(--c-cyan);
 }
 .user-css .custom-sidebar-wrapper .starmap,
 .user-css .custom-sidebar-wrapper .starmap h3 {
@@ -4781,6 +4809,10 @@ html {
   }
 }
 @media only screen and (min-width: 1200px) {
+  html {
+    scroll-padding-top: 44px;
+  }
+
   .user-css-presentation .world-navigation-palette-trigger {
     display: none;
   }

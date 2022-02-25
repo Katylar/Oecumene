@@ -755,6 +755,7 @@
 
                             .selector-icon {
                                 opacity: 0.85;
+                                // transform: rotate(0deg);
                                 visibility: visible;
                                 animation: throb 10s ease-in-out infinite;
                             }
@@ -1002,9 +1003,12 @@
 
                         .selector-icon {
                             top: 0;
-                            bottom: 0;
+                            bottom: 48px;
                             margin: auto;
                             font-size: 160px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                     }
                 }
@@ -1023,6 +1027,7 @@
                     margin: 0 auto;
                     top: 0;
                     transition: all 350ms ease-in-out;
+                    // transform: rotate(-20deg);
                 }
 
                 

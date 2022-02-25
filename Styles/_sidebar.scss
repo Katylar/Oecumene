@@ -296,16 +296,32 @@
         }
 
         .sidebar-symbol {
-            display: flex;
-            justify-content: space-between;
-            font-family: var(--f6);
-            font-size: 11px;
-            line-height: 1;
-            color: var(--c-light);
-            text-align: center;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 1em;
+            place-items: center;
+            place-content: center;
+            margin: 5px 0;
+            
+            .sidebar-flag, .sidebar-icon {
+                display: grid;
+                grid-template-rows: 120px 1fr;
+                gap: 10px;
+                place-items: center;
+                cursor: default;
 
-            .sidebar-flag,
-            .sidebar-icon {
+                sub {
+                    bottom: unset;
+                    font-family: var(--f6);
+                    font-size: 11px;
+                    line-height: 1;
+                    color: var(--c-light);
+                    width: max-content;
+                    text-align:center;
+                }
+            }
+
+            .sidebar-flag {
                 .user-css-image-thumbnail {
                     height: 120px;
                     max-height: 120px;
@@ -313,6 +329,8 @@
                     margin-bottom: 8px !important;
                     display: flex;
                     align-items: center;
+                    transition: 300ms ease-in-out;
+
 
                     img {
                         max-height: 120px;
@@ -322,27 +340,28 @@
                 .artist-credits {
                     display: none;
                 }
-            }
 
-            .sidebar-flag {
-            }
-
-            .sidebar-icon {
-                .user-css-image-thumbnail {
-                    background: var(--c-lightest) !important;
-                    border: 2px solid var(--c-cyan) !important;
-                    border-radius: 0 10px !important;
-                    border-top-left-radius: 0px;
-                    border-top-right-radius: 10px;
-                    border-bottom-right-radius: 0px;
-                    border-bottom-left-radius: 10px;
-
-                    img {
-                        text-align: center;
-                        display: block;
-                        margin: auto;
-                        padding: 5px;
+                &:hover, &:focus {
+                    .user-css-image-thumbnail {
+                        filter: 
+                            drop-shadow(1px 1px 0 var(--c-cyan)) drop-shadow(-1px -1px 0 var(--c-cyan))
+                            drop-shadow(1px -1px 0 var(--c-cyan)) drop-shadow(-1px 1px 0 var(--c-cyan));
                     }
+
+                }
+            }
+            .sidebar-icon {
+                color: var(--c-light);
+                transition: 300ms ease-in-out;
+
+                .icono {
+                    display: block;
+                    font-size: 105px;
+                    line-height: 1;
+                }
+
+                &:hover, &:focus {
+                    color: var(--c-cyan);
                 }
             }
         }

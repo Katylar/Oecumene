@@ -10,11 +10,11 @@
 				[container:sidebar-symbol]
 					[container:sidebar-flag]
 						[img:2994769]
-						Flag
+						[sub]Flag[/sub]
 					[/container]
 					[container:sidebar-icon]
-						[img:2994764]
-						Icon
+						[section:icono]2[/section]
+						[sub]Icon[/sub]
 					[/container]
 				[/container]
 			[hr]

@@ -267,7 +267,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
+    html {
+        scroll-padding-top: 44px;
+    }
+    
     .user-css-presentation {
+
+
         .world-navigation-palette-trigger {
             display: none;
         }

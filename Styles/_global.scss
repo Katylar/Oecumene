@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-   
+
     scrollbar-width: thin;
     scrollbar-color: rgb(129, 91, 9) rgb(26, 17, 0);
 }
@@ -59,7 +59,8 @@ html {
     &::-webkit-scrollbar-thumb {
         background: var(--c-gold-dimmer);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: var(--c-gold);
         }
     }
@@ -71,7 +72,7 @@ html {
             opacity: 1;
             background: var(--c-dark) !important;
         }
-    
+
         *::selection {
             color: rgb(41, 29, 2);
             background: var(--c-gold);
@@ -87,9 +88,7 @@ html {
     }
 }
 
-
 .user-css {
-
     //** LAYOUT **//
 
     .world-content,
@@ -310,6 +309,20 @@ html {
             grid-template-columns: 2fr 5fr;
         }
 
+        &.flex-topper {
+            align-items: flex-start;
+            justify-content: left;
+
+            .matrix-wrapper {
+                margin: 0;
+            }
+            .flex-item {
+                h1, h2, h3, h4, h5, h6 {
+                    padding-top: 0;
+                }
+            }
+        }
+
         .article-panel {
             padding: 0;
         }
@@ -434,10 +447,8 @@ html {
 
     //** SIDEBAR **
 
-
     /** OH HOH! **/
 
-    
     .user-css-vignette,
     .article-horizontal-navigation {
         font-family: var(--f6);
@@ -466,7 +477,6 @@ html {
     /** EXPERIMENT **/
 
     //** ARTICLE TOC **//
-
 
     /** SCANLINER **/
 

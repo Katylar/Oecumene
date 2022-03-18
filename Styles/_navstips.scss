@@ -10,7 +10,7 @@
     }
 
     #world-editor-bar {
-        position: fixed;
+        position: fixed !important;
         bottom: 0;
         opacity: 0.1;
 
@@ -609,14 +609,14 @@
             background: var(--c-cyan-dark);
             transition: opacity 400ms ease-in-out;
             clip-path: polygon(
-                8px 0,
-                calc(100% - 8px) 0,
-                100% 8px,
-                100% calc(100% - 8px),
-                calc(100% - 8px) 100%,
-                8px 100%,
-                0 calc(100% - 8px),
-                0 8px
+                5px 0,
+                calc(100% - 5px) 0,
+                100% 5px,
+                100% calc(100% - 5px),
+                calc(100% - 5px) 100%,
+                5px 100%,
+                0 calc(100% - 5px),
+                0 5px
             );
             padding: 2px;
 
@@ -653,14 +653,14 @@
 
         .tooltip-inner {
             clip-path: polygon(
-                8px 0,
-                calc(100% - 8px) 0,
-                100% 8px,
-                100% calc(100% - 8px),
-                calc(100% - 8px) 100%,
-                8px 100%,
-                0 calc(100% - 8px),
-                0 8px
+                5px 0,
+                calc(100% - 5px) 0,
+                100% 5px,
+                100% calc(100% - 5px),
+                calc(100% - 5px) 100%,
+                5px 100%,
+                0 calc(100% - 5px),
+                0 5px
             );
             background: rgba(2, 2, 7, 0.98);
             padding: 4px;
@@ -674,14 +674,14 @@
         background: var(--c-cyan-dark);
         transition: opacity 400ms ease-in-out;
         clip-path: polygon(
-            8px 0,
-            calc(100% - 8px) 0,
-            100% 8px,
-            100% calc(100% - 8px),
-            calc(100% - 8px) 100%,
-            8px 100%,
-            0 calc(100% - 8px),
-            0 8px
+            5px 0,
+            calc(100% - 5px) 0,
+            100% 5px,
+            100% calc(100% - 5px),
+            calc(100% - 5px) 100%,
+            5px 100%,
+            0 calc(100% - 5px),
+            0 5px
         );
         padding: 2px;
 
@@ -693,19 +693,20 @@
         .tooltipster-content {
             animation: flash 600ms 1;
             clip-path: polygon(
-                8px 0,
-                calc(100% - 8px) 0,
-                100% 8px,
-                100% calc(100% - 8px),
-                calc(100% - 8px) 100%,
-                8px 100%,
-                0 calc(100% - 8px),
-                0 8px
+                5px 0,
+                calc(100% - 5px) 0,
+                100% 5px,
+                100% calc(100% - 5px),
+                calc(100% - 5px) 100%,
+                5px 100%,
+                0 calc(100% - 5px),
+                0 5px
             );
             background: rgba(2, 2, 7, 0.98);
             padding: 4px;
             border-radius: 0;
             text-align: center;
+            font-size: 12px;
 
             &::before,
             &::after {

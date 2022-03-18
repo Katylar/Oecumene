@@ -47,6 +47,10 @@
                     width: 40%;
                 }
             }
+
+            .matrix-wrapper {
+                transform: scale(1);
+            }
         }
     }
 }
@@ -479,6 +483,11 @@
                         }
                     }
                 }
+                .matrix-wrapper {
+                    &.nomen {
+                        max-width: 485px;
+                    }
+                }
             }
 
             #cover {
@@ -511,6 +520,8 @@
             }
 
         }
+
+
     }
     .user-css-extended {
         z-index: unset;
@@ -532,6 +543,12 @@
                         width: 65%;
                     }
                 }
+                .matrix-wrapper {
+                    &.nomen {
+                        max-width: 585px;
+                    }
+                }
+
             }
         }
     }
@@ -544,6 +561,16 @@
                 .home-selector-for-trads {
                     transform: scale(1);
                 }
+            }
+        }
+        &.page-article {
+            .user-css-vignette {
+                .matrix-wrapper {
+                    &.nomen {
+                        max-width: 685px;
+                    }
+                }
+
             }
         }
     }

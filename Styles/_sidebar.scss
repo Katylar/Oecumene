@@ -310,15 +310,15 @@
                 place-items: center;
                 cursor: default;
 
-                sub {
-                    bottom: unset;
-                    font-family: var(--f6);
-                    font-size: 11px;
-                    line-height: 1;
-                    color: var(--c-light);
-                    width: max-content;
-                    text-align:center;
-                }
+            }
+            sub {
+                bottom: unset;
+                font-family: var(--f6);
+                font-size: 11px;
+                line-height: 1;
+                color: var(--c-light);
+                width: max-content;
+                text-align:center;
             }
 
             .sidebar-flag {
@@ -363,6 +363,37 @@
                 &:hover, &:focus {
                     color: var(--c-cyan);
                 }
+            }
+
+            .sidebar-seal {
+                display: grid;
+                grid-template-rows: 180px 1fr;
+                gap: 10px;
+                place-items: center;
+                cursor: default;
+
+                .user-css-image-thumbnail {
+                    height: 180px;
+                    padding: 0 !important;
+                    margin-bottom: 8px !important;
+                    display: flex;
+                    align-items: center;
+                    transition: 300ms ease-in-out;
+
+                    img {
+                        max-height: 180px;
+                    }
+                }
+
+                .artist-credits {
+                    display: none;
+                }
+            }
+            
+            &.symbol-seal {
+                grid-template-columns: 1fr;
+                gap: 0;
+
             }
         }
 

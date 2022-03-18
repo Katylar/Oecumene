@@ -1319,6 +1319,16 @@ html {
 .user-css .flexor.left-third {
   grid-template-columns: 2fr 5fr;
 }
+.user-css .flexor.flex-topper {
+  align-items: flex-start;
+  justify-content: left;
+}
+.user-css .flexor.flex-topper .matrix-wrapper {
+  margin: 0;
+}
+.user-css .flexor.flex-topper .flex-item h1, .user-css .flexor.flex-topper .flex-item h2, .user-css .flexor.flex-topper .flex-item h3, .user-css .flexor.flex-topper .flex-item h4, .user-css .flexor.flex-topper .flex-item h5, .user-css .flexor.flex-topper .flex-item h6 {
+  padding-top: 0;
+}
 .user-css .flexor .article-panel {
   padding: 0;
 }
@@ -1549,8 +1559,10 @@ html {
 }
 .user-css h5 {
   font-family: var(--f5);
-  color: var(--c-gold-dark);
-  letter-spacing: 1px;
+  color: var(--c-light);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 14px;
 }
 .user-css hr {
   border-top: 1px solid var(--c-gold-dark);
@@ -1569,7 +1581,7 @@ html {
   z-index: 1500;
 }
 .user-css-presentation #world-editor-bar {
-  position: fixed;
+  position: fixed !important;
   bottom: 0;
   opacity: 0.1;
 }
@@ -1909,7 +1921,7 @@ html {
   background: rgba(2, 2, 7, 0.95);
   box-shadow: 10px 10px 20px 4px rgba(19, 25, 37, 0.8), -10px -10px 20px 4px rgba(19, 25, 37, 0.8);
   border: 1px solid var(--c-gold-dimmer);
-  width: clamp(300px, 35%, calc(99vw - 60px));
+  width: clamp(300px, 35%, 99vw - 60px);
   left: 80px;
   scrollbar-color: var(--c-gold-dimmer) rgba(2, 2, 7, 0.9);
   font-family: var(--f2) !important;
@@ -2063,8 +2075,8 @@ html {
 .user-css-presentation .tooltip.fade {
   background: var(--c-cyan-dark);
   transition: opacity 400ms ease-in-out;
-  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
   padding: 2px;
 }
 .user-css-presentation .tooltip.fade .tooltip-inner::before, .user-css-presentation .tooltip.fade .tooltip-inner::after {
@@ -2092,8 +2104,8 @@ html {
   transform: translateY(100%);
 }
 .user-css-presentation .tooltip .tooltip-inner {
-  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
   background: rgba(2, 2, 7, 0.98);
   padding: 4px;
   border-radius: 0;
@@ -2103,8 +2115,8 @@ html {
   font-family: var(--f2);
   background: var(--c-cyan-dark);
   transition: opacity 400ms ease-in-out;
-  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
   padding: 2px;
 }
 .user-css-presentation .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
@@ -2114,12 +2126,13 @@ html {
 .user-css-presentation .tooltipster-sidetip .tooltipster-content {
   -webkit-animation: flash 600ms 1;
           animation: flash 600ms 1;
-  -webkit-clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-          clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
   background: rgba(2, 2, 7, 0.98);
   padding: 4px;
   border-radius: 0;
   text-align: center;
+  font-size: 12px;
 }
 .user-css-presentation .tooltipster-sidetip .tooltipster-content::before, .user-css-presentation .tooltipster-sidetip .tooltipster-content::after {
   content: url(.);
@@ -2221,7 +2234,7 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  height: calc(48px * 3);
+  height: 144px;
   background: rgba(0, 0, 0, 0.6);
   top: -284px;
   text-align: center;
@@ -3126,7 +3139,7 @@ html {
   font-variant: small-caps;
   font-weight: 600;
   letter-spacing: 1px;
-  display: block;
+  display: none;
   height: 20px;
 }
 .user-css .breadcrumb {
@@ -3391,6 +3404,9 @@ html {
 .user-css .user-css-vignette h4 {
   padding: 15px 0 6px 0;
 }
+.user-css .user-css-vignette h5 {
+  padding: 4px 0 6px 0;
+}
 .user-css .user-css-vignette blockquote {
   background: transparent;
   margin: 10px 5px 25px 5px;
@@ -3437,32 +3453,6 @@ html {
 .user-css .user-css-vignette blockquote .quotebox:hover::before, .user-css .user-css-vignette blockquote .quotebox:hover::after, .user-css .user-css-vignette blockquote .quotebox:focus::before, .user-css .user-css-vignette blockquote .quotebox:focus::after {
   display: none;
 }
-.user-css .user-css-vignette blockquote .quotebox:before, .user-css .user-css-vignette blockquote .quotebox:after {
-  display: block;
-  pointer-events: none;
-  content: url(.);
-  position: absolute;
-}
-.user-css .user-css-vignette blockquote .quotebox:before {
-  width: 100%;
-  height: 2px;
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-  -webkit-animation: scanline 6s linear infinite;
-          animation: scanline 6s linear infinite;
-}
-.user-css .user-css-vignette blockquote .quotebox:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 200;
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
-  background-size: 100% 4px;
-  -webkit-animation: scanlines 1s steps(60) infinite;
-          animation: scanlines 1s steps(60) infinite;
-}
 .user-css .user-css-vignette blockquote .actual-quote {
   transition: color ease-in-out 250ms;
   -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
@@ -3503,6 +3493,9 @@ html {
   width: fit-content;
   margin: 0 auto;
 }
+.user-css .user-css-vignette blockquote p .text-abbreviation {
+  color: var(--c-cyan-dark);
+}
 .user-css .user-css-vignette blockquote em {
   top: -9px;
   left: 20px;
@@ -3523,7 +3516,7 @@ html {
 }
 .user-css .user-css-vignette blockquote small a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.65);
   transition: 100ms ease;
 }
 .user-css .user-css-vignette blockquote small a:hover, .user-css .user-css-vignette blockquote small a:focus {
@@ -3531,6 +3524,20 @@ html {
 }
 .user-css .user-css-vignette blockquote small a:active {
   color: var(--c-gold);
+}
+.user-css .user-css-vignette blockquote small .text-abbreviation {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
+  transition: 100ms ease;
+  text-decoration: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  border-bottom-style: none;
+  border-bottom: none;
+  text-decoration: none;
+}
+.user-css .user-css-vignette blockquote small .text-abbreviation:hover, .user-css .user-css-vignette blockquote small .text-abbreviation:focus {
+  color: var(--c-dark);
 }
 .user-css .user-css-vignette blockquote small::before {
   display: none;
@@ -3558,6 +3565,106 @@ html {
   transform: rotate(180deg);
   bottom: -5px;
   right: -5px;
+}
+.user-css .user-css-vignette .text-abbreviation {
+  text-decoration: none;
+  color: #fff;
+  transition: 200ms ease;
+  text-decoration: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  border-bottom-style: none;
+  border-bottom: none;
+  text-decoration: none;
+}
+.user-css .user-css-vignette .text-abbreviation:hover, .user-css .user-css-vignette .text-abbreviation:focus {
+  color: var(--c-gold-dim);
+}
+.user-css .user-css-vignette .matrix-wrapper {
+  transform: scale(0.92);
+  transform-origin: left;
+  position: relative;
+  background: var(--c-cyan-darkest);
+  padding: 1px;
+  margin: 1em 0;
+  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
+          clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
+}
+.user-css .user-css-vignette .matrix-wrapper:before, .user-css .user-css-vignette .matrix-wrapper:after {
+  content: url(.);
+  position: absolute;
+  z-index: 10;
+  background: #2799e0;
+  height: 30px;
+  width: 30px;
+}
+.user-css .user-css-vignette .matrix-wrapper:before {
+  top: 0;
+  right: 0px;
+}
+.user-css .user-css-vignette .matrix-wrapper:after {
+  bottom: 0;
+  left: 0;
+}
+.user-css .user-css-vignette .matrix-wrapper.nomen {
+  min-width: 335px;
+  max-width: 630px;
+}
+.user-css .user-css-vignette .matrix-wrapper.nomen .matrix {
+  grid-template-columns: 100px 1fr 1fr;
+}
+.user-css .user-css-vignette .matrix-wrapper.style-form {
+  min-width: 250px;
+  max-width: 400px;
+}
+.user-css .user-css-vignette .matrix-wrapper.style-form .matrix {
+  grid-template-columns: 100px 1fr;
+}
+.user-css .user-css-vignette .matrix {
+  position: relative;
+  display: grid;
+  background: var(--c-dark);
+  z-index: 15;
+  -webkit-clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
+          clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
+}
+.user-css .user-css-vignette .matrix .matrix-cell {
+  font-family: var(--f1);
+  font-size: 14.5px;
+  color: var(--c-light);
+  line-height: 1.2;
+  padding: 10px;
+}
+.user-css .user-css-vignette .matrix .matrix-cell.cell-label {
+  font-family: var(--f2);
+  color: var(--c-gray-light);
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1;
+  background: rgba(4, 97, 154, 0.01);
+  display: flex;
+  align-items: center;
+}
+.user-css .user-css-vignette .matrix .matrix-cell.cell-center {
+  text-align: center;
+  justify-content: center;
+}
+.user-css .user-css-vignette .matrix .matrix-cell.cell-top {
+  height: 30px;
+}
+.user-css .user-css-vignette .matrix::after {
+  content: url(.);
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 1px;
+  background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 12.5%, var(--c-dark) 100%);
+  -webkit-animation: sesame-right 2s 2s ease-out forwards 1;
+          animation: sesame-right 2s 2s ease-out forwards 1;
 }
 
 .user-css .article-table-of-contents {
@@ -4387,7 +4494,7 @@ html {
   place-items: center;
   cursor: default;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-flag sub, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon sub {
+.user-css .custom-sidebar-wrapper .sidebar-symbol sub {
   bottom: unset;
   font-family: var(--f6);
   font-size: 11px;
@@ -4427,6 +4534,31 @@ html {
 }
 .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:hover, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:focus {
   color: var(--c-cyan);
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal {
+  display: grid;
+  grid-template-rows: 180px 1fr;
+  gap: 10px;
+  place-items: center;
+  cursor: default;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail {
+  height: 180px;
+  padding: 0 !important;
+  margin-bottom: 8px !important;
+  display: flex;
+  align-items: center;
+  transition: 300ms ease-in-out;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail img {
+  max-height: 180px;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .artist-credits {
+  display: none;
+}
+.user-css .custom-sidebar-wrapper .sidebar-symbol.symbol-seal {
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 .user-css .custom-sidebar-wrapper .starmap,
 .user-css .custom-sidebar-wrapper .starmap h3 {
@@ -4675,6 +4807,9 @@ html {
   }
   .user-css .user-css-vignette blockquote::after {
     width: 40%;
+  }
+  .user-css .user-css-vignette .matrix-wrapper {
+    transform: scale(1);
   }
 }
 @media only screen and (min-width: 590px) {
@@ -4929,6 +5064,9 @@ html {
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
     overflow-y: unset;
   }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
+    max-width: 485px;
+  }
   .user-css.page-article #cover:before, .user-css.page-article #cover:after {
     display: block;
     pointer-events: none;
@@ -4959,10 +5097,16 @@ html {
   .user-css.page-article .user-css-vignette blockquote::after {
     width: 65%;
   }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
+    max-width: 585px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
     transform: scale(1);
+  }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
+    max-width: 685px;
   }
 }
 @media only screen and (min-width: 1600px) {

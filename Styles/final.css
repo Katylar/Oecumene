@@ -3407,6 +3407,14 @@ html {
 .user-css .user-css-vignette h5 {
   padding: 4px 0 6px 0;
 }
+.user-css .user-css-vignette span.oomph {
+  font-weight: 900;
+  color: var(--c-lightest);
+  transition: 300ms ease;
+}
+.user-css .user-css-vignette span.oomph:hover, .user-css .user-css-vignette span.oomph:focus {
+  color: var(--c-gold);
+}
 .user-css .user-css-vignette blockquote {
   background: transparent;
   margin: 10px 5px 25px 5px;
@@ -3581,12 +3589,16 @@ html {
   color: var(--c-gold-dim);
 }
 .user-css .user-css-vignette .matrix-wrapper {
-  transform: scale(0.92);
+  transform: scale(0.9);
   transform-origin: left;
   position: relative;
   background: var(--c-cyan-darkest);
   padding: 1px;
   margin: 1em 0;
+  min-width: 350px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
           clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
 }
@@ -3606,18 +3618,13 @@ html {
   bottom: 0;
   left: 0;
 }
-.user-css .user-css-vignette .matrix-wrapper.nomen {
-  min-width: 335px;
-  max-width: 630px;
+.user-css .user-css-vignette .matrix-wrapper.three .matrix {
+  grid-template-columns: 100px 1fr 1fr 1fr;
 }
-.user-css .user-css-vignette .matrix-wrapper.nomen .matrix {
+.user-css .user-css-vignette .matrix-wrapper.two .matrix {
   grid-template-columns: 100px 1fr 1fr;
 }
-.user-css .user-css-vignette .matrix-wrapper.style-form {
-  min-width: 250px;
-  max-width: 400px;
-}
-.user-css .user-css-vignette .matrix-wrapper.style-form .matrix {
+.user-css .user-css-vignette .matrix-wrapper.one .matrix {
   grid-template-columns: 100px 1fr;
 }
 .user-css .user-css-vignette .matrix {
@@ -5064,9 +5071,6 @@ html {
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
     overflow-y: unset;
   }
-  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
-    max-width: 485px;
-  }
   .user-css.page-article #cover:before, .user-css.page-article #cover:after {
     display: block;
     pointer-events: none;
@@ -5097,16 +5101,10 @@ html {
   .user-css.page-article .user-css-vignette blockquote::after {
     width: 65%;
   }
-  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
-    max-width: 585px;
-  }
 }
 @media only screen and (min-width: 1400px) {
   .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
     transform: scale(1);
-  }
-  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
-    max-width: 685px;
   }
 }
 @media only screen and (min-width: 1600px) {

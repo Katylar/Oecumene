@@ -2075,8 +2075,8 @@ html {
 .user-css-presentation .tooltip.fade {
   background: var(--c-cyan-dark);
   transition: opacity 400ms ease-in-out;
-  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
-          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+  -webkit-clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+          clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   padding: 2px;
 }
 .user-css-presentation .tooltip.fade .tooltip-inner::before, .user-css-presentation .tooltip.fade .tooltip-inner::after {
@@ -2089,6 +2089,22 @@ html {
   left: 0;
   right: 0;
   transition: 200ms linear;
+}
+.user-css-presentation .tooltip.fade:before, .user-css-presentation .tooltip.fade:after {
+  content: url(.);
+  position: absolute;
+  z-index: -1;
+  background: #2799e0;
+  height: 35%;
+  width: 20%;
+}
+.user-css-presentation .tooltip.fade:before {
+  top: 0;
+  right: 0px;
+}
+.user-css-presentation .tooltip.fade:after {
+  bottom: 0;
+  left: 0;
 }
 .user-css-presentation .tooltip.in {
   opacity: 1;
@@ -2104,20 +2120,37 @@ html {
   transform: translateY(100%);
 }
 .user-css-presentation .tooltip .tooltip-inner {
-  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
-          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+  -webkit-clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+          clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   background: rgba(2, 2, 7, 0.98);
   padding: 4px;
   border-radius: 0;
   text-align: center;
+  z-index: 150;
 }
 .user-css-presentation .tooltipster-sidetip {
   font-family: var(--f2);
   background: var(--c-cyan-dark);
   transition: opacity 400ms ease-in-out;
-  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
-          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+  -webkit-clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+          clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   padding: 2px;
+}
+.user-css-presentation .tooltipster-sidetip:before, .user-css-presentation .tooltipster-sidetip:after {
+  content: url(.);
+  position: absolute;
+  z-index: -1;
+  background: #2799e0;
+  height: 35%;
+  width: 20%;
+}
+.user-css-presentation .tooltipster-sidetip:before {
+  top: 0;
+  right: 0px;
+}
+.user-css-presentation .tooltipster-sidetip:after {
+  bottom: 0;
+  left: 0;
 }
 .user-css-presentation .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
   margin-bottom: 0 !important;
@@ -2126,8 +2159,8 @@ html {
 .user-css-presentation .tooltipster-sidetip .tooltipster-content {
   -webkit-animation: flash 600ms 1;
           animation: flash 600ms 1;
-  -webkit-clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
-          clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+  -webkit-clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+          clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   background: rgba(2, 2, 7, 0.98);
   padding: 4px;
   border-radius: 0;

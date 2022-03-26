@@ -607,14 +607,22 @@
         &.fade {
             background: var(--c-cyan-dark);
             transition: opacity 400ms ease-in-out;
+            // clip-path: polygon(
+            //     5px 0,
+            //     calc(100% - 5px) 0,
+            //     100% 5px,
+            //     100% calc(100% - 5px),
+            //     calc(100% - 5px) 100%,
+            //     5px 100%,
+            //     0 calc(100% - 5px),
+            //     0 5px
+            // );
             clip-path: polygon(
                 5px 0,
-                calc(100% - 5px) 0,
-                100% 5px,
+                100% 0,
                 100% calc(100% - 5px),
                 calc(100% - 5px) 100%,
-                5px 100%,
-                0 calc(100% - 5px),
+                0 100%,
                 0 5px
             );
             padding: 2px;
@@ -632,6 +640,25 @@
                     right: 0;
                     transition: 200ms linear;
                 }
+            }
+
+            &:before,
+            &:after {
+                content: url(.);
+                position: absolute;
+                z-index: -1;
+                background: rgb(39, 153, 224);
+                height: 35%;
+                width: 20%;   
+            }
+            &:before {
+                top: 0;
+                right: 0px;
+            }
+
+            &:after {
+                bottom: 0;
+                left: 0;
             }
         }
 
@@ -653,18 +680,17 @@
         .tooltip-inner {
             clip-path: polygon(
                 5px 0,
-                calc(100% - 5px) 0,
-                100% 5px,
+                100% 0,
                 100% calc(100% - 5px),
                 calc(100% - 5px) 100%,
-                5px 100%,
-                0 calc(100% - 5px),
+                0 100%,
                 0 5px
             );
             background: rgba(2, 2, 7, 0.98);
             padding: 4px;
             border-radius: 0;
             text-align: center;
+            z-index: 150;
         }
     }
 
@@ -674,15 +700,32 @@
         transition: opacity 400ms ease-in-out;
         clip-path: polygon(
             5px 0,
-            calc(100% - 5px) 0,
-            100% 5px,
+            100% 0,
             100% calc(100% - 5px),
             calc(100% - 5px) 100%,
-            5px 100%,
-            0 calc(100% - 5px),
+            0 100%,
             0 5px
         );
         padding: 2px;
+
+        &:before,
+        &:after {
+            content: url(.);
+            position: absolute;
+            z-index: -1;
+            background: rgb(39, 153, 224);
+            height: 35%;
+            width: 20%;   
+        }
+        &:before {
+            top: 0;
+            right: 0px;
+        }
+
+        &:after {
+            bottom: 0;
+            left: 0;
+        }
 
         &.tooltipster-borderless .tooltipster-box {
             margin-bottom: 0 !important;
@@ -693,12 +736,10 @@
             animation: flash 600ms 1;
             clip-path: polygon(
                 5px 0,
-                calc(100% - 5px) 0,
-                100% 5px,
+                100% 0,
                 100% calc(100% - 5px),
                 calc(100% - 5px) 100%,
-                5px 100%,
-                0 calc(100% - 5px),
+                0 100%,
                 0 5px
             );
             background: rgba(2, 2, 7, 0.98);

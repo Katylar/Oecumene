@@ -1088,6 +1088,7 @@ html {
       rgba(255, 179, 13, 1) 100%
   );
   --c-cyan: rgb(6, 123, 194);
+  --c-cyan-light: rgba(216, 239, 253, 0.85);
   --c-cyan-dark: rgb(4, 98, 155);
   --c-cyan-darkest: rgb(4, 97, 154);
   --c-cyan-gradient: linear-gradient(
@@ -1435,7 +1436,7 @@ html {
 .user-css .article-horizontal-navigation a {
   color: var(--c-cyan);
   text-decoration: none;
-  transition: all 100ms ease;
+  transition: all 180ms ease;
   border: none;
   border-radius: 0;
   white-space: nowrap;
@@ -2154,6 +2155,7 @@ html {
 }
 .user-css-presentation .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
   margin-bottom: 0 !important;
+  margin-top: 0 !important;
   background: transparent !important;
 }
 .user-css-presentation .tooltipster-sidetip .tooltipster-content {
@@ -3233,7 +3235,8 @@ html {
 .user-css .breadcrumb .world-category-breadcrumb-link:active::after {
   background: var(--c-gold);
 }
-.user-css .breadcrumb .world-category-breadcrumb-link, .user-css .breadcrumb .breadcrumb-category-article-redirect-link {
+.user-css .breadcrumb .world-category-breadcrumb-link,
+.user-css .breadcrumb .breadcrumb-category-article-redirect-link {
   opacity: 0;
 }
 .user-css .breadcrumb .breadcrumb-article-current {
@@ -3622,7 +3625,7 @@ html {
   color: var(--c-gold-dim);
 }
 .user-css .user-css-vignette .matrix-wrapper {
-  transform: scale(0.9);
+  transform: scale(0.875);
   transform-origin: left;
   position: relative;
   background: var(--c-cyan-darkest);
@@ -3632,6 +3635,7 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 486px;
   -webkit-clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
           clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
 }
@@ -3705,6 +3709,49 @@ html {
   background: linear-gradient(90deg, var(--c-cyan-dark) 0%, var(--c-dark) 12.5%, var(--c-dark) 100%);
   -webkit-animation: sesame-right 2s 2s ease-out forwards 1;
           animation: sesame-right 2s 2s ease-out forwards 1;
+}
+.user-css .user-css-vignette a.spoiler-button {
+  font-weight: 900;
+  color: var(--c-cyan-light) !important;
+  transition: 300ms ease;
+  font-family: var(--f6);
+  display: inline;
+  background: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: normal;
+  vertical-align: unset;
+  transition: 400ms ease-in-out;
+}
+.user-css .user-css-vignette a.spoiler-button:hover {
+  color: var(--c-cyan-dark) !important;
+}
+.user-css .user-css-vignette a.spoiler-button:active, .user-css .user-css-vignette a.spoiler-button[aria-expanded=true] {
+  color: var(--c-cyan) !important;
+}
+.user-css .user-css-vignette .spoiler-card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5px 0 10px 0;
+}
+.user-css .user-css-vignette .spoiler-content {
+  padding: 0;
+  background: none;
+  color: unset;
+  border-radius: unset;
+  border: none;
+  min-height: unset;
+  margin: 0;
+}
+.user-css .user-css-vignette .spoiler-content .matrix-wrapper {
+  margin: 0;
+}
+.user-css .user-css-vignette .spoiler-content .matrix-wrapper .matrix::after {
+  -webkit-animation: sesame-right 2s 0s ease-out forwards 1 !important;
+          animation: sesame-right 2s 0s ease-out forwards 1 !important;
 }
 
 .user-css .article-table-of-contents {
@@ -5134,10 +5181,16 @@ html {
   .user-css.page-article .user-css-vignette blockquote::after {
     width: 65%;
   }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen {
+    max-width: 585px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .user-css.page-world-homepage .home-main-area .home-selector-for-trads {
     transform: scale(1);
+  }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.nomen, .user-css.page-article .user-css-vignette .matrix-wrapper.style-form {
+    max-width: none;
   }
 }
 @media only screen and (min-width: 1600px) {

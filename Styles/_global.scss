@@ -30,6 +30,7 @@ html {
     );
 
     --c-cyan: rgb(6, 123, 194);
+    --c-cyan-light: rgba(216, 239, 253, 0.85);
     --c-cyan-dark: rgb(4, 98, 155);
     --c-cyan-darkest: rgb(4, 97, 154);
     --c-cyan-gradient: linear-gradient(
@@ -458,7 +459,7 @@ html {
         a {
             color: var(--c-cyan);
             text-decoration: none;
-            transition: all 100ms ease;
+            transition: all 180ms ease;
             border: none;
             border-radius: 0;
             white-space: nowrap;

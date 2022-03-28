@@ -4,13 +4,15 @@
     [container:custom-sidebar-inner]
         [container:custom-sidebar sidebar-title]
             [container:sidebar-1]
-                Chairperson of the Commission on Genetic Rights
+                
             [/container]
             [hr]
             [container:sidebar-symbol symbol-seal]
                 [container:sidebar-seal]
                     [img:3180340]
-                    [sub]Seal of the Chairperson of the Commission[/sub]
+                    [sub]
+                    
+                    [/sub]
                 [/container]
             [/container]
             [hr]
@@ -20,11 +22,11 @@
                 Incumbent
             [/container]
             [container:incumbent-name]
-                @[Bruce Wayne](article:757b55be-352d-43db-ad66-8755db955f6b)
+                
             [/container]
             [container:incumbent-since]
                 since 25 September 12.609
-            [/container]            
+            [/container]			
             [/container]
             [hr]
             [container:sidebar-2]Titles & Styles[/container]
@@ -37,15 +39,9 @@
                     [/td]
                     [td:75]
                         [ul]
-                        [li]
-                        Chairperson of the Commission on Genetic Rights
-                        [/li]
-                        [li]
-                        Godparent of the Communion
-                        [/li]
-                        [li]
-                        Patron and Protector of the People
-                        [/li]
+                            [li]
+
+                            [/li]
                         [/ul]
                     [/td]
                 [/tr]
@@ -57,18 +53,24 @@
                     [/td]
                     [td:75]
                         [ul]
-                        [li]
-                        Chairperson of the Commission
-                        [/li]
-                        [li]
-                        Genitorine
-                        [/li]
-                        [li]
-                        Grand Commissioner
-                        [/li]
+                            [li]
+
+                            [/li]
                         [/ul]
                     [/td]
                 [/tr]
+                [tr]
+                    [td:25]
+                        Honorific
+                    [/td]
+                    [td:75]
+                        [ul]
+                            [li]
+
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]				
                 [tr]
                     [td:25]
                         Style,
@@ -76,17 +78,21 @@
                         Formal
                     [/td]
                     [td:75]
-                        Their Eminent Guidance
+
                     [/td]
                 [/tr]
                 [tr]
                     [td:25]
-                        Style,
+                        Styles,
                         [br]
                         Informal
                     [/td]
                     [td:75]
-                        Mx Chair
+                        [ul]
+                            [li]
+
+                            [/li]
+                        [/ul]
                     [/td]
                 [/tr]
             [/table]
@@ -98,7 +104,7 @@
                         Type
                     [/td]
                     [td:75]
-                        Head of Subsidiary Body
+                        
                     [/td]
                 [/tr]
                 [tr]
@@ -107,24 +113,18 @@
                     [/td]
                     [td:75]
                         [ul]
-                        [li]
-                        @[The Commision](article:5ba102f7-f7ab-4297-9c1f-1c229b1e6f86)
-                        [/li]
-                        [li]
-                        @[Œcumenical Senate](article:492d62da-b26a-435a-bbc9-e61b223b2a56)
-                        [/li]
-                        [li]
-                        @[Œcumenical Parliament](article:17840179-eb12-450a-a60e-9ed8cdf5e65f)
-                        [/li]
+                            [li]
+
+                            [/li]
                         [/ul]
                     [/td]
-                [/tr]    
+                [/tr]	
                 [tr]
                     [td:25]
                         Seat
                         [/td]
                     [td:75]
-                        XXXXXXXXXXX
+                        
                     [/td]
                 [/tr]
                 [tr]
@@ -132,15 +132,15 @@
                         Appointer
                     [/td]
                     [td:75]
-                        The Commission
+                        
                     [/td]
-                [/tr]                
+                [/tr]				
                 [tr]
                     [td:25]
                         Term Length
                         [/td]
                     [td:75]
-                        For Life
+                        
                     [/td]
                 [/tr]
                 [tr]
@@ -148,17 +148,17 @@
                         First Holder
                     [/td]
                     [td:75]
-                        Jack Kirby
+                        
                     [/td]
-                [/tr]                
+                [/tr]				
                 [tr]
                     [td:25]
                         Formation
                     [/td]
                     [td:75]
-                        XXXXX
+                        
                     [/td]
-                [/tr]                                
+                [/tr]								
             [/table] 
         [/container]
     [/container]

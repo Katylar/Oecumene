@@ -4,15 +4,13 @@
     [container:custom-sidebar-inner]
         [container:custom-sidebar sidebar-title]
             [container:sidebar-1]
-                
+                Chairperson of the Commission on Genetic Rights
             [/container]
             [hr]
             [container:sidebar-symbol symbol-seal]
                 [container:sidebar-seal]
                     [img:3180340]
-                    [sub]
-                    
-                    [/sub]
+                    [sub]Seal of the Chairperson of the Commission[/sub]
                 [/container]
             [/container]
             [hr]
@@ -22,11 +20,11 @@
                 Incumbent
             [/container]
             [container:incumbent-name]
-                
+                @[Bruce Wayne](article:757b55be-352d-43db-ad66-8755db955f6b)
             [/container]
             [container:incumbent-since]
                 since 25 September 12.609
-            [/container]			
+            [/container]            
             [/container]
             [hr]
             [container:sidebar-2]Titles & Styles[/container]
@@ -39,9 +37,15 @@
                     [/td]
                     [td:75]
                         [ul]
-                            [li]
-
-                            [/li]
+                        [li]
+                        Chairperson of the Commission on Genetic Rights
+                        [/li]
+                        [li]
+                        Godparent of the Communion
+                        [/li]
+                        [li]
+                        Patron and Protector of the People
+                        [/li]
                         [/ul]
                     [/td]
                 [/tr]
@@ -53,24 +57,28 @@
                     [/td]
                     [td:75]
                         [ul]
-                            [li]
-
-                            [/li]
+                        [li]
+                        Chairperson of the Commission
+                        [/li]
+                        [li]
+                        Genitorine
+                        [/li]
+                        [li]
+                        Grand Commissioner
+                        [/li]
                         [/ul]
                     [/td]
                 [/tr]
                 [tr]
                     [td:25]
+                        Style,
+                        [br]
                         Honorific
                     [/td]
                     [td:75]
-                        [ul]
-                            [li]
-
-                            [/li]
-                        [/ul]
+                        Doné
                     [/td]
-                [/tr]				
+                [/tr]
                 [tr]
                     [td:25]
                         Style,
@@ -78,21 +86,17 @@
                         Formal
                     [/td]
                     [td:75]
-
+                        Their Eminent Guidance
                     [/td]
                 [/tr]
                 [tr]
                     [td:25]
-                        Styles,
+                        Style,
                         [br]
                         Informal
                     [/td]
                     [td:75]
-                        [ul]
-                            [li]
-
-                            [/li]
-                        [/ul]
+                        Mx Chair
                     [/td]
                 [/tr]
             [/table]
@@ -104,7 +108,7 @@
                         Type
                     [/td]
                     [td:75]
-                        
+                        Head of Subsidiary Body
                     [/td]
                 [/tr]
                 [tr]
@@ -113,18 +117,24 @@
                     [/td]
                     [td:75]
                         [ul]
-                            [li]
-
-                            [/li]
+                        [li]
+                        @[The Commision](article:5ba102f7-f7ab-4297-9c1f-1c229b1e6f86)
+                        [/li]
+                        [li]
+                        @[Œcumenical Senate](article:492d62da-b26a-435a-bbc9-e61b223b2a56)
+                        [/li]
+                        [li]
+                        @[Œcumenical Parliament](article:17840179-eb12-450a-a60e-9ed8cdf5e65f)
+                        [/li]
                         [/ul]
                     [/td]
-                [/tr]	
+                [/tr]    
                 [tr]
                     [td:25]
                         Seat
                         [/td]
                     [td:75]
-                        
+                        XXXXXXXXXXX
                     [/td]
                 [/tr]
                 [tr]
@@ -132,15 +142,15 @@
                         Appointer
                     [/td]
                     [td:75]
-                        
+                        The Commission
                     [/td]
-                [/tr]				
+                [/tr]                
                 [tr]
                     [td:25]
                         Term Length
                         [/td]
                     [td:75]
-                        
+                        For Life
                     [/td]
                 [/tr]
                 [tr]
@@ -148,18 +158,314 @@
                         First Holder
                     [/td]
                     [td:75]
-                        
+                        Jack Kirby
                     [/td]
-                [/tr]				
+                [/tr]                
                 [tr]
                     [td:25]
                         Formation
                     [/td]
                     [td:75]
-                        
+                        XXXXX
                     [/td]
-                [/tr]								
+                [/tr]                                
             [/table] 
         [/container]
     [/container]
 [/container]
+[quote]
+    [i]Archive_Entry[/i]
+    [container:actual-quote]
+        [container:quotebox ]
+            [container:swiper] [/container]
+            [p]
+                I'm gonna make him an offer he can't refuse.
+            [/p]
+        [/container]
+    [/container]
+    [small]
+    [container:quotee]
+            Corleone_Vito
+    [/container]
+    [container:quote-colon]:[/container]
+    [container:quoted-work]
+        [tooltip:Coppola_Francis_Ford : Completed_Works]
+            The_Godfather
+        [/tooltip]
+    [/container]
+    [/small]
+[/quote]
+The [b]Chairperson of the Commission on Genetic Rights (CCGC)[/b], commonly known as the [b]Chairperson of the Commission[/b], is the head of the @[Commission on Genetic Rights](article:5ba102f7-f7ab-4297-9c1f-1c229b1e6f86), and by virtue of latter's function as the successor to the @[Signoria](article:37ead84b-5ef5-44e5-8ab9-718d7ecafa85), also the [i]de facto[/i] leader of the @[Principalía](article:438071e9-74a2-4d51-aa4a-f839af982da0).
+
+The Chairperson of the Commission is elected into office for life by a two-thirds majority the members of the Commission.
+
+The position of Chairperson of the Commission is inextricably linked to the power and influence one Family holds and exerts relative to the others; they are either elected due to their family having a clearly dominant position, or vice-versa: the family whose @[Parens familias](article:a49f77f6-acc7-414c-b2ed-a44ff411ed9f) is able to garner enough votes to secure the title becomes the dominant family by virtue of their head's now exalted status.
+
+[b]!!!Don Bruce Wayne[/b] is the the twelfth and current Chairperson of the Commission, having assumed office on XXXXXXX.
+[h1]History of the Office[/h1]
+[h2]Origins[/h2]
+[h2]Development[/h2]
+[h2]Past Officeholders[/h2]
+[h1]Role, Authority, & Powers[/h1]
+[h2]Definition of the Role[/h2]
+[h2]Authority & Precedence[/h2]
+[h2]Powers within the Commission[/h2]
+[h2]Powers within the Parliament[/h2]
+[h2]Powers within the Principalía[/h2]
+[h1]Selection & Installment Process[/h1]
+[h2]Eligibility[/h2]
+[h2]Nomination[/h2]
+[h2]Election[/h2]
+[h2]Installment[/h2]
+[h1]Incumbency[/h1]
+[h2]Term of Office[/h2]
+[h2]Vacancy & Succession[/h2]
+[h3]Interregnum[/h3]
+[h3]Death[/h3]
+[h3]Removal[/h3]
+[h3]Resignation[/h3]
+[h3]Succession[/h3]
+[h2]Seat[/h2]
+[h2]Privileges[/h2]
+[h3]Compensation[/h3]
+[h3]Residence[/h3]
+[h3]Healthcare[/h3]
+[h3]Travel[/h3]
+[h3]Protection[/h3]
+[h1]Titles, Styles, and Honors[/h1]
+The Chairperson of the Commission's complete list of titles and full style is: [tooltip:Son of Muhammad, Brother of the Sun and Moon, Grandson and Viceroy of God, Ruler of the Kingdoms of Macedonia, Babylon, Jerusalem, Upper and Lower Egypt, Emperor of Emperors, Sovereign of Sovereigns, Extraordinary Knight, Never Defeated, Steadfast Guardian of the Tomb of Jesus Christ, Trustee Chosen By God Himself, the Hope and Comfort of Muslims, Confounder and Great Defender of Christians, First of His Name, King of the Andals and the First Men, Protector of the Seven Kingdoms, the Father of Dragons, the Khal of the Great Grass Sea, the Unburnt, the Breaker of Chains, the One Free Man, Stand-Up Guy]Their Eminent Guidance, Doné [b][i][Given Name(s)][/i][/b] of the [b][i][Family Name][/i][/b] Family, Chairperson of the Commission on Genetic Rights, Godparent of the Communion, Patron and Protector of the People[/tooltip].
+
+Since every single person to hold the office has been a Parens familias, all Chairpersons of the Commision have also held the @[personal honorific prefix of Doné](article:09383c42-b759-4f5d-8548-36129fed6a4a).
+[h2]Titles[/h2]
+[h3]Official Titles[/h3]
+For general purposes and within the context of their position as the head of a permanent body within the @[Œcumenical Parliament](article:17840179-eb12-450a-a60e-9ed8cdf5e65f), only the first title, [spoiler]
+[container: matrix-wrapper nomen one]
+[container: matrix]
+    [container: matrix-cell cell-blank cell-top]
+    [/container]
+    [container: matrix-cell cell-label cell-center cell-top]
+    Reference
+    [/container]
+    [container: matrix-cell cell-label]
+    Neutral
+    [/container]
+    [container: matrix-cell cell-center ]
+    Chairperson of the Commission on Genetic Rights
+    [/container]
+    [container: matrix-cell cell-label]
+    Feminine
+    [/container]
+    [container: matrix-cell cell-center]
+    Chairwoman of the Commission on Genetic Rights
+    [/container]
+    [container: matrix-cell cell-label cell-bottom]
+    Masculine
+    [/container]
+    [container: matrix-cell cell-center cell-bottom]
+    Chairman of the Commission on Genetic Rights
+    [/container]
+[/container]
+[/container]|Chairperson of the Commission on Genetic Rights,[/spoiler]is used.
+
+For more ceremonial or courtly uses, the second title, [spoiler]
+[container: matrix-wrapper nomen one]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Godparent of the Communion
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Godmother of the Communion
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Godfather of the Communion
+        [/container]
+    [/container]
+[/container]|Godparent of the Communion,[/spoiler]is sometimes used in lieu of or alongside the first. This title reflects the Chairperson of the Commission's foundational role in the Communion, as well as their position within the Families.
+
+Although almost never used, the latter title of [spoiler]
+[container: matrix-wrapper nomen one]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Patron and Protector of the People
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Patroness and Protectress of the People
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Patron and Protector of the People
+        [/container]
+    [/container]
+[/container]|Patron and Protector of the People[/spoiler]is always included when the Chairperson of the Commission is referred to in the most formal occassions, and in any legal or official documents.
+[h3]Colloquial Titles[/h3]
+In relaxed settings, the shortened form of the official title, [spoiler]
+[container: matrix-wrapper nomen two]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Chairperson of the Commission
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Chairwoman of the Commission
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Chairman of the Commission
+        [/container]
+    [/container]
+[/container]|Chairperson of the Commission[/spoiler](COC) is most commonly used. In occassions wherein the person being referred to is apparent to all parties involved, the even more shortened title of [b]Chairperson[/b] may be utilized. However, it is not often used as the chance of equivocation is high.
+
+Within the Families, the title of [spoiler]
+[container: matrix-wrapper nomen one]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Genitorine
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Madrina
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Padrino
+        [/container]
+    [/container]
+[/container]|Genitorine[/spoiler]is often used, as it directly addresses the convention of having the Chairperson of the Commission as the godparent of the immediate children of the other Parentes familias.
+
+The Chairperson of the Commission is also sometimes referred to by the alternate title of [b]Grand Commissioner[/b], by virtue of their leadership of the members of the Commission, who are alled called Commissioners.
+[h2]Styles[/h2]
+[h3]Formal Style[/h3]
+When addressed in a formal settings, the Chairperson of the Commission is styled as [spoiler]
+[container: matrix-wrapper style-form two]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Abbreviation
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Their Eminent Guidance
+        [/container]
+        [container: matrix-cell cell-center ]
+        TEG
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Her Eminent Guidance
+        [/container]
+        [container: matrix-cell cell-center]
+        HEG
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        His Eminent Guidance
+        [/container]
+        [container: matrix-cell cell-center]
+        HEG
+        [/container]
+    [/container]
+[/container]|Their Eminent Guidance.[/spoiler]
+
+When speaking directly to the Chairperson of the Commission, the oral style of [b]Your Eminent Guidance[/b] is first used, and thereafter their personal honorific of [b]Doné[/b].
+[h3]Informal Styles[/h3]
+When expedient or informal contexts, the Chairperson of the Commission is referred to by the style, [spoiler]
+[container: matrix-wrapper nomen two]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Singular
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Plural
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Mx Chair
+        [/container]
+        [container: matrix-cell cell-center ]
+        Mxes Chair
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Madam Chair
+        [/container]
+        [container: matrix-cell cell-center]
+        Mesdames Chair
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Mr Chair
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Messrs Chair
+        [/container]
+    [/container]
+[/container]|Mx Chair,[/spoiler] or simply by [b]Doné[/b].

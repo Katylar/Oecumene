@@ -3445,13 +3445,20 @@ html {
   font-size: 16px;
   color: var(--c-gold-dark);
 }
-.user-css .user-css-vignette span.oomph {
+.user-css .user-css-vignette a {
+  white-space: normal !important;
+}
+.user-css .user-css-vignette span .oomph {
   font-weight: 900;
   color: var(--c-lightest);
   transition: 300ms ease;
 }
-.user-css .user-css-vignette span.oomph:hover, .user-css .user-css-vignette span.oomph:focus {
+.user-css .user-css-vignette span .oomph:hover, .user-css .user-css-vignette span .oomph:focus {
   color: var(--c-gold);
+}
+.user-css .user-css-vignette span .placeholder {
+  font-style: italic;
+  border-bottom: 1px dashed;
 }
 .user-css .user-css-vignette blockquote {
   background: transparent;

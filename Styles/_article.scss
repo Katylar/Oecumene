@@ -407,18 +407,31 @@
             font-size: 16px;
             color: var(--c-gold-dark);
         }
-
-
-        span.oomph {
-            font-weight: 900;
-            color: var(--c-lightest);
-            transition: 300ms ease;
-
-            &:hover,
-            &:focus {
-                color: var(--c-gold);
-            }
+        a {
+            white-space: normal !important;
         }
+
+
+        span {
+            .oomph {
+                font-weight: 900;
+                color: var(--c-lightest);
+                transition: 300ms ease;
+    
+                &:hover,
+                &:focus {
+                    color: var(--c-gold);
+                }
+            }
+    
+            .placeholder {
+                font-style: italic;
+                border-bottom: 1px dashed;
+            }
+
+        }
+        
+        
 
         blockquote {
             background: transparent;

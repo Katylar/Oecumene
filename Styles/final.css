@@ -2136,6 +2136,8 @@ html {
   -webkit-clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
           clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   padding: 2px;
+  width: unset !important;
+  max-width: min(500px, 80vw) !important;
 }
 .user-css-presentation .tooltipster-sidetip:before, .user-css-presentation .tooltipster-sidetip:after {
   content: url(.);
@@ -3457,8 +3459,17 @@ html {
   color: var(--c-gold);
 }
 .user-css .user-css-vignette span .placeholder {
-  font-style: italic;
-  border-bottom: 1px dashed;
+  padding: 0 4px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.user-css .user-css-vignette span .no-hilight .text-abbreviation {
+  color: inherit;
+}
+.user-css .user-css-vignette span .no-hilight .text-abbreviation:hover, .user-css .user-css-vignette span .no-hilight .text-abbreviation:focus {
+  color: inherit;
 }
 .user-css .user-css-vignette blockquote {
   background: transparent;
@@ -3663,6 +3674,12 @@ html {
 .user-css .user-css-vignette .matrix-wrapper:after {
   bottom: 0;
   left: 0;
+}
+.user-css .user-css-vignette .matrix-wrapper.five .matrix {
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+}
+.user-css .user-css-vignette .matrix-wrapper.four .matrix {
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr;
 }
 .user-css .user-css-vignette .matrix-wrapper.three .matrix {
   grid-template-columns: 100px 1fr 1fr 1fr;
@@ -4504,6 +4521,10 @@ html {
   font-size: 12.5px;
   vertical-align: top;
 }
+.user-css .custom-sidebar-wrapper .custom-sidebar .table td:nth-child(2),
+.user-css .custom-sidebar-wrapper .custom-sidebar .table th:nth-child(2) {
+  padding-left: 5px;
+}
 .user-css .custom-sidebar-wrapper .custom-sidebar .table th {
   text-align: left;
   font-weight: 900;
@@ -4631,14 +4652,14 @@ html {
 .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:hover, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-icon:focus {
   color: var(--c-cyan);
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-badge {
   display: grid;
   grid-template-rows: 180px 1fr;
   gap: 10px;
   place-items: center;
   cursor: default;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-badge .user-css-image-thumbnail {
   height: 180px;
   padding: 0 !important;
   margin-bottom: 8px !important;
@@ -4646,13 +4667,13 @@ html {
   align-items: center;
   transition: 300ms ease-in-out;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail img {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .user-css-image-thumbnail img, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-badge .user-css-image-thumbnail img {
   max-height: 180px;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .artist-credits {
+.user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-seal .artist-credits, .user-css .custom-sidebar-wrapper .sidebar-symbol .sidebar-badge .artist-credits {
   display: none;
 }
-.user-css .custom-sidebar-wrapper .sidebar-symbol.symbol-seal {
+.user-css .custom-sidebar-wrapper .sidebar-symbol.symbol-seal, .user-css .custom-sidebar-wrapper .sidebar-symbol.symbol-badge {
   grid-template-columns: 1fr;
   gap: 0;
 }
@@ -4678,12 +4699,6 @@ html {
 }
 .user-css .custom-sidebar-wrapper .tagged-articles-list:last-of-type {
   margin-bottom: 0;
-}
-.user-css .custom-sidebar-wrapper .sidebar-polity table th {
-  font-family: var(--f2);
-  color: var(--c-gray-light);
-  font-size: 12.5px;
-  vertical-align: top;
 }
 .user-css .custom-sidebar-wrapper .custom-sidebar .matrix-table table th {
   background: none !important;
@@ -4729,7 +4744,32 @@ html {
   line-height: 1.4;
   border-top: none;
 }
-
+.user-css .custom-sidebar-wrapper span.swatch {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px 0 3px 0;
+  border: 1px solid var(--c-light);
+  margin-right: 10px;
+}
+.user-css .custom-sidebar-wrapper span.swatch.black {
+  background-color: black;
+}
+.user-css .custom-sidebar-wrapper span.swatch.blue {
+  background-color: blue;
+}
+.user-css .custom-sidebar-wrapper span.swatch.red {
+  background-color: red;
+}
+.user-css .custom-sidebar-wrapper span.swatch.white {
+  background-color: white;
+}
+.user-css .custom-sidebar-wrapper .sidebar-polity table th {
+  font-family: var(--f2);
+  color: var(--c-gray-light);
+  font-size: 12.5px;
+  vertical-align: top;
+}
 .user-css-extended {
   font-family: var(--f2);
   color: var(--c-cyan);

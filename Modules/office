@@ -1,0 +1,359 @@
+[container:custom-sidebar-wrapper]
+    [section:fas fa-2x fa-database] [/section]
+    [small]Data_File[/small]
+    [container:custom-sidebar-inner]
+        [container:custom-sidebar sidebar-title]
+            [container:sidebar-1]
+                YYY
+            [/container]
+            [hr]
+            [container:sidebar-symbol symbol-seal]
+                [container:sidebar-seal]
+                    [img:3180340]
+                    [sub]Seal of the 
+                    [/sub]
+                [/container]
+            [/container]
+            [hr]
+            [container:person-profile-wrapper]
+                [img:https://thispersondoesnotexist.com/image]
+            [container:incumbent-header]
+                Incumbent
+            [/container]
+            [container:incumbent-name]
+                ZZZ
+            [/container]
+            [container:incumbent-since]
+                since 
+                
+                 September 
+                
+            [/container]            
+            [/container]
+            [hr]
+            [container:sidebar-2]Styles[/container]
+            [table]
+                [tr]
+                    [td:25]
+                        Personal
+                    [/td]
+                    [td:75]
+                        
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Colloquial
+                    [/td]
+                    [td:75]
+                        XXX
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Formal
+                    [/td]
+                    [td:75]
+                        FFF
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Informal
+                    [/td]
+                    [td:75]
+                        
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Alternative
+                    [/td]
+                    [td:75]
+                        [ul]
+                            [li]
+                            
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]
+            [/table]
+            [hr]
+            [container:sidebar-2]Office Details[/container]
+            [table]
+                [tr]
+                    [td:25]
+                        Type
+                    [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Member of
+                    [/td]
+                    [td:75]
+                        [ul]
+                            [li]
+
+                            [/li]
+                        [/ul]
+                    [/td]
+                [/tr]    
+                [tr]
+                    [td:25]
+                        Seat
+                        [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        Appointer
+                    [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]                
+                [tr]
+                    [td:25]
+                        Term Length
+                        [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]
+                [tr]
+                    [td:25]
+                        First Holder
+                    [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]                
+                [tr]
+                    [td:25]
+                        Formation
+                    [/td]
+                    [td:75]
+
+                    [/td]
+                [/tr]                                
+            [/table] 
+        [/container]
+    [/container]
+[/container]
+[quote]
+    [i]Archive_Entry[/i]
+    [container:actual-quote]
+        [container:quotebox ]
+            [container:swiper] [/container]
+            [p]
+
+            [/p]
+        [/container]
+    [/container]
+    [small]
+    [container:quotee]
+        [tooltip:]
+            
+        [/tooltip]    
+    [/container]
+    [container:quote-colon]:[/container]
+    [container:quoted-work]
+        [tooltip:]
+            
+        [/tooltip]
+    [/container]
+    [/small]
+[/quote]
+The [b]YYY[/b], commonly known as the [b]XXX[/b] and sometimes called the [b] [/b], is the 
+
+The XXX is <appointment/election> <term> <appointer>
+
+The position of XXX is 
+
+[b]ZZZ[/b] is the the * and current XXX, having assumed office on DDD.
+[h1]History of the Office[/h1]
+[h2]Origins[/h2]
+[h2]Development[/h2]
+[h2]Past Officeholders[/h2]
+[h1]Role, Authority, & Powers[/h1]
+[h2]Definition of the Role[/h2]
+[h2]Authority & Precedence[/h2]
+[h2]Powers within the Commission[/h2]
+[h2]Powers within the Parliament[/h2]
+[h2]Powers within the Principalía[/h2]
+[h1]Selection & Installment Process[/h1]
+[h2]Eligibility[/h2]
+[h2]Nomination[/h2]
+[h2]Election[/h2]
+[h2]Installment[/h2]
+[h1]Incumbency[/h1]
+[h2]Term of Office[/h2]
+[h2]Vacancy & Succession[/h2]
+[h3]Interregnum[/h3]
+[h3]Death[/h3]
+[h3]Removal[/h3]
+[h3]Resignation[/h3]
+[h3]Succession[/h3]
+[h2]Seat[/h2]
+[h2]Privileges[/h2]
+[h3]Compensation[/h3]
+[h3]Residence[/h3]
+[h3]Healthcare[/h3]
+[h3]Travel[/h3]
+[h3]Protection[/h3]
+[h1]Titles and Styles[/h1]
+The XXX's full [var:nick-style], which includes all official titles, is: .
+
+[h2]Title of Office[/h2]
+The official designation of the position is [spoiler]
+[container: matrix-wrapper nomen one]
+[container: matrix]
+    [container: matrix-cell cell-blank cell-top]
+    [/container]
+    [container: matrix-cell cell-label cell-center cell-top]
+    Reference
+    [/container]
+    [container: matrix-cell cell-label]
+    Neutral
+    [/container]
+    [container: matrix-cell cell-center ]
+        YYY
+    [/container]
+    [container: matrix-cell cell-label]
+    Feminine
+    [/container]
+    [container: matrix-cell cell-center]
+    
+    [/container]
+    [container: matrix-cell cell-label cell-bottom]
+    Masculine
+    [/container]
+    [container: matrix-cell cell-center cell-bottom]
+    
+    [/container]
+[/container]
+[/container]|YYY,[/spoiler]
+
+In less formal or relaxed settings, the <?> form of the official title, [spoiler]
+[container: matrix-wrapper nomen one]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        XXX
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        
+        [/container]
+    [/container]
+[/container]|XXX[/spoiler](ABV) is most commonly used.
+
+[h2]Subsidiary Titles[/h2]
+Due to the prestige of the office, the position also enjoys the privilege of two subsidiary titles. Although always present in the full style, these subsidiary titles are almost never used by themselves, except in vary rare and specific occassions.
+
+The first subsidiary title, [spoiler]
+[container: matrix-wrapper nomen one]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        
+        [/container]
+    [/container]
+[/container]|,[/spoiler]
+
+[h2]Personal Honorific Title[/h2]
+
+
+[h2]Alternaive Titles[/h2]
+Based on context, occassion, formality, and audience, the XXX may also be referred to by some alternative titles.
+
+[h2]Formal Style[/h2]
+By law and convention, the XXX is always addressed using a specific phrase preceding the title of office.
+
+[h3]Written Form[/h3]
+When addressed in writing, and in all cases as the grammatical third person, the XXX is styled as [spoiler]
+[container: matrix-wrapper style-form two]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Reference
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Abbreviation
+        [/container]
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+            FFF
+        [/container]
+        [container: matrix-cell cell-center ]
+        
+        [/container]
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        
+        [/container]
+        [container: matrix-cell cell-center]
+        
+        [/container]
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        
+        [/container]
+        [container: matrix-cell cell-center]
+        
+        [/container]
+    [/container]
+[/container]|FFF.[/spoiler]
+
+[h3]Spoken Form[/h3]
+When speaking directly to the XXX–as such, using the grammatical second person–the oral style of [b]Your Serene Guidance[/b] is first used, and thereafter their personal honorific of [b][/b].
+
+[h2]Informal Style[/h2]
+When expedient or informal contexts, the XXX is referred to by the style [spoiler][/spoiler]
+[h1]Official Seal[/h1]

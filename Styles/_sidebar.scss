@@ -208,6 +208,9 @@
                         font-size: 12.5px;
                         vertical-align: top;
                     }
+                    &:nth-child(2) {
+                        padding-left: 5px;
+                    }    
                 }
 
                 th {
@@ -216,6 +219,7 @@
                     font-variant: small-caps;
                     letter-spacing: 1px;
                 }
+
             }
 
             .starmap {
@@ -365,7 +369,7 @@
                 }
             }
 
-            .sidebar-seal {
+            .sidebar-seal, .sidebar-badge {
                 display: grid;
                 grid-template-rows: 180px 1fr;
                 gap: 10px;
@@ -390,7 +394,7 @@
                 }
             }
             
-            &.symbol-seal {
+            &.symbol-seal, &.symbol-badge {
                 grid-template-columns: 1fr;
                 gap: 0;
 
@@ -424,20 +428,6 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
-        }
-
-        .sidebar-polity {
-            table {
-                th {
-                    font-family: var(--f2);
-                    color: var(--c-gray-light);
-                    font-size: 12.5px;
-                    vertical-align: top;
-                }
-            }
-        }
-
-        .sidebar-title {
         }
 
         .custom-sidebar .matrix-table {
@@ -493,6 +483,49 @@
                 line-height: 1.4;
                 border-top: none;
             }
+        }
+
+        span.swatch {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            border-radius: 3px 0 3px 0;
+            border: 1px solid var(--c-light);
+            margin-right: 10px;
+
+            &.black {
+                background-color: black;
+            }
+            &.blue {
+                background-color: blue;
+            }
+            &.red {
+                background-color: red;
+            }
+            &.white {
+                background-color: white;
+            }
+        }
+
+
+
+
+        .sidebar-polity {
+            table {
+                th {
+                    font-family: var(--f2);
+                    color: var(--c-gray-light);
+                    font-size: 12.5px;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .sidebar-title {
+        }
+
+        .sidebar-militaryunit {
+            
         }
     }
 }

@@ -1,0 +1,213 @@
+A [b]Personal Honorific Title[/b], or simply, an [b]Honorific[/b] is a title that conveys courtesy, esteem, or respect. Most times, it is styled as a prefix–it precedes a person's name. 
+
+As a title, the honorific can also be used by itself to refer to a titleholder.
+
+[h1]Common Honorifics[/h1]
+
+[h2]Citizen[/h2]
+[container: matrix-wrapper four]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Singular
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Abbreviation
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Plural
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Abbreviation
+        [/container]
+        [container: matrix-cell cell-label]
+            Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+            Citizen
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-ctz]
+        [/container]
+        [container: matrix-cell cell-center ]
+            Citizens
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-ctzs]
+        [/container]
+    [/container]
+[/container]
+[h2]Denizen[/h2]
+[container: matrix-wrapper four]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Singular
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Abbreviation
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Plural
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Abbreviation
+        [/container]
+        [container: matrix-cell cell-label]
+            Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+            Denizen
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-dnz]
+        [/container]
+        [container: matrix-cell cell-center ]
+            Denizens
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-dnzs]
+        [/container]
+    [/container]
+[/container]
+[h2][var:nick-mx][/h2]
+[container: matrix-wrapper two]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Singular
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+            Plural
+        [/container]
+        [container: matrix-cell cell-label]
+            Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-mx]
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-mxes]
+        [/container]
+        [container: matrix-cell cell-label]
+            Feminine
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-ms]
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-mss]
+        [/container]
+        [container: matrix-cell cell-label]
+            Masculine
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-mr]
+        [/container]
+        [container: matrix-cell cell-center ]
+            [var:nick-messrs]
+        [/container]
+    [/container]
+[/container]
+[h2]Madam & Sir[/h2]
+
+[h1]Professional & Academic Honorifics[/h1]
+
+[h2]Doctor[/h2]
+
+[h2]Professor[/h2]
+
+[h2]Engineer[/h2]
+
+[h2]Architect[/h2]
+
+[h2]Artisan[/h2]
+
+[h2]Technologist[/h2]
+
+[h2]Attorney[/h2]
+[h3]Barrister[/h3]
+[h3]Solicitor[/h3]
+
+
+
+[h1]Official & Formal Honorifics[/h1]
+
+[h2]Doné[/h2]
+[container: matrix-wrapper nomen four]
+    [container: matrix]
+        [container: matrix-cell cell-blank cell-top]
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Singular
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Abbreviation
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Plural
+        [/container]
+        [container: matrix-cell cell-label cell-center cell-top]
+        Abbreviation
+        [/container]        
+        [container: matrix-cell cell-label]
+        Neutral
+        [/container]
+        [container: matrix-cell cell-center ]
+        Doné
+        [/container]
+        [container: matrix-cell cell-center ]
+        D[sup]é[/sup]
+        [/container]
+        [container: matrix-cell cell-center ]
+        Donés
+        [/container]
+        [container: matrix-cell cell-center ]
+        D[sup]és[/sup]
+        [/container]        
+        [container: matrix-cell cell-label]
+        Feminine
+        [/container]
+        [container: matrix-cell cell-center]
+        Doña
+        [/container]
+        [container: matrix-cell cell-center]
+        D[sup]a[/sup]
+        [/container]
+        [container: matrix-cell cell-center ]
+        Doñas
+        [/container]
+        [container: matrix-cell cell-center ]
+        D[sup]as[/sup]
+        [/container]        
+        [container: matrix-cell cell-label cell-bottom]
+        Masculine
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Don
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        D
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Dons
+        [/container]
+        [container: matrix-cell cell-center cell-bottom]
+        Ds
+        [/container]        
+    [/container]
+[/container]
+
+[h2]Siress & Sire[/h2]
+
+[h2]Lady & Lord[/h2]
+
+[h2]Justice[/h2]
+
+
+[h1]Religious Honorifics[/h1]
+
+[h1]Military Honorifics[/h1]

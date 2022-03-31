@@ -707,6 +707,8 @@
             0 5px
         );
         padding: 2px;
+        width: unset !important;
+        max-width: min(500px, 80vw) !important;
 
         &:before,
         &:after {

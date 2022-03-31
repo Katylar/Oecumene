@@ -425,8 +425,21 @@
             }
     
             .placeholder {
-                font-style: italic;
-                border-bottom: 1px dashed;
+                padding: 0 4px;
+                display: inline-block;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .no-hilight {
+                .text-abbreviation {
+                    color: inherit;
+
+                    &:hover, &:focus {
+                        color: inherit;
+                    }
+                }
             }
 
         }
@@ -688,6 +701,16 @@
                 left: 0;
             }
 
+            &.five {
+                .matrix {
+                    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+                }
+            }
+            &.four {
+                .matrix {
+                    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+                }
+            }
             &.three {
                 .matrix {
                     grid-template-columns: 100px 1fr 1fr 1fr;

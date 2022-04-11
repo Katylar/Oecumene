@@ -512,4 +512,31 @@ html {
             @include scan-crt($scan-crt);
         }
     }
+
+    /** GENERAL **/
+
+    span.swatch {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border-radius: 3px 0 3px 0;
+        border: 1px solid var(--c-light);
+        margin-right: 8px;
+
+        &.black {
+            background-color: black;
+        }
+        &.blue {
+            background-color: blue;
+        }
+        &.red {
+            background-color: red;
+        }
+        &.white {
+            background-color: white;
+        }
+        &.green {
+            background-color: green;
+        }
+    }
 }

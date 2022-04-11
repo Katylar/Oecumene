@@ -1146,6 +1146,7 @@ html {
   /** OH HOH! **/
   /** EXPERIMENT **/
   /** SCANLINER **/
+  /** GENERAL **/
 }
 .user-css .world-content,
 .user-css .breadcrumb-world-link-wrapper,
@@ -1478,6 +1479,29 @@ html {
   background-size: 100% 4px;
   -webkit-animation: scanlines 1s steps(60) infinite;
           animation: scanlines 1s steps(60) infinite;
+}
+.user-css span.swatch {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px 0 3px 0;
+  border: 1px solid var(--c-light);
+  margin-right: 8px;
+}
+.user-css span.swatch.black {
+  background-color: black;
+}
+.user-css span.swatch.blue {
+  background-color: blue;
+}
+.user-css span.swatch.red {
+  background-color: red;
+}
+.user-css span.swatch.white {
+  background-color: white;
+}
+.user-css span.swatch.green {
+  background-color: green;
 }
 
 .user-css .article-content,
@@ -3437,13 +3461,16 @@ html {
   padding-top: 0;
 }
 .user-css .user-css-vignette h3 {
-  padding-top: 20px;
+  margin: 20px 0 6px 0;
+  padding: 0;
 }
 .user-css .user-css-vignette h4 {
-  padding: 15px 0 6px 0;
+  margin: 15px 0 6px 0;
+  padding: 0;
 }
 .user-css .user-css-vignette h5 {
-  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  padding: 0;
   font-size: 16px;
   color: var(--c-gold-dark);
 }
@@ -3675,8 +3702,18 @@ html {
   bottom: 0;
   left: 0;
 }
+.user-css .user-css-vignette .matrix-wrapper.ranker {
+  width: 1330px;
+}
+.user-css .user-css-vignette .matrix-wrapper.sup-ending .matrix-cell span sup {
+  margin-right: unset;
+}
+.user-css .user-css-vignette .matrix-wrapper.five {
+  max-width: 100%;
+}
 .user-css .user-css-vignette .matrix-wrapper.five .matrix {
   grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+  overflow-x: auto;
 }
 .user-css .user-css-vignette .matrix-wrapper.four .matrix {
   grid-template-columns: 100px 1fr 1fr 1fr 1fr;
@@ -3697,6 +3734,8 @@ html {
   z-index: 15;
   -webkit-clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
           clip-path: polygon(100px 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0px 100%, 0 30px, 10px 20px, 80px 20px);
+  grid-template-rows: 30px;
+  grid-auto-rows: 1fr;
 }
 .user-css .user-css-vignette .matrix .matrix-cell {
   font-family: var(--f1);
@@ -3718,6 +3757,8 @@ html {
 .user-css .user-css-vignette .matrix .matrix-cell.cell-center {
   text-align: center;
   justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .user-css .user-css-vignette .matrix .matrix-cell.cell-top {
   height: 30px;
@@ -4744,26 +4785,6 @@ html {
   line-height: 1.4;
   border-top: none;
 }
-.user-css .custom-sidebar-wrapper span.swatch {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  border-radius: 3px 0 3px 0;
-  border: 1px solid var(--c-light);
-  margin-right: 10px;
-}
-.user-css .custom-sidebar-wrapper span.swatch.black {
-  background-color: black;
-}
-.user-css .custom-sidebar-wrapper span.swatch.blue {
-  background-color: blue;
-}
-.user-css .custom-sidebar-wrapper span.swatch.red {
-  background-color: red;
-}
-.user-css .custom-sidebar-wrapper span.swatch.white {
-  background-color: white;
-}
 .user-css .custom-sidebar-wrapper .sidebar-polity table th {
   font-family: var(--f2);
   color: var(--c-gray-light);
@@ -4960,6 +4981,11 @@ html {
   }
   .user-css .user-css-vignette blockquote::after {
     width: 35%;
+  }
+}
+@media only screen and (min-width: 715px) {
+  .user-css .user-css-vignette .matrix-wrapper.five .matrix {
+    overflow-x: unset;
   }
 }
 @media only screen and (min-width: 850px) {
@@ -5199,6 +5225,9 @@ html {
   }
   .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:hover .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:focus-within .custom-sidebar-inner .custom-sidebar, .user-css.page-article .user-css-vignette .custom-sidebar-wrapper:active .custom-sidebar-inner .custom-sidebar {
     overflow-y: unset;
+  }
+  .user-css.page-article .user-css-vignette .matrix-wrapper.five {
+    max-width: calc(100vw - 350px);
   }
   .user-css.page-article #cover:before, .user-css.page-article #cover:after {
     display: block;

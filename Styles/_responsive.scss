@@ -87,6 +87,20 @@
     }
 }
 
+@media only screen and (min-width: 715px) {
+    .user-css {
+        .user-css-vignette {
+            .matrix-wrapper {
+                &.five {
+                    .matrix {
+                        overflow-x: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 850px) {
     .user-css-presentation {
     }
@@ -484,6 +498,9 @@
                     }
                 }
                 .matrix-wrapper {
+                    &.five {
+                        max-width: calc(100vw - 350px);
+                    }
                     // &.nomen {
                     //     max-width: 485px;
                     // }

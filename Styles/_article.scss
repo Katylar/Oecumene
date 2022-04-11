@@ -396,14 +396,17 @@
         }
 
         h3 {
-            padding-top: 20px;
+            margin: 20px 0 6px 0;
+            padding: 0;
         }
 
         h4 {
-            padding: 15px 0 6px 0;
+            margin: 15px 0 6px 0;
+            padding: 0;
         }
         h5 {
-            padding: 10px 0 10px 0;
+            margin: 10px 0 10px 0;
+            padding: 0;
             font-size: 16px;
             color: var(--c-gold-dark);
         }
@@ -437,7 +440,7 @@
                     color: inherit;
 
                     &:hover, &:focus {
-                        color: inherit;
+                        color: inherit
                     }
                 }
             }
@@ -701,9 +704,22 @@
                 left: 0;
             }
 
+            &.ranker {
+                width: 1330px;
+            }
+
+            &.sup-ending {
+                .matrix-cell span sup {
+                    margin-right: unset;
+                }
+            }
+
             &.five {
+                // max-width: calc(100vw - 350px);
+                max-width: 100%;
                 .matrix {
                     grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+                    overflow-x: auto;
                 }
             }
             &.four {
@@ -746,12 +762,19 @@
                 10px 20px,
                 80px 20px
             );
+            grid-template-rows: 30px;
+            grid-auto-rows: 1fr; 
+
             .matrix-cell {
                 font-family: var(--f1);
                 font-size: 14.5px;
                 color: var(--c-light);
                 line-height: 1.2;
                 padding: 10px;
+
+                // sup {
+                //     margin-right: 5px;
+                // }
 
                 &.cell-label {
                     font-family: var(--f2);
@@ -766,6 +789,8 @@
                 &.cell-center {
                     text-align: center;
                     justify-content: center;
+                    display: flex;
+                    align-items: center;
                 }
                 &.cell-top {
                     height: 30px;

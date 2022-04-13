@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.enableFiletypes": [
+			"clojure"
+		],
+		"cSpell.words": [
+			"Œcumenical"
+		]
+	}
 }

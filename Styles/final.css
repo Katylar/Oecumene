@@ -1062,7 +1062,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #815b09 #1a1100;
+  scrollbar-color: rgb(129, 91, 9) rgb(26, 17, 0);
 }
 
 .user-css,
@@ -1123,19 +1123,19 @@ html {
   background: var(--c-dark) !important;
 }
 .user-css-presentation .user-css-viewer *::-moz-selection {
-  color: #291d02;
+  color: rgb(41, 29, 2);
   background: var(--c-gold);
 }
 .user-css-presentation .user-css-viewer *::selection {
-  color: #291d02;
+  color: rgb(41, 29, 2);
   background: var(--c-gold);
 }
 .user-css-presentation .user-css-viewer a::-moz-selection {
-  color: #291d02;
+  color: rgb(41, 29, 2);
   background: var(--c-gold-dimmer);
 }
 .user-css-presentation .user-css-viewer a::selection {
-  color: #291d02;
+  color: rgb(41, 29, 2);
   background: var(--c-gold-dimmer);
 }
 .user-css-presentation span.icono {
@@ -1147,6 +1147,9 @@ html {
   /** EXPERIMENT **/
   /** SCANLINER **/
   /** GENERAL **/
+}
+.user-css .world-editor-link {
+  display: none !important;
 }
 .user-css .world-content,
 .user-css .breadcrumb-world-link-wrapper,
@@ -1164,7 +1167,7 @@ html {
   margin-right: -25px;
   background: linear-gradient(rgba(2, 2, 7, 0.9), rgba(2, 2, 7, 0.9)), url(https://www.worldanvil.com/uploads/images/3d9364baf000616c9c22021f30a7fdd7.jpg) fixed no-repeat;
   background-size: cover;
-  background-color: #00000000;
+  background-color: rgba(0, 0, 0, 0);
 }
 .user-css .bottomnotch {
   position: absolute;
@@ -1502,6 +1505,9 @@ html {
 }
 .user-css span.swatch.green {
   background-color: green;
+}
+.user-css span.swatch.gold {
+  background-color: var(--c-gold);
 }
 
 .user-css .article-content,
@@ -2119,7 +2125,7 @@ html {
   content: url(.);
   position: absolute;
   z-index: -1;
-  background: #2799e0;
+  background: rgb(39, 153, 224);
   height: 35%;
   width: 20%;
 }
@@ -2167,7 +2173,7 @@ html {
   content: url(.);
   position: absolute;
   z-index: -1;
-  background: #2799e0;
+  background: rgb(39, 153, 224);
   height: 35%;
   width: 20%;
 }
@@ -2373,7 +2379,7 @@ html {
 .user-css.page-world-homepage .home-main-area hr {
   margin: 30px auto;
   height: 2px;
-  background: linear-gradient(90deg, #023555 0%, #43aaeb 50%, #023555 100%);
+  background: linear-gradient(90deg, rgb(2, 53, 85) 0%, rgb(67, 170, 235) 50%, rgb(2, 53, 85) 100%);
   background-position-x: 50%;
   -webkit-animation: grow-center-hr-large 5s ease-out forwards 1, oscil 2s linear infinite alternate;
           animation: grow-center-hr-large 5s ease-out forwards 1, oscil 2s linear infinite alternate;
@@ -2971,21 +2977,21 @@ html {
   transform: rotate(180deg);
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-oecumene .bar-image {
-  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
+  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, rgb(2, 2, 7) 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, rgb(2, 2, 7) 100%), url(https://www.worldanvil.com/uploads/images/bf31ff772b7265c1be4176d164fa0a87.jpg);
   background-position: 64% 92%;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-communion .bar-image {
-  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/3b992ab16750e79b19d762072d41a12d.jpg);
+  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, rgb(2, 2, 7) 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, rgb(2, 2, 7) 100%), url(https://www.worldanvil.com/uploads/images/3b992ab16750e79b19d762072d41a12d.jpg);
   background-position: 64% 85%;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-principalia .bar-image {
-  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/e6bfc8cd02805427f11fce34bee90ded.jpg);
+  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, rgb(2, 2, 7) 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, rgb(2, 2, 7) 100%), url(https://www.worldanvil.com/uploads/images/e6bfc8cd02805427f11fce34bee90ded.jpg);
   background-position-x: 76%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .user-css.page-world-homepage .home-main-area .home-selector-for-trads .bar-wrapper.bar-peoples .bar-image {
-  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, #020207 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, #020207 100%), url(https://www.worldanvil.com/uploads/images/da5205744d769fc4dac845e329be58ff.jpg);
+  background: linear-gradient(90deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 35%, rgb(2, 2, 7) 100%), linear-gradient(180deg, rgba(2, 2, 7, 0.05) 0%, rgba(2, 2, 7, 0.2) 15%, rgb(2, 2, 7) 100%), url(https://www.worldanvil.com/uploads/images/da5205744d769fc4dac845e329be58ff.jpg);
   background-position: 51% 82%;
   background-size: 320%;
   background-repeat: no-repeat;
@@ -3129,7 +3135,7 @@ html {
   left: 0;
   height: 3px;
   width: 0;
-  background: linear-gradient(90deg, #815b09 0%, #bb8000 50%, #ffb30d 100%);
+  background: linear-gradient(90deg, rgb(129, 91, 9) 0%, rgb(187, 128, 0) 50%, rgb(255, 179, 13) 100%);
   content: url(.);
   -webkit-animation: line-expander 5s 2.15s ease-out forwards 1;
           animation: line-expander 5s 2.15s ease-out forwards 1;
@@ -3485,6 +3491,9 @@ html {
 .user-css .user-css-vignette span .oomph:hover, .user-css .user-css-vignette span .oomph:focus {
   color: var(--c-gold);
 }
+.user-css .user-css-vignette span .nobreak {
+  white-space: nowrap;
+}
 .user-css .user-css-vignette span .placeholder {
   padding: 0 4px;
   display: inline-block;
@@ -3690,7 +3699,7 @@ html {
   content: url(.);
   position: absolute;
   z-index: 10;
-  background: #2799e0;
+  background: rgb(39, 153, 224);
   height: 30px;
   width: 30px;
 }
@@ -3704,12 +3713,29 @@ html {
 }
 .user-css .user-css-vignette .matrix-wrapper.ranker {
   width: 1330px;
+  max-width: 100%;
+}
+.user-css .user-css-vignette .matrix-wrapper.ranker-horizontal.six {
+  width: 1330px;
+}
+.user-css .user-css-vignette .matrix-wrapper.ranker-horizontal.five {
+  width: 1125px;
+}
+.user-css .user-css-vignette .matrix-wrapper.ranker-horizontal.four {
+  width: 920px;
+}
+.user-css .user-css-vignette .matrix-wrapper.ranker-horizontal.three {
+  width: 715px;
+}
+.user-css .user-css-vignette .matrix-wrapper.ranker-horizontal.two {
+  width: 510px;
 }
 .user-css .user-css-vignette .matrix-wrapper.sup-ending .matrix-cell span sup {
   margin-right: unset;
 }
-.user-css .user-css-vignette .matrix-wrapper.five {
-  max-width: 100%;
+.user-css .user-css-vignette .matrix-wrapper.six .matrix {
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr;
+  overflow-x: auto;
 }
 .user-css .user-css-vignette .matrix-wrapper.five .matrix {
   grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
@@ -3743,6 +3769,9 @@ html {
   color: var(--c-light);
   line-height: 1.2;
   padding: 10px;
+}
+.user-css .user-css-vignette .matrix .matrix-cell .nobreak {
+  white-space: nowrap !important;
 }
 .user-css .user-css-vignette .matrix .matrix-cell.cell-label {
   font-family: var(--f2);
@@ -4555,6 +4584,18 @@ html {
 .user-css .custom-sidebar-wrapper .custom-sidebar .table th a:active {
   color: var(--c-gold);
 }
+.user-css .custom-sidebar-wrapper .custom-sidebar .table td .placeholder,
+.user-css .custom-sidebar-wrapper .custom-sidebar .table th .placeholder {
+  padding: 0 4px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.user-css .custom-sidebar-wrapper .custom-sidebar .table td .nobreak,
+.user-css .custom-sidebar-wrapper .custom-sidebar .table th .nobreak {
+  white-space: nowrap;
+}
 .user-css .custom-sidebar-wrapper .custom-sidebar .table td:nth-child(1),
 .user-css .custom-sidebar-wrapper .custom-sidebar .table th:nth-child(1) {
   font-family: var(--f2);
@@ -4984,7 +5025,7 @@ html {
   }
 }
 @media only screen and (min-width: 715px) {
-  .user-css .user-css-vignette .matrix-wrapper.five .matrix {
+  .user-css .user-css-vignette .matrix-wrapper.five .matrix, .user-css .user-css-vignette .matrix-wrapper.six .matrix {
     overflow-x: unset;
   }
 }
@@ -5107,7 +5148,7 @@ html {
 }
 @media only screen and (min-width: 1200px) {
   html {
-    scroll-padding-top: 44px;
+    scroll-padding-top: 48px;
   }
 
   .user-css-presentation .world-navigation-palette-trigger {

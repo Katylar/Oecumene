@@ -92,6 +92,10 @@ html {
 .user-css {
     //** LAYOUT **//
 
+    .world-editor-link {
+        display: none !important;
+    }
+
     .world-content,
     .breadcrumb-world-link-wrapper,
     .article-title-icon,
@@ -537,6 +541,9 @@ html {
         }
         &.green {
             background-color: green;
+        }
+        &.gold {
+            background-color: var(--c-gold);
         }
     }
 }

@@ -91,7 +91,7 @@
     .user-css {
         .user-css-vignette {
             .matrix-wrapper {
-                &.five {
+                &.five, &.six {
                     .matrix {
                         overflow-x: unset;
                     }
@@ -286,7 +286,7 @@
 
 @media only screen and (min-width: 1200px) {
     html {
-        scroll-padding-top: 44px;
+        scroll-padding-top: 48px;
     }
     
     .user-css-presentation {
